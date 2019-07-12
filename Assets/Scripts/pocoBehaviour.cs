@@ -7,8 +7,9 @@ public class pocoBehaviour : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject corda;
     [SerializeField] private Sprite[] sprites;
+    [SerializeField] private int capacidade;
     private SpriteRenderer cRenderer;
-    private bool balde, bPoco = false;
+    private bool balde, cAgua = false, bPoco = false;
     private float profundidade;
     private RaycastHit2D[] hit;
     private Animator cAnim;
@@ -23,7 +24,7 @@ public class pocoBehaviour : MonoBehaviour
     
     void Update()
     {
-        cRenderer.sprite = sprites[(profundidade <= 0 && bPoco)? 1 : 0 ];
+        cRenderer.sprite = sprites[(profundidade <= 0 && bPoco)? ((cAgua)?2 : 1) : 0];
         balde = player.GetComponent<controladorJogador>().balde;
         hit = Physics2D.CircleCastAll(transform.position, 1, -transform.up);        
         
@@ -36,6 +37,7 @@ public class pocoBehaviour : MonoBehaviour
                 {
                     if(Input.GetKeyDown("e") && balde && !bPoco)
                     {
+                        cAgua = false;
                         player.GetComponent<controladorJogador>().balde = false;
                         bPoco = true;
                     }
@@ -60,7 +62,16 @@ public class pocoBehaviour : MonoBehaviour
                         {
                             profundidade = (Mathf.Abs(profundidade) < 0.05f)? 0 : profundidade;
                             cAnim.enabled = false;
-                        }                      
+                        }      
+                        if(capacidade > 0 && profundidade  >= 1 && !cAgua)
+                        {
+                            cAgua = true;
+                            capacidade--;
+                        }
+                        else if(capacidade <= 0 && profundidade >= 1 && !cAgua)
+                        {
+                            cAgua = false;
+                        }
                     }
                 }
             }

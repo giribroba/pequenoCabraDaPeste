@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class pocoBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject corda;
+    [SerializeField] private GameObject player, corda, gota;
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private int capacidade;
     private SpriteRenderer cRenderer;
@@ -76,6 +75,12 @@ public class pocoBehaviour : MonoBehaviour
                 }
             }
             
+        }
+
+        void Feed(){
+            if (capacidade <= 0){
+                gota.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
+            }
         }
     }
 

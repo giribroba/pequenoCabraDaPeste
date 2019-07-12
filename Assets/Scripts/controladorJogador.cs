@@ -48,7 +48,7 @@ public class controladorJogador : MonoBehaviour
                     var other = hit[i].collider.gameObject;
                     if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && podePa){
                         contBroto++;
-                        contador.text = contBroto.ToString();
+                        contador.text = (contBroto.ToString() + "/3");
                         animator.SetTrigger("pasada");
                         other.GetComponent<SpriteRenderer>().sprite = terra;
                         Destroy(other.GetComponent<BoxCollider2D>());

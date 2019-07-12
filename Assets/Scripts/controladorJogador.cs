@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class controladorJogador : MonoBehaviour
 {
-    [SerializeField] private Vector3 limiteMin, limiteMax;
-    [SerializeField] private float velocidadeMaxima, forcaPulo, KB;
+    [SerializeField] private float velocidadeMaxima, forcaPulo;
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto;
     [SerializeField] private Sprite terra;
     [SerializeField] private SpriteRenderer balaoBaoba;
     [SerializeField] private Text contador;
     private bool noChao, podePa = false, iconeUmaVez = true;
-    private float movimento, velocidade;    
+    private float movimento, velocidade, KB;    
     private int contBroto = 0;
     private string balaoNoSim = "Broto";
     private Animator animator;
@@ -21,15 +20,19 @@ public class controladorJogador : MonoBehaviour
     private Rigidbody2D rbPlayer;
     private Collider2D colPlayer;
 
+    public AudioSource[] musicas;
+    private int proxMusica = 0;
+    private AudioSource musicaAtual;
+
     void Start(){
+        //musicaAtual = musicas[0];
         podePa = false;
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         rbPlayer = GetComponent<Rigidbody2D>();
     }
-
     void Update(){
-        
+        Musica();
         movimento = Input.GetAxisRaw("Horizontal");
         Jump();
         Raycasts();
@@ -108,8 +111,8 @@ public class controladorJogador : MonoBehaviour
 
     void Jump(){
         animator.SetBool("jump", !noChao);
-        if (noChao && Input.GetKeyDown(KeyCode.Space)){
-                rbPlayer.velocity = new Vector2(0, forcaPulo);
+        if (noChao && Input.GetKeyDown("space")){
+            rbPlayer.velocity = new Vector2(0, forcaPulo);
         }
     }
 
@@ -124,6 +127,7 @@ public class controladorJogador : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other){
         if(other.tag == "Pá"){
+            proxMusica = 1;
             podePa = true;
             Destroy(iconePa.GetComponent<IconesBehaviour>());
             iconePa.GetComponent<Image>().enabled = true;
@@ -144,6 +148,17 @@ public class controladorJogador : MonoBehaviour
 
     void VisualNormal(){
         renderer.color = new Color(255, 255, 255, 255);
+    }
+
+    void Musica()
+    {
+        //print(musicaAtual.clip.length - musicaAtual.time);
+        //if (musicaAtual.clip.length - musicaAtual.time <= 0.2f)
+        //{
+        //    musicas[proxMusica].Play();
+        //    musicaAtual = musicas[proxMusica];
+        //    proxMusica = 0;
+        //}
     }
 }
 

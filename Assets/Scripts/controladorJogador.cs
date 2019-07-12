@@ -10,6 +10,7 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private Sprite terra;
     [SerializeField] private SpriteRenderer balaoBaoba;
     [SerializeField] private Text contador;
+    public bool balde = false;
     private bool noChao, podePa = false, iconeUmaVez = true;
     private float movimento, velocidade, KB;    
     private int contBroto = 0;

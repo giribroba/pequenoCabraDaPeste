@@ -21,7 +21,12 @@ public class controladorJogador : MonoBehaviour
     private Rigidbody2D rbPlayer;
     private Collider2D colPlayer;
 
+    public AudioSource[] musicas;
+    private int proxMusica = 0;
+    private AudioSource musicaAtual;
+
     void Start(){
+        musicaAtual = musicas[0];
         podePa = false;
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
@@ -29,7 +34,7 @@ public class controladorJogador : MonoBehaviour
     }
 
     void Update(){
-        
+        Musica();
         movimento = Input.GetAxisRaw("Horizontal");
         Jump();
         Raycasts();
@@ -124,6 +129,7 @@ public class controladorJogador : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other){
         if(other.tag == "Pá"){
+            proxMusica = 1;
             podePa = true;
             Destroy(iconePa.GetComponent<IconesBehaviour>());
             iconePa.GetComponent<Image>().enabled = true;
@@ -144,6 +150,17 @@ public class controladorJogador : MonoBehaviour
 
     void VisualNormal(){
         renderer.color = new Color(255, 255, 255, 255);
+    }
+
+    void Musica()
+    {    
+        print(musicaAtual.clip.length - musicaAtual.time);
+        if(musicaAtual.clip.length - musicaAtual.time <= 0.2f)  
+        {
+            musicas[proxMusica].Play();
+            musicaAtual = musicas[proxMusica];
+            proxMusica = 0;
+        }      
     }
 }
 

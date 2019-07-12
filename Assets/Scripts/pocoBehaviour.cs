@@ -9,7 +9,7 @@ public class pocoBehaviour : MonoBehaviour
     [SerializeField] private Sprite[] sprites;
     private SpriteRenderer cRenderer;
     private bool balde, bPoco = false;
-    public float profundidade;
+    private float profundidade;
     private RaycastHit2D[] hit;
     private Animator cAnim;
 

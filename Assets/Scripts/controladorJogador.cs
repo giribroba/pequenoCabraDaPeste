@@ -121,8 +121,8 @@ public class controladorJogador : MonoBehaviour
     if(collision.gameObject.tag == "Cacto"){
             KB = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
             vida.GetComponent<Life>().DecrementLife();
-            renderer.color = new Color(200, 0, 0);
-            Invoke("VisualNormal", 0.5f);
+            GetComponent<DanoPlayerPisca>().Comeca();
+            Invoke("VisualNormal", 1f);
         }
     }
 
@@ -132,7 +132,7 @@ public class controladorJogador : MonoBehaviour
             podePa = true;
             Destroy(iconePa.GetComponent<IconesBehaviour>());
             iconePa.GetComponent<Image>().enabled = true;
-            iconePa.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            iconePa.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             iconeBroto.GetComponent<IconesBehaviour>().Comeca();
             Destroy(other.gameObject);
         }
@@ -148,7 +148,8 @@ public class controladorJogador : MonoBehaviour
     }
 
     void VisualNormal(){
-        renderer.color = new Color(255, 255, 255, 255);
+        GetComponent<DanoPlayerPisca>().QuebraRepeticao();
+        renderer.color = new Color(1, 1, 1, 1);
     }
 
     void Musica()

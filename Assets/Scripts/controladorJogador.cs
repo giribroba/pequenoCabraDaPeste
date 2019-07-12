@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class controladorJogador : MonoBehaviour
 {
     [SerializeField] private Vector3 limiteMin, limiteMax;
-    [SerializeField] private float velocidadeMaxima, forcaPulo;
+    [SerializeField] private float velocidadeMaxima, forcaPulo, KB;
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto;
     [SerializeField] private Sprite terra;
     [SerializeField] private SpriteRenderer balaoBaoba;
@@ -16,7 +16,7 @@ public class controladorJogador : MonoBehaviour
     private int contBroto = 0;
     private string balaoNoSim = "Broto";
     private Animator animator;
-    private RaycastHit2D hit;
+    private RaycastHit2D[] hit;
     private SpriteRenderer renderer; 
     private Rigidbody2D rbPlayer;
     private Collider2D colPlayer;
@@ -36,26 +36,30 @@ public class controladorJogador : MonoBehaviour
     }
 
     void Raycasts(){
-        hit = Physics2D.Raycast(transform.position - new Vector3(0, 0.8f), -transform.up, 0.5f);
+        hit = Physics2D.RaycastAll(transform.position - new Vector3(0, 0.8f), -transform.up, 0.1f);     
         noChao = Physics2D.OverlapCircle(transform.position - new Vector3(0,0.84f), 0.3f, LayerMask.GetMask("Chao"));
-        if (hit.collider != null){
-            if (hit.collider.gameObject.tag == "Broto"){
-                var other = hit.collider.gameObject;
-                if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && podePa){
-                    contBroto++;
-                    contador.text = contBroto.ToString();
-                    animator.SetTrigger("pasada");
-                    other.GetComponent<SpriteRenderer>().sprite = terra;
-                    Destroy(other.GetComponent<BoxCollider2D>());
-                    Destroy(iconeBroto.GetComponent<IconesBehaviour>());
-                    iconeBroto.GetComponent<Image>().enabled = true;
-                    iconeBroto.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+        for (int i = 0; i < hit.Length; i++)
+        {
+            if (hit[i].collider != null){
+                if (hit[i].collider.gameObject.tag == "Broto"){
+                    var other = hit[i].collider.gameObject;
+                    if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && podePa){
+                        contBroto++;
+                        contador.text = contBroto.ToString();
+                        animator.SetTrigger("pasada");
+                        other.GetComponent<SpriteRenderer>().sprite = terra;
+                        Destroy(other.GetComponent<BoxCollider2D>());
+                        Destroy(iconeBroto.GetComponent<IconesBehaviour>());
+                        iconeBroto.GetComponent<Image>().enabled = true;
+                        iconeBroto.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+                    }
+                    else if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && !podePa && iconeUmaVez){
+                        iconeUmaVez = false;
+                        iconePa.GetComponent<IconesBehaviour>().Comeca();
+                    }
                 }
-                else if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && !podePa && iconeUmaVez){
-                    iconeUmaVez = false;
-                    iconePa.GetComponent<IconesBehaviour>().Comeca();
-                }
-            }
+            }       
+        
         }
         
     }
@@ -65,8 +69,19 @@ public class controladorJogador : MonoBehaviour
     }
 
     void Move(){
-        planeta.transform.eulerAngles = new Vector3(planeta.transform.eulerAngles.x, planeta.transform.eulerAngles.y, planeta.transform.eulerAngles.z + velocidade);
-
+        planeta.transform.eulerAngles = new Vector3(planeta.transform.eulerAngles.x, planeta.transform.eulerAngles.y, planeta.transform.eulerAngles.z + velocidade + KB);
+        if (Mathf.Abs(KB) < 0.1f)
+        {
+            KB = 0;
+        }
+        else if (KB > 0)
+        {
+            KB -= Time.deltaTime * 1.5f;
+        }
+        else if (KB < 0)
+        {
+            KB += Time.deltaTime * 1.5f;
+        }
         if (movimento > 0){
             velocidade = (velocidade < velocidadeMaxima)? velocidade += Time.deltaTime * 1.5f : velocidade = velocidadeMaxima;
             animator.SetBool("walk", true);
@@ -100,7 +115,7 @@ public class controladorJogador : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
     if(collision.gameObject.tag == "Cacto"){
-            velocidade = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
+            KB = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
             vida.GetComponent<Life>().DecrementLife();
             renderer.color = new Color(200, 0, 0);
             Invoke("VisualNormal", 0.5f);

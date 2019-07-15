@@ -19,11 +19,13 @@ public class DanoPlayerPisca : MonoBehaviour
     public void Comeca(){
         InvokeRepeating("Despisca", 0.1f, 0.2f);
         InvokeRepeating("Pisca", 0.2f, 0.2f);
+        GetComponent<controladorJogador>().imortal = true;
     }
 
     public void QuebraRepeticao(){
         CancelInvoke("Pisca");
         CancelInvoke("Despisca");
+        GetComponent<controladorJogador>(). imortal = false;  
     }
     
 }

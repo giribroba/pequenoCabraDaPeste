@@ -10,7 +10,7 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private Sprite terra;
     [SerializeField] private SpriteRenderer balaoBaoba;
     [SerializeField] private Text contador;
-    public bool balde = false;
+    public bool balde = false, imortal = false;
     private bool noChao, podePa = false, iconeUmaVez = true;
     private float movimento, velocidade, KB;    
     private int contBroto = 0;
@@ -118,11 +118,11 @@ public class controladorJogador : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-    if(collision.gameObject.tag == "Cacto"){
+    if(collision.gameObject.tag == "Cacto" && !imortal){
             KB = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
             vida.GetComponent<Life>().DecrementLife();
             GetComponent<DanoPlayerPisca>().Comeca();
-            Invoke("VisualNormal", 1f);
+            Invoke("VisualNormal", 2f);
         }
     }
 

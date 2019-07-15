@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pocoBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject player, corda, gota;
+    [SerializeField] private GameObject player, corda, gota, iconeBalde;
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private int capacidade;
     private SpriteRenderer cRenderer;
@@ -39,11 +39,13 @@ public class pocoBehaviour : MonoBehaviour
                         cAgua = false;
                         player.GetComponent<controladorJogador>().balde = false;
                         bPoco = true;
+                        iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
                     }
                     else if(Input.GetKeyDown("e") && !balde && bPoco && profundidade <= 0)
                     {
                         bPoco = false;
                         player.GetComponent<controladorJogador>().balde = true;
+                        iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1, 0.5f);
                     }
                     if(bPoco)
                     {
@@ -69,6 +71,7 @@ public class pocoBehaviour : MonoBehaviour
                         }
                         else if(capacidade <= 0 && profundidade >= 1 && !cAgua)
                         {
+                            Feed();
                             cAgua = false;
                         }
                     }
@@ -78,9 +81,7 @@ public class pocoBehaviour : MonoBehaviour
         }
 
         void Feed(){
-            if (capacidade <= 0){
                 gota.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
-            }
         }
     }
 

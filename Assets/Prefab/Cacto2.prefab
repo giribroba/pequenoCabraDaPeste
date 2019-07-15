@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3205edb7ee51061419a065691ee325ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comeco: 0.5
+  comeco: 1
 --- !u!95 &7213534246206637326
 Animator:
   serializedVersion: 3

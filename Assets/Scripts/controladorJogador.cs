@@ -20,20 +20,16 @@ public class controladorJogador : MonoBehaviour
     private SpriteRenderer renderer; 
     private Rigidbody2D rbPlayer;
     private Collider2D colPlayer;
-
-    public AudioSource[] musicas;
-    private int proxMusica = 0;
-    private AudioSource musicaAtual;
+    public GameObject tocaSons;
 
     void Start(){
-        //musicaAtual = musicas[0];
+        tocaSons = GameObject.FindWithTag("Sound");
         podePa = false;
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         rbPlayer = GetComponent<Rigidbody2D>();
     }
     void Update(){
-        Musica();
         movimento = Input.GetAxisRaw("Horizontal");
         Jump();
         Raycasts();
@@ -113,12 +109,14 @@ public class controladorJogador : MonoBehaviour
     void Jump(){
         animator.SetBool("jump", !noChao);
         if (noChao && Input.GetKeyDown("space")){
+            tocaSons.GetComponent<Sons>().PlaySound("pulo");
             rbPlayer.velocity = new Vector2(0, forcaPulo);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision){
     if(collision.gameObject.tag == "Cacto" && !imortal){
+            tocaSons.GetComponent<Sons>().PlaySound("hit");
             KB = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
             vida.GetComponent<Life>().DecrementLife();
             GetComponent<DanoPlayerPisca>().Comeca();
@@ -128,7 +126,7 @@ public class controladorJogador : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other){
         if(other.tag == "Pá"){
-            proxMusica = 1;
+            tocaSons.GetComponent<Sons>().PlaySound("pá");
             podePa = true;
             Destroy(iconePa.GetComponent<IconesBehaviour>());
             iconePa.GetComponent<Image>().enabled = true;
@@ -150,17 +148,6 @@ public class controladorJogador : MonoBehaviour
     void VisualNormal(){
         GetComponent<DanoPlayerPisca>().QuebraRepeticao();
         renderer.color = new Color(1, 1, 1, 1);
-    }
-
-    void Musica()
-    {
-        //print(musicaAtual.clip.length - musicaAtual.time);
-        //if (musicaAtual.clip.length - musicaAtual.time <= 0.2f)
-        //{
-        //    musicas[proxMusica].Play();
-        //    musicaAtual = musicas[proxMusica];
-        //    proxMusica = 0;
-        //}
     }
 }
 

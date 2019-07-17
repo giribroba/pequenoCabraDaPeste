@@ -16,7 +16,6 @@ public class Sons : MonoBehaviour
 
     void Update()
     {
-        print(musicaAtual.clip.length - musicaAtual.time);
         if (musicaAtual.clip.length - musicaAtual.time <= 0.2f)
         {
            musicas[proxMusica].Play();

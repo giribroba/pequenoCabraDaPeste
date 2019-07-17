@@ -120,7 +120,7 @@ public class controladorJogador : MonoBehaviour
             KB = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
             vida.GetComponent<Life>().DecrementLife();
             GetComponent<DanoPlayerPisca>().Comeca();
-            Invoke("VisualNormal", 2f);
+            Invoke("VisualNormal", 1f);
         }
     }
 

@@ -9,10 +9,12 @@ public class Life : MonoBehaviour
     [SerializeField] private int maxLife;
     private int life;
     [SerializeField] GameObject[] spriteHearts;
+    [SerializeField] Animator menu;
 
     void Start() {
         life = maxLife;
-        StartCoroutine(LowerUpdate());    
+        StartCoroutine(LowerUpdate());
+        menu.SetBool("perde", false);
     }
 
     private void SetHearts(int curLife){
@@ -29,7 +31,7 @@ public class Life : MonoBehaviour
         if(life > maxLife)
             life = maxLife;
         else if(life <= 0)
-            Invoke("ResetScene", 1f);
+            Invoke("ResetScene", 0.2f);
     }
 
     IEnumerator LowerUpdate(){
@@ -40,6 +42,6 @@ public class Life : MonoBehaviour
     }
 
     void ResetScene(){
-        SceneManager.LoadScene(0);
+        menu.SetBool("perde", true);
     }
 }

@@ -114,13 +114,13 @@ public class controladorJogador : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
+    void OnCollisionStay2D(Collision2D collision){
     if(collision.gameObject.tag == "Cacto" && !imortal){
             tocaSons.GetComponent<Sons>().PlaySound("hit");
             KB = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
             vida.GetComponent<Life>().DecrementLife();
             GetComponent<DanoPlayerPisca>().Comeca();
-            Invoke("VisualNormal", 2f);
+            Invoke("VisualNormal", 1f);
         }
     }
 

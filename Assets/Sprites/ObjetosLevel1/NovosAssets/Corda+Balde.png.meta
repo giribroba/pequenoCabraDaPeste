@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 07202eee404f5284cbd4332ab912ac65
+guid: 6ae0ec15f43b45e479754dada6e23f90
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Corda_0
-    21300002: Corda_1
+    21300000: Corda+Balde_0
+    21300002: Corda+Balde_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -108,7 +108,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Corda_0
+      name: Corda+Balde_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,13 +122,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f05a10e2eef7483468588cae2ba77d1f
+      spriteID: e26d0a18d76877d4dabffe6df2d85927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corda_1
+      name: Corda+Balde_1
       rect:
         serializedVersion: 2
         x: 290
@@ -142,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e65e747f2425ebe4997ce7cd5feaa745
+      spriteID: acc3e6255afcd81409164fc9917ba0db
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1245c65c3e5ca2c4991b9bfb9407af07
+    spriteID: e4c576bc45df4454c959b6cd4986749a
     vertices: []
     indices: 
     edges: []

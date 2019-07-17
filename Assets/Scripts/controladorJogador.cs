@@ -10,9 +10,10 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private Sprite terra;
     [SerializeField] private SpriteRenderer balaoBaoba;
     [SerializeField] private Text contador;
-    public bool balde = false, imortal = false;
+    [HideInInspector]public float velocidade;
+    public bool balde = false, imortal = false, iVulcao;
     private bool noChao, podePa = false, iconeUmaVez = true;
-    private float movimento, velocidade, KB;    
+    private float movimento, KB;    
     private int contBroto = 0;
     private string balaoNoSim = "Broto";
     private Animator animator;
@@ -70,6 +71,7 @@ public class controladorJogador : MonoBehaviour
 
     void Move(){
         planeta.transform.eulerAngles = new Vector3(planeta.transform.eulerAngles.x, planeta.transform.eulerAngles.y, planeta.transform.eulerAngles.z + velocidade + KB);
+        animator.SetBool("walk", velocidade != 0);
         if (Mathf.Abs(KB) < 0.1f)
         {
             KB = 0;
@@ -84,12 +86,10 @@ public class controladorJogador : MonoBehaviour
         }
         if (movimento > 0){
             velocidade = (velocidade < velocidadeMaxima)? velocidade += Time.deltaTime * 1.5f : velocidade = velocidadeMaxima;
-            animator.SetBool("walk", true);
             renderer.flipX = false;
         }
         else if(movimento < 0){
             velocidade = (velocidade > -velocidadeMaxima)? velocidade -= Time.deltaTime * 1.5f : velocidade = -velocidadeMaxima;
-            animator.SetBool("walk", true);
             renderer.flipX = true;
         }
         else{
@@ -102,13 +102,12 @@ public class controladorJogador : MonoBehaviour
             else if(velocidade < 0){
                 velocidade += Time.deltaTime * 1.5f;
             }
-            animator.SetBool("walk", false);
         }
     }
 
     void Jump(){
         animator.SetBool("jump", !noChao);
-        if (noChao && Input.GetKeyDown("space")){
+        if (noChao && Input.GetKeyDown("space") && !iVulcao){
             tocaSons.GetComponent<Sons>().PlaySound("pulo");
             rbPlayer.velocity = new Vector2(0, forcaPulo);
         }

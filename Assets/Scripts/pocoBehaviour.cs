@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pocoBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject player, corda, gota, iconeBalde;
+    [SerializeField] private GameObject corda, gota, iconeBalde;
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private int capacidade;
     private SpriteRenderer cRenderer;

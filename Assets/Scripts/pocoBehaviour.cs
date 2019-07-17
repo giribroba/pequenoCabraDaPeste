@@ -8,7 +8,7 @@ public class pocoBehaviour : MonoBehaviour
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private int capacidade;
     private SpriteRenderer cRenderer;
-    private bool balde, cAgua = false, bPoco = false;
+    private bool cAgua = false, bPoco = false;
     private float profundidade;
     private RaycastHit2D[] hit;
     private Animator cAnim;
@@ -24,7 +24,6 @@ public class pocoBehaviour : MonoBehaviour
     void Update()
     {
         cRenderer.sprite = sprites[(profundidade <= 0 && bPoco)? ((cAgua)?2 : 1) : 0];
-        balde = player.GetComponent<controladorJogador>().balde;
         hit = Physics2D.CircleCastAll(transform.position, 1, -transform.up);        
         
         for (int i = 0; i < hit.Length; i++)
@@ -34,17 +33,17 @@ public class pocoBehaviour : MonoBehaviour
                 var other = hit[i].collider.gameObject;
                 if (other.tag == "Player")
                 {
-                    if(Input.GetKeyDown("e") && balde && !bPoco)
+                    if(Input.GetKeyDown("e") && other.GetComponent<controladorJogador>().balde && !bPoco)
                     {
                         cAgua = false;
-                        player.GetComponent<controladorJogador>().balde = false;
+                        other.GetComponent<controladorJogador>().balde = false;
                         bPoco = true;
                         iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
                     }
-                    else if(Input.GetKeyDown("e") && !balde && bPoco && profundidade <= 0)
+                    else if(Input.GetKeyDown("e") && !other.GetComponent<controladorJogador>().balde && bPoco && profundidade <= 0)
                     {
                         bPoco = false;
-                        player.GetComponent<controladorJogador>().balde = true;
+                        other.GetComponent<controladorJogador>().balde = true;
                         iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1, 0.5f);
                     }
                     if(bPoco)

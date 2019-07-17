@@ -32,6 +32,7 @@ public class Life : MonoBehaviour
             life = maxLife;
         else if(life <= 0)
             Invoke("ResetScene", 0.2f);
+            gameObject.GetComponent<AudioSource>().Play();
     }
 
     IEnumerator LowerUpdate(){

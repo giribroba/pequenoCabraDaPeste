@@ -16,6 +16,7 @@ public class Sons : MonoBehaviour
 
     void Update()
     {
+        //print(Random.Range(1, 4));
         //print(musicaAtual.clip.length - musicaAtual.time);
         if (musicaAtual.clip.length - musicaAtual.time <= 0.2f)
         {
@@ -30,10 +31,10 @@ public class Sons : MonoBehaviour
                 sons[0].Play();
                 break;
             case "pulo":
-                sons[1].Play();
+                sons[Random.Range(0, 4)].Play();
                 break;
             case "broto":
-                sons[2].Play();
+                sons[5].Play();
                 break;
             case "pá":
                 proxMusica = 1;

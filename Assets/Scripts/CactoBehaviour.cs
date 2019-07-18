@@ -6,13 +6,20 @@ public class CactoBehaviour : MonoBehaviour
 {
 
     private SpriteRenderer renderer;
+    private GameObject player;
     private EdgeCollider2D cactoCol;
     [SerializeField] private float comeco;
     public AudioSource[] somEspinho;
     void Start(){
+        player = GameObject.FindWithTag("Player");
         renderer = GetComponent<SpriteRenderer>();
         cactoCol = GetComponent<EdgeCollider2D>();
         Invoke("Comeca", comeco);
+    }
+
+    void Update()
+    {
+        GetComponent<EdgeCollider2D>().enabled = !(player.GetComponent<controladorJogador>().imortal);
     }
 
     void Comeca(){

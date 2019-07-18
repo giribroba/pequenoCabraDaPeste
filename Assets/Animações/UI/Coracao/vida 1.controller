@@ -8,6 +8,10 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: vida 1
   serializedVersion: 5
+<<<<<<< HEAD
+  m_AnimatorParameters: []
+  m_AnimatorLayers: []
+=======
   m_AnimatorParameters:
   - m_Name: Broken
     m_Type: 9
@@ -131,3 +135,4 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102748995549876032}
+>>>>>>> 5554670c98c03158278a9b5e49897a0e968914bd

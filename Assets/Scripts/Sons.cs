@@ -32,9 +32,13 @@ public class Sons : MonoBehaviour
             case "pulo":
                 sons[1].Play();
                 break;
+            case "broto":
+                sons[2].Play();
+                break;
             case "pá":
                 proxMusica = 1;
                 break;
+            
         }
     }
 }

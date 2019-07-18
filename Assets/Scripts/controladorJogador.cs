@@ -45,6 +45,7 @@ public class controladorJogador : MonoBehaviour
                 if (hit[i].collider.gameObject.tag == "Broto"){
                     var other = hit[i].collider.gameObject;
                     if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && podePa){
+                        tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;
                         contador.text = (contBroto.ToString() + "/3");
                         animator.SetTrigger("pasada");

@@ -13,16 +13,14 @@ public class pocoBehaviour : MonoBehaviour
     private RaycastHit2D[] hit;
     private Animator cAnim;
 
-    void Start()
-    {
+    void Start(){
         cRenderer = corda.GetComponent<SpriteRenderer>();
         cAnim = corda.GetComponent<Animator>();
         cAnim.enabled = false;
         cRenderer.sprite = sprites[0];
     }
     
-    void Update()
-    {
+    void Update(){
         cRenderer.sprite = sprites[(profundidade <= 0 && bPoco)? ((cAgua)?2 : 1) : 0];
         hit = Physics2D.CircleCastAll(transform.position, 1, -transform.up);        
         
@@ -79,9 +77,22 @@ public class pocoBehaviour : MonoBehaviour
             
         }
 
-        void Feed(){
-                gota.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
-        }
     }
 
+    void Feed(){
+        gota.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision){
+        if(collision.tag == "Player"){
+            gota.GetComponent<SpriteRenderer>().enabled = true;
+            iconeBalde.GetComponent<SpriteRenderer>().enabled = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision){
+        if (collision.tag == "Player"){
+            gota.GetComponent<SpriteRenderer>().enabled = false;
+            iconeBalde.GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
 }

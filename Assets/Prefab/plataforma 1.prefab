@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7065140858737422138}
   - component: {fileID: 7065140858737422137}
   - component: {fileID: 1388171994764498257}
+  - component: {fileID: 7476503474175128840}
   m_Layer: 0
   m_Name: plataforma 1
   m_TagString: Untagged
@@ -111,3 +112,15 @@ EdgeCollider2D:
   - {x: 1.4562564, y: 2.2850266}
   - {x: 2.670841, y: 1.9211514}
   - {x: 4.66019, y: 1.1178344}
+--- !u!114 &7476503474175128840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7065140858737422136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b26713d6ebade49860bba9878d6f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

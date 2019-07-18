@@ -13,4 +13,8 @@ public class Camera : MonoBehaviour
         var posZ = Vector3.Lerp(transform.position, player.transform.position, 0.0075f);
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(novaCamPos.y, limiteMin, limiteMax), Mathf.Clamp(posZ.z, zoomMin, zoomMax)); 
     }
+
+    private void Kkk(){
+        
+    }
 }

@@ -19,7 +19,7 @@ public class CactoBehaviour : MonoBehaviour
 
     void Update()
     {
-        GetComponent<EdgeCollider2D>().enabled = !(player.GetComponent<controladorJogador>().imortal);
+        //GetComponent<EdgeCollider2D>().enabled = !(player.GetComponent<controladorJogador>().imortal);
     }
 
     void Comeca(){

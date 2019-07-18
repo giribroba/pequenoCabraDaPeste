@@ -31,7 +31,7 @@ public class Sons : MonoBehaviour
                 sons[0].Play();
                 break;
             case "pulo":
-                sons[Random.Range(0, 4)].Play();
+                sons[Random.Range(1, 4)].Play();
                 break;
             case "broto":
                 sons[5].Play();

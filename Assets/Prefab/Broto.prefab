@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5647288190311588609}
   - component: {fileID: 8634342813248610616}
   m_Layer: 0
-  m_Name: broto (1)
+  m_Name: PrimeiroBrotoComBalao
   m_TagString: Broto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.51165307, w: 0.8591922}
   m_LocalPosition: {x: 129.44, y: -78.81, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1.5948503}
-  m_Children:
-  - {fileID: 2492068309048484952}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -61.548004}
@@ -120,78 +119,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b26713d6ebade49860bba9878d6f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1227794339
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 5647288190311588610}
-    m_Modifications:
-    - target: {fileID: 2492068307859489785, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_Name
-      value: BalaozinBaoba
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0035238601
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99999386
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.404
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ed22ae5e727b4d14facfd49c6ff84fe4, type: 3}
---- !u!4 &2492068309048484952 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1227794339}
-  m_PrefabAsset: {fileID: 0}

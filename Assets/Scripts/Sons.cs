@@ -21,7 +21,8 @@ public class Sons : MonoBehaviour
     {              
         musicas[0].volume = (musicas[0].volume >= 0.3f) ? 0.3f : musicas[0].volume;     
         musicas[1].volume = (musicas[1].volume >= 0.5f) ? 0.5f : musicas[1].volume;      
-        musicas[3].volume = (musicas[3].volume >= 0.5f) ? 0.5f : musicas[3].volume;       
+        musicas[3].volume = (musicas[3].volume >= 0.5f) ? 0.5f : musicas[3].volume; 
+        musicas[4].volume = (musicas[4].volume >= 0.5f) ? 0.5f : musicas[4].volume;       
         
         if( changeSong && musicas[iAu].isPlaying && musicas[iAu].clip.length - musicas[iAu].time <= 2){   
             iAb = iAu; 
@@ -53,14 +54,11 @@ public class Sons : MonoBehaviour
                 sons[5].Play();
                 break;
             case "pá":
-                musicas[1].Play();
-                musicas[1].volume = 0.1f;
-                iAu = 1;
-                StartCoroutine("AumentarVolume");
-                iAb = (musicas[3].isPlaying) ? 3 : 0;
-                StartCoroutine("AbaixarVolume");
-                //evento = som;
-                break;            
+                NextMusic(1);
+                break;  
+            case "rosa":
+                NextMusic(4);
+                break;
         }
     }
     IEnumerator AbaixarVolume(){
@@ -76,6 +74,18 @@ public class Sons : MonoBehaviour
             musicas[iAu].volume += 0.002f;
         }
         changeSong = true;
+    }
+    void NextMusic(int i){
+        StopCoroutine("AumentarVolume");                
+        StopCoroutine("AbaixarVolume");
+        if(musicas[1].isPlaying){iAb = 1;}
+        else if(musicas[3].isPlaying){iAb = 3;}
+        else if(musicas[4].isPlaying){iAb = 4;}        
+        musicas[i].Play();
+        musicas[i].volume = 0.1f;
+        iAu = i;
+        StartCoroutine("AumentarVolume");
+        StartCoroutine("AbaixarVolume");
     }
     
 }

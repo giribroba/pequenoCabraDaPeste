@@ -37,8 +37,8 @@ public class controladorJogador : MonoBehaviour
     }
 
     void Raycasts(){
-        hit = Physics2D.RaycastAll(transform.position - new Vector3(0, 0.8f), -transform.up, 0.1f);     
-        noChao = Physics2D.OverlapCircle(transform.position - new Vector3(0,0.84f), 0.3f, LayerMask.GetMask("Chao"));
+        hit = Physics2D.RaycastAll(transform.position - new Vector3(0, 0.8f), -transform.up, 0.7f);     
+        noChao = Physics2D.OverlapCircle(transform.position - new Vector3(0,0.84f), 0.7f, LayerMask.GetMask("Chao"));
         for (int i = 0; i < hit.Length; i++)
         {
             if (hit[i].collider != null){

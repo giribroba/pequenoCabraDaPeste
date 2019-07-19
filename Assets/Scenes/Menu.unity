@@ -318,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   som: {fileID: 642555547}
   botaoNovo: {fileID: 21300000, guid: cd938d1d4466e1d418440227b5502337, type: 3}
+  trocaAsset: 1
 --- !u!82 &642555547
 AudioSource:
   m_ObjectHideFlags: 0
@@ -572,6 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   som: {fileID: 726027836}
   botaoNovo: {fileID: 21300000, guid: 3351032497ef0544d904c19f0b465469, type: 3}
+  trocaAsset: 1
 --- !u!114 &726027835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,6 +1252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   som: {fileID: 1976773858}
   botaoNovo: {fileID: 21300000, guid: f8f5b9d4e0a188c4bb33fb6408b81c0b, type: 3}
+  trocaAsset: 1
 --- !u!82 &1976773858
 AudioSource:
   m_ObjectHideFlags: 0

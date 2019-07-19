@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MenuBotoesBehaviour : MonoBehaviour
 {
+    [SerializeField] private AudioSource som;
     [SerializeField] private Sprite botaoNovo;
     private Sprite botaoNormal;
     private Image img;
@@ -17,6 +18,7 @@ public class MenuBotoesBehaviour : MonoBehaviour
     public void Aumenta(){
         transform.localScale *= 1.2f;
         img.sprite = botaoNovo;
+        som.Play();
     }
 
     public void Normal(){

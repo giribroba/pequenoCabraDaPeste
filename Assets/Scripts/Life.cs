@@ -44,6 +44,6 @@ public class Life : MonoBehaviour
 
     void ResetScene(){
         menu.SetBool("perde", true);
-        Destroy(GameObject.FindWithTag("Player"));
+        GameObject.FindWithTag("Player").SetActive(false);
     }
 }

@@ -7,8 +7,10 @@ public class MenuBotoesBehaviour : MonoBehaviour
 {
     [SerializeField] private AudioSource som;
     [SerializeField] private Sprite botaoNovo;
+    [SerializeField] private bool trocaAsset;
     private Sprite botaoNormal;
     private Image img;
+
 
     void Start(){
         img = GetComponent<Image>();
@@ -17,12 +19,15 @@ public class MenuBotoesBehaviour : MonoBehaviour
 
     public void Aumenta(){
         transform.localScale *= 1.2f;
-        img.sprite = botaoNovo;
         som.Play();
+        if(trocaAsset)
+            img.sprite = botaoNovo;
+        //TODO: impedir que o som seja sobrescrito
     }
 
     public void Normal(){
         transform.localScale /= 1.2f;
-        img.sprite = botaoNormal;
+        if (trocaAsset)
+            img.sprite = botaoNormal;
     }
 }

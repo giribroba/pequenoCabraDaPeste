@@ -10,6 +10,7 @@ public class vulcaoBehaviour : MonoBehaviour
     private RaycastHit2D[] hit;
     private int nivel = 1;
     private bool direita = true, move = true;
+    [SerializeField] private AudioSource cavar;
 
     void Start()
     {
@@ -73,6 +74,7 @@ public class vulcaoBehaviour : MonoBehaviour
                                     case 3:
                                     if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
                                     {
+                                        GameObject.FindWithTag("Sound").GetComponent<Sons>().PlaySound("vulcao");
                                         Destroy(gameObject);
                                     }
                                     else

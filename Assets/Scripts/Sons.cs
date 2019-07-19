@@ -20,9 +20,9 @@ public class Sons : MonoBehaviour
     void Update()
     {              
         musicas[0].volume = (musicas[0].volume >= 0.3f) ? 0.3f : musicas[0].volume;     
-        musicas[1].volume = (musicas[1].volume >= 0.5f) ? 0.5f : musicas[1].volume;      
-        musicas[3].volume = (musicas[3].volume >= 0.5f) ? 0.5f : musicas[3].volume; 
-        musicas[4].volume = (musicas[4].volume >= 0.5f) ? 0.5f : musicas[4].volume;       
+        musicas[1].volume = (musicas[1].volume >= 0.4f) ? 0.4f : musicas[1].volume;      
+        musicas[3].volume = (musicas[3].volume >= 0.4f) ? 0.4f : musicas[3].volume; 
+        musicas[4].volume = (musicas[4].volume >= 0.4f) ? 0.4f : musicas[4].volume;       
         
         if( changeSong && musicas[iAu].isPlaying && musicas[iAu].clip.length - musicas[iAu].time <= 2){   
             iAb = iAu; 
@@ -52,6 +52,9 @@ public class Sons : MonoBehaviour
                 break;
             case "broto":
                 sons[5].Play();
+                break;
+            case "vulcao":
+                sons[6].Play();
                 break;
             case "pá":
                 NextMusic(1);

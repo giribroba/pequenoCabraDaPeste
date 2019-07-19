@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class Life : MonoBehaviour
 {
     [SerializeField] private int maxLife;
-    private int life;
     [SerializeField] GameObject[] spriteHearts;
     [SerializeField] Animator menu;
+    private int life;
 
     void Start() {
         life = maxLife;
@@ -44,5 +44,6 @@ public class Life : MonoBehaviour
 
     void ResetScene(){
         menu.SetBool("perde", true);
+        GameObject.FindWithTag("Player").SetActive(false);
     }
 }

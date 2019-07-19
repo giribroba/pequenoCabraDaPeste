@@ -6,9 +6,10 @@ public class vulcaoBehaviour : MonoBehaviour
 {
     [SerializeField] private Sprite[] sNivel;
     [SerializeField] private GameObject indicador, barra;
+    [SerializeField] private float[] velocidadeBarra;
     private RaycastHit2D[] hit;
-    private int nivel = 3;
-    private bool direita = true, interagindo = false, move = true;
+    private int nivel = 1;
+    private bool direita = true, move = true;
 
     void Start()
     {
@@ -28,36 +29,32 @@ public class vulcaoBehaviour : MonoBehaviour
                 //colisões
                 if(other.tag == "Player")
                 {
-                    indicador.GetComponent<SpriteRenderer>().enabled = true;
-                    barra.GetComponent<SpriteRenderer>().enabled = true;
-                    other.GetComponent<controladorJogador>().iVulcao = interagindo;
-                    if(interagindo)
+                    indicador.GetComponent<SpriteRenderer>().enabled = other.GetComponent<controladorJogador>().podePa;
+                    barra.GetComponent<SpriteRenderer>().enabled = other.GetComponent<controladorJogador>().podePa;
+                    if(other.GetComponent<controladorJogador>().podePa)
                     {
-                        other.GetComponent<controladorJogador>().velocidade = 0;
                         if(direita && move)
                         {
-                            indicador.transform.Translate(Vector3.right * Time.deltaTime);
+                            indicador.transform.Translate(Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
                             direita = (indicador.transform.localPosition.x < 4.8f);
                         }
                         else if(!direita && move)
                         {
-                            indicador.transform.Translate(-Vector3.right * Time.deltaTime);
+                            indicador.transform.Translate(-Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
                             direita = (indicador.transform.localPosition.x <= -4.8f);
                         }
                         if(Input.GetKeyDown("e") && move)
                         {
                             switch(nivel)
                             {
-                                case 3:
+                                case 1:
                                     if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
                                     {
                                         StartCoroutine(Pisca(new Color(0.5f, 1, 0.5f, 1)));
-                                        nivel--;
-                                        indicador.transform.localPosition = Vector2.zero;
+                                        nivel++;
                                     }
                                     else
                                     {
-                                        indicador.transform.localPosition = Vector2.zero;
                                         StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
                                     }
                                 break;    
@@ -65,38 +62,27 @@ public class vulcaoBehaviour : MonoBehaviour
                                     if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
                                     {
                                         StartCoroutine(Pisca(new Color(0.5f, 1, 0.5f, 1)));
-                                        nivel--;
-                                        indicador.transform.localPosition = Vector2.zero;
+                                        nivel++;
                                     }
                                     else
                                     {
-                                        indicador.transform.localPosition = Vector2.zero;
                                         StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
-                                        nivel = 3;
+                                        nivel = 1;
                                     }
                                 break;
-                                    case 1:
+                                    case 3:
                                     if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
                                     {
                                         Destroy(gameObject);
                                     }
                                     else
                                     {
-                                        indicador.transform.localPosition = Vector2.zero;
                                         StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
-                                        nivel = 3;
+                                        nivel = 1;
                                     }
                                 break;
                             }
                         }
-                        if(Input.GetKeyDown("q"))
-                        {
-                            interagindo = false;
-                        }
-                    }
-                    if(Input.GetKeyDown("e"))
-                    {
-                        interagindo = true;
                     }    
                 }
             }
@@ -113,6 +99,7 @@ public class vulcaoBehaviour : MonoBehaviour
         barra.GetComponent<SpriteRenderer>().color = cor;
         yield return new WaitForSeconds(0.5f);
         barra.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
+        indicador.transform.localPosition = Vector2.zero;
         move = true;
     }
 }

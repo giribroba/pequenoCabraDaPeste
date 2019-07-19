@@ -11,8 +11,8 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private SpriteRenderer balaoBaoba;
     [SerializeField] private Text contador;
     [HideInInspector]public float velocidade;
-    public bool balde = false, imortal = false, iVulcao;
-    private bool noChao, podePa = false, iconeUmaVez = true;
+    public bool balde = false, imortal = false, podePa = false;
+    private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
     private int contBroto = 0;
     private string balaoNoSim = "Broto";
@@ -108,7 +108,7 @@ public class controladorJogador : MonoBehaviour
 
     void Jump(){
         animator.SetBool("jump", !noChao);
-        if (noChao && Input.GetKeyDown("space") && !iVulcao){
+        if (noChao && Input.GetKeyDown("space")){
             tocaSons.GetComponent<Sons>().PlaySound("pulo");
             rbPlayer.velocity = new Vector2(0, forcaPulo);
         }

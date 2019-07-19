@@ -43,7 +43,7 @@ public class vulcaoBehaviour : MonoBehaviour
                             indicador.transform.Translate(-Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
                             direita = (indicador.transform.localPosition.x <= -4.8f);
                         }
-                        if(Input.GetKeyDown("e") && move)
+                        if(Input.GetButtonDown("Fire1") && move)
                         {
                             switch(nivel)
                             {

@@ -44,7 +44,7 @@ public class controladorJogador : MonoBehaviour
             if (hit[i].collider != null){
                 if (hit[i].collider.gameObject.tag == "Broto"){
                     var other = hit[i].collider.gameObject;
-                    if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && podePa){
+                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa){
                         tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;
                         contador.text = (contBroto.ToString() + "/3");
@@ -108,7 +108,7 @@ public class controladorJogador : MonoBehaviour
 
     void Jump(){
         animator.SetBool("jump", !noChao);
-        if (noChao && Input.GetKeyDown("space")){
+        if (noChao && Input.GetButtonDown("Jump")){
             tocaSons.GetComponent<Sons>().PlaySound("pulo");
             rbPlayer.velocity = new Vector2(0, forcaPulo);
         }

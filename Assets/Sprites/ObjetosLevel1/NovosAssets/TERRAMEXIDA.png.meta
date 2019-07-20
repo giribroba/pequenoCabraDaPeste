@@ -81,6 +81,28 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -88,10 +110,10 @@ TextureImporter:
       name: TERRAMEXIDA_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 192
-        width: 410
-        height: 107
+        x: 147
+        y: 472
+        width: 1035
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de710857d394e4341a739ab80276cbd0
+      spriteID: 7d92165d51f95af409080a0a690d00be
       vertices: []
       indices: 
       edges: []
@@ -107,7 +129,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7904461e3a3c6eb4087a27d0ca9a4b76
+    spriteID: 065bcef74df14424b874187aff46d414
     vertices: []
     indices: 
     edges: []

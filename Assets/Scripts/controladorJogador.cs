@@ -51,6 +51,7 @@ public class controladorJogador : MonoBehaviour
                         contador.text = (contBroto.ToString() + "/6");
                         animator.SetTrigger("pasada");
                         other.GetComponent<SpriteRenderer>().sprite = terra;
+                        other.GetComponent<Transform>().localScale /= 2;
                         Destroy(other.GetComponent<BoxCollider2D>());
                         iconeBroto.GetComponent<IconesBehaviour>().QuebraRepeticao();
                         iconeBroto.GetComponent<Image>().enabled = true;

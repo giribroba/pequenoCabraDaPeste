@@ -9,7 +9,7 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private SpriteRenderer balaoBaoba;
-    [SerializeField] private Text contador;
+    public Text contador;
     [HideInInspector]public float velocidade;
     public bool balde = false, imortal = false, podePa = false;
     private bool noChao, iconeUmaVez = true;

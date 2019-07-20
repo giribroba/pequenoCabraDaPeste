@@ -13,10 +13,15 @@ public class IconesBehaviour : MonoBehaviour
         InvokeRepeating("Despisca", 0.5f, 1f);
         InvokeRepeating("Pisca", 1f, 1f);
     }
-    void Pisca(){
+    public void Pisca(){
         img.enabled = true;
     }
     void Despisca(){
         img.enabled = false;
+    }
+    public void QuebraRepeticao()
+    {
+        CancelInvoke("Pisca");
+        CancelInvoke("Despisca");
     }
 }

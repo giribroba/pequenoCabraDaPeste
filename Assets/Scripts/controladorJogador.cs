@@ -14,7 +14,7 @@ public class controladorJogador : MonoBehaviour
     public bool balde = false, imortal = false, podePa = false;
     private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
-    public int contBroto = 0;
+    public int contBroto = 0, contVulcao;
     private string balaoNoSim = "Broto";
     private Animator animator;
     private RaycastHit2D[] hit;
@@ -44,29 +44,36 @@ public class controladorJogador : MonoBehaviour
             if (hit[i].collider != null){
                 if (hit[i].collider.gameObject.tag == "Broto"){
                     var other = hit[i].collider.gameObject;
-                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa){
+                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6))
+                    {
                         tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;
                         contador.text = (contBroto.ToString() + "/6");
                         animator.SetTrigger("pasada");
                         other.GetComponent<SpriteRenderer>().sprite = terra;
                         Destroy(other.GetComponent<BoxCollider2D>());
-                        Destroy(iconeBroto.GetComponent<IconesBehaviour>());
+                        iconeBroto.GetComponent<IconesBehaviour>().QuebraRepeticao();
                         iconeBroto.GetComponent<Image>().enabled = true;
-                        iconeBroto.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+                        iconeBroto.GetComponent<Image>().color = new Color(1, 1, 1, 1);
                     }
                     else if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && !podePa && iconeUmaVez){
                         iconeUmaVez = false;
                         iconePa.GetComponent<IconesBehaviour>().Comeca();
                     }
                 }
-            }       
-        
+            }
+            if (contBroto == 6){
+                contador.text = (contVulcao.ToString() + "/5");
+                iconeBroto.GetComponent<Image>().sprite = imgVulcao;
+                iconeBroto.GetComponent<IconesBehaviour>().Comeca();
+                contBroto++;
+            }
         }
-        if(contBroto >= 1){
-            iconeBroto.GetComponent<Image>().sprite = imgVulcao;
-        }
         
+    }
+    public void VulcaoDespisca(){
+        iconeBroto.GetComponent<IconesBehaviour>().QuebraRepeticao();
+        iconeBroto.GetComponent<IconesBehaviour>().Pisca();
     }
 
     void FixedUpdate(){

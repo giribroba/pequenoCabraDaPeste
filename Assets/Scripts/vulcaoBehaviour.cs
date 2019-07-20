@@ -29,7 +29,7 @@ public class vulcaoBehaviour : MonoBehaviour
             {
                 var other = i.collider.gameObject;
                 //colisões
-                if(other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 1)
+                if(other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6)
                 {
                     p = other.GetComponent<controladorJogador>();
                     indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
@@ -77,7 +77,9 @@ public class vulcaoBehaviour : MonoBehaviour
                                     if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
                                     {
                                         GameObject.FindWithTag("Sound").GetComponent<Sons>().PlaySound("vulcao");
+                                        p.VulcaoDespisca();
                                         Destroy(gameObject);
+                                        p.contVulcao++;
                                     }
                                     else
                                     {

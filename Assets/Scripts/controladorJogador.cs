@@ -7,14 +7,14 @@ public class controladorJogador : MonoBehaviour
 {
     [SerializeField] private float velocidadeMaxima, forcaPulo;
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto;
-    [SerializeField] private Sprite terra;
+    [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private SpriteRenderer balaoBaoba;
     [SerializeField] private Text contador;
     [HideInInspector]public float velocidade;
     public bool balde = false, imortal = false, podePa = false;
     private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
-    private int contBroto = 0;
+    public int contBroto = 0;
     private string balaoNoSim = "Broto";
     private Animator animator;
     private RaycastHit2D[] hit;
@@ -47,7 +47,7 @@ public class controladorJogador : MonoBehaviour
                     if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa){
                         tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;
-                        contador.text = (contBroto.ToString() + "/3");
+                        contador.text = (contBroto.ToString() + "/6");
                         animator.SetTrigger("pasada");
                         other.GetComponent<SpriteRenderer>().sprite = terra;
                         Destroy(other.GetComponent<BoxCollider2D>());
@@ -62,6 +62,9 @@ public class controladorJogador : MonoBehaviour
                 }
             }       
         
+        }
+        if(contBroto >= 1){
+            iconeBroto.GetComponent<Image>().sprite = imgVulcao;
         }
         
     }

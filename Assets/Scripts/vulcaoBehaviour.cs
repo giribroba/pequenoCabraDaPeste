@@ -10,6 +10,7 @@ public class vulcaoBehaviour : MonoBehaviour
     private RaycastHit2D[] hit;
     private int nivel = 1;
     private bool direita = true, move = true;
+    private controladorJogador p;
     [SerializeField] private AudioSource cavar;
 
     void Start()
@@ -28,11 +29,12 @@ public class vulcaoBehaviour : MonoBehaviour
             {
                 var other = i.collider.gameObject;
                 //colisões
-                if(other.tag == "Player")
+                if(other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 1)
                 {
-                    indicador.GetComponent<SpriteRenderer>().enabled = other.GetComponent<controladorJogador>().podePa;
-                    barra.GetComponent<SpriteRenderer>().enabled = other.GetComponent<controladorJogador>().podePa;
-                    if(other.GetComponent<controladorJogador>().podePa)
+                    p = other.GetComponent<controladorJogador>();
+                    indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
+                    barra.GetComponent<SpriteRenderer>().enabled = p.podePa;
+                    if(p.podePa)
                     {
                         if(direita && move)
                         {

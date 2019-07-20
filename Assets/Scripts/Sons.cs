@@ -71,7 +71,6 @@ public class Sons : MonoBehaviour
         }
     }
     IEnumerator AumentarVolume(){
-        print(iAu);
         for(int i = 0; i < 500; i++){
             yield return new WaitForSeconds(0.01f);
             musicas[iAu].volume += 0.002f;

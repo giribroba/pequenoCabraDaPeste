@@ -118,18 +118,18 @@ TextureImporter:
       name: "Parada\xE7o_0"
       rect:
         serializedVersion: 2
-        x: 5
-        y: 20
-        width: 465
-        height: 822
+        x: 0
+        y: 16
+        width: 521
+        height: 833
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 5, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5900f53859deb4a46a4a0a7504a43a5d
+      spriteID: e606fff28d671d740a9df85af3a2458c
       vertices: []
       indices: 
       edges: []
@@ -138,18 +138,18 @@ TextureImporter:
       name: "Parada\xE7o_1"
       rect:
         serializedVersion: 2
-        x: 667
-        y: 20
-        width: 465
-        height: 822
+        x: 748
+        y: 16
+        width: 525
+        height: 833
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e624dac058dce346ad89dbf8ec3abc7
+      spriteID: cafaf7079c3bc754b8dd6e5e79937f4f
       vertices: []
       indices: 
       edges: []
@@ -158,18 +158,18 @@ TextureImporter:
       name: "Parada\xE7o_2"
       rect:
         serializedVersion: 2
-        x: 1337
-        y: 20
-        width: 465
-        height: 822
+        x: 1506
+        y: 16
+        width: 520
+        height: 833
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25864013a497ec944897b17025e21632
+      spriteID: 0937449cbeea6244e9bbbdb3b7f7a359
       vertices: []
       indices: 
       edges: []
@@ -178,18 +178,18 @@ TextureImporter:
       name: "Parada\xE7o_3"
       rect:
         serializedVersion: 2
-        x: 1995
-        y: 20
-        width: 465
-        height: 822
+        x: 2261
+        y: 16
+        width: 521
+        height: 828
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40273ebdffd090f43bb0136ff0294773
+      spriteID: 2074a1937ffdb9748b88fe00b1b4266c
       vertices: []
       indices: 
       edges: []
@@ -198,18 +198,18 @@ TextureImporter:
       name: "Parada\xE7o_4"
       rect:
         serializedVersion: 2
-        x: 2667
-        y: 20
-        width: 465
-        height: 822
+        x: 3018
+        y: 16
+        width: 521
+        height: 828
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 803cce216f490a041bd2a48e93d666c9
+      spriteID: 4d28c0a51b0dd9540a6b93a3449e2c0a
       vertices: []
       indices: 
       edges: []
@@ -218,18 +218,18 @@ TextureImporter:
       name: "Parada\xE7o_5"
       rect:
         serializedVersion: 2
-        x: 3329
-        y: 20
-        width: 465
-        height: 822
+        x: 3774
+        y: 16
+        width: 518
+        height: 833
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb798ec4c0fbce747aebcea85686cf9e
+      spriteID: 0b7079d6b4bf405428411a14715509ec
       vertices: []
       indices: 
       edges: []
@@ -238,18 +238,18 @@ TextureImporter:
       name: "Parada\xE7o_6"
       rect:
         serializedVersion: 2
-        x: 3995
-        y: 20
-        width: 466
-        height: 822
+        x: 4527
+        y: 16
+        width: 521
+        height: 828
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c570f535d333e64fbfe40da789a2f8d
+      spriteID: 95b411855ec62604ba87d31326ef3e9c
       vertices: []
       indices: 
       edges: []
@@ -258,38 +258,18 @@ TextureImporter:
       name: "Parada\xE7o_7"
       rect:
         serializedVersion: 2
-        x: 4663
-        y: 20
-        width: 476
-        height: 822
+        x: 5283
+        y: 16
+        width: 517
+        height: 828
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01e9f6f4d8ec57346aa03b1b3039d6c3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Parada\xE7o_8"
-      rect:
-        serializedVersion: 2
-        x: 5324
-        y: 19
-        width: 465
-        height: 822
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa369338ae7823f4d9315350439c91a3
+      spriteID: 869ea2dc433e4a5449fcaed049b6eebb
       vertices: []
       indices: 
       edges: []

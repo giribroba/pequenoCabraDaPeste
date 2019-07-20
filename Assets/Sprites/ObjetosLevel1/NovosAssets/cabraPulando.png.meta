@@ -1,15 +1,11 @@
 fileFormatVersion: 2
-guid: 77fc619bc3b55e34bacd799c0b8ec5f3
+guid: ed73c76ebaa8acb48aaa847f87ae67b0
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pEQUENO-BROTHER-2_0
-    21300002: pEQUENO-BROTHER-2_1
-    21300004: pEQUENO-BROTHER-2_2
-    21300006: pEQUENO-BROTHER-2_3
-    21300008: pEQUENO-BROTHER-2_4
-    21300010: pEQUENO-BROTHER-2_5
-    21300012: pEQUENO-BROTHER-2_6
-    21300014: pEQUENO-BROTHER-2_7
+    21300000: cabraPulando_0
+    21300002: cabraPulando_1
+    21300004: cabraPulando_2
+    21300006: cabraPulando_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -114,32 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_0
+      name: cabraPulando_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 54
-        width: 457
-        height: 752
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac7b9f9307070d441ab094142d42e660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_1
-      rect:
-        serializedVersion: 2
-        x: 595
-        y: 60
-        width: 460
+        y: 57
+        width: 455
         height: 746
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -148,119 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5342b8121726f3a499131842072a9ba7
+      spriteID: 8d7cac8441e89e545a02fc73a4bbe1f0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_2
+      name: cabraPulando_1
       rect:
         serializedVersion: 2
-        x: 1193
-        y: 51
-        width: 460
-        height: 758
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8167ec97acf326f449ea3d5b80a0a086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_3
-      rect:
-        serializedVersion: 2
-        x: 1791
-        y: 55
-        width: 460
-        height: 751
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d390538ca421b8d4f8ac87e687088960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_4
-      rect:
-        serializedVersion: 2
-        x: 2389
-        y: 54
-        width: 460
-        height: 753
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ce5a4fa55e94a84ba65356d3d6bc4d2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_5
-      rect:
-        serializedVersion: 2
-        x: 2987
-        y: 63
-        width: 460
-        height: 734
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 004e8ca662415c545a7b05b4d58ff24c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_6
-      rect:
-        serializedVersion: 2
-        x: 3579
-        y: 63
-        width: 472
-        height: 730
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12afb2809cba5b343bf2412d504acf2f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pEQUENO-BROTHER-2_7
-      rect:
-        serializedVersion: 2
-        x: 4183
-        y: 60
+        x: 625
+        y: 67
         width: 457
-        height: 740
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,7 +144,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73a7a4f66478e8845b86d4b942418fb8
+      spriteID: 98b92b7f2e4b7854785ddbbe20ce3485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabraPulando_2
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 52
+        width: 459
+        height: 748
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0200659495e07b7438ebb711b58b7fe4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabraPulando_3
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 57
+        width: 455
+        height: 746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7547bfccb95facf418d722789a7c77bb
       vertices: []
       indices: 
       edges: []
@@ -276,7 +192,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ca8f403fa5e9aee4b8e23fc4b28e576e
+    spriteID: 0c5182447e52b1b48a65e194f71269c8
     vertices: []
     indices: 
     edges: []

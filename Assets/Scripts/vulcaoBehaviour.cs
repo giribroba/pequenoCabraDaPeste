@@ -78,11 +78,11 @@ public class vulcaoBehaviour : MonoBehaviour
                                     {
                                         GameObject.FindWithTag("Sound").GetComponent<Sons>().PlaySound("vulcao");
                                         p.VulcaoDespisca();
-                                        Destroy(gameObject);
-                                        p.contVulcao = (gameObject.tag == "Balde")? p.contVulcao++ : p.contVulcao;
+                                        p.contVulcao += (gameObject.tag == "Balde")? 0 : 1;
                                         if (gameObject.tag == "Balde")
                                             p.balde = true;
-                                        p.contador.text = (p.contVulcao.ToString() + "/5");
+                                        p.contador.text = (p.contVulcao.ToString() + "/5");                                        
+                                        Destroy(gameObject);
                                     }
                                     else
                                     {

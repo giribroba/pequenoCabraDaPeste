@@ -24,6 +24,7 @@ public class controladorJogador : MonoBehaviour
     public GameObject tocaSons;
 
     void Start(){
+        contVulcao = 5;
         tocaSons = GameObject.FindWithTag("Sound");
         podePa = false;
         animator = GetComponent<Animator>();
@@ -148,6 +149,12 @@ public class controladorJogador : MonoBehaviour
         else if(other.tag == balaoNoSim){
             balaoBaoba.enabled = true;
             Invoke("NoBalao", 15f);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D col){
+        if(col.tag == "eventRosa" && contVulcao == 5){
+            tocaSons.GetComponent<Sons>().PlaySound("rosa");
+            Destroy(col.gameObject);
         }
     }
 

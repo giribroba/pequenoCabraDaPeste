@@ -13,6 +13,7 @@ public class Sons : MonoBehaviour
 
     void Start()
     {
+        musicas[0].volume = 0;
         iAu = 3; 
         //musicaAtual = musicas[0];
     }
@@ -82,7 +83,8 @@ public class Sons : MonoBehaviour
         StopCoroutine("AbaixarVolume");
         if(musicas[1].isPlaying){iAb = 1;}
         else if(musicas[3].isPlaying){iAb = 3;}
-        else if(musicas[4].isPlaying){iAb = 4;}        
+        else if(musicas[4].isPlaying){iAb = 4;}   
+        else{iAb = 0;}     
         musicas[i].Play();
         musicas[i].volume = 0.1f;
         iAu = i;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ed73c76ebaa8acb48aaa847f87ae67b0
+guid: 6bdb96be8a44bf549815873acf26c38c
 TextureImporter:
   fileIDToRecycleName:
     21300000: cabraPulando_0
@@ -113,10 +113,10 @@ TextureImporter:
       name: cabraPulando_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 57
-        width: 455
-        height: 746
+        x: 2
+        y: 33
+        width: 527
+        height: 806
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d7cac8441e89e545a02fc73a4bbe1f0
+      spriteID: 4754e263bc92b27488b8f6aaa0a9db56
       vertices: []
       indices: 
       edges: []
@@ -133,10 +133,10 @@ TextureImporter:
       name: cabraPulando_1
       rect:
         serializedVersion: 2
-        x: 625
-        y: 67
-        width: 457
-        height: 726
+        x: 614
+        y: 41
+        width: 529
+        height: 789
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,7 +144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98b92b7f2e4b7854785ddbbe20ce3485
+      spriteID: d2ea556dc8f85084ca3b1880eb706c3c
       vertices: []
       indices: 
       edges: []
@@ -153,10 +153,10 @@ TextureImporter:
       name: cabraPulando_2
       rect:
         serializedVersion: 2
-        x: 1236
-        y: 52
-        width: 459
-        height: 748
+        x: 1242
+        y: 41
+        width: 497
+        height: 789
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0200659495e07b7438ebb711b58b7fe4
+      spriteID: 524e1e6f7bd433940aaac0d4fa67588f
       vertices: []
       indices: 
       edges: []
@@ -173,10 +173,10 @@ TextureImporter:
       name: cabraPulando_3
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 57
-        width: 455
-        height: 746
+        x: 1842
+        y: 43
+        width: 522
+        height: 784
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7547bfccb95facf418d722789a7c77bb
+      spriteID: 6a573c60963ec154bb635c841a14fb43
       vertices: []
       indices: 
       edges: []
@@ -192,7 +192,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0c5182447e52b1b48a65e194f71269c8
+    spriteID: 1b563459e2b13d342910af977d0069ab
     vertices: []
     indices: 
     edges: []

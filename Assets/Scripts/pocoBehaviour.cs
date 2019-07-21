@@ -12,6 +12,7 @@ public class pocoBehaviour : MonoBehaviour
     private float profundidade;
     private RaycastHit2D[] hit;
     private Animator cAnim;
+    [SerializeField] private AudioSource baldeIn;
 
     void Start(){
         cRenderer = corda.GetComponent<SpriteRenderer>();
@@ -40,6 +41,7 @@ public class pocoBehaviour : MonoBehaviour
                     }
                     else if(Input.GetKeyDown("e") && !other.GetComponent<controladorJogador>().balde && bPoco && profundidade <= 0)
                     {
+                        baldeIn.Play();
                         bPoco = false;
                         other.GetComponent<controladorJogador>().balde = true;
                         iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1, 0.5f);

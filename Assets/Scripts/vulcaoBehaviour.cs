@@ -20,6 +20,8 @@ public class vulcaoBehaviour : MonoBehaviour
 
     void Update()
     {
+        if (!trocouVulcao)
+        {
             indicador.GetComponent<SpriteRenderer>().enabled = false;
             barra.GetComponent<SpriteRenderer>().enabled = false;
             barra.GetComponent<SpriteRenderer>().sprite = sNivel[nivel - 1];
@@ -30,7 +32,7 @@ public class vulcaoBehaviour : MonoBehaviour
                 {
                     var other = i.collider.gameObject;
                     //colisões
-                    if (other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6 && !trocouVulcao)
+                    if (other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6)
                     {
                         p = other.GetComponent<controladorJogador>();
                         indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
@@ -81,10 +83,12 @@ public class vulcaoBehaviour : MonoBehaviour
                                             p.VulcaoDespisca();
                                             p.contVulcao += (gameObject.tag == "Balde") ? 0 : 1;
                                             if (gameObject.tag == "Balde")
-                                            p.balde = true;
+                                                p.balde = true;
                                             p.contador.text = (p.contVulcao.ToString() + "/5");
                                             GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
                                             trocouVulcao = true;
+                                            Destroy(indicador);
+                                            Destroy(barra);
                                         }
                                         else
                                         {
@@ -98,6 +102,7 @@ public class vulcaoBehaviour : MonoBehaviour
                     }
                 }
             }
+        }
     }
     IEnumerator Pisca(Color cor)
     {

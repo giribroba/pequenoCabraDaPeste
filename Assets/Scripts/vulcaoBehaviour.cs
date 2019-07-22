@@ -81,7 +81,10 @@ public class vulcaoBehaviour : MonoBehaviour
                                         p.contVulcao += (gameObject.tag == "Balde")? 0 : 1;
                                         if (gameObject.tag == "Balde")
                                             p.balde = true;
-                                        p.contador.text = (p.contVulcao.ToString() + "/5");                                        
+                                        p.contador.text = (p.contVulcao.ToString() + "/5");
+                                        if (p.contVulcao == 5){
+                                            p.MudaIconePa();
+                                        }
                                         Destroy(gameObject);
                                     }
                                     else
@@ -97,7 +100,6 @@ public class vulcaoBehaviour : MonoBehaviour
             }
         }
     }
-
     IEnumerator Pisca(Color cor)
     {
         move = false;

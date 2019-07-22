@@ -10,7 +10,8 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private SpriteRenderer balaoBaoba;
     public Text contador;
-    [HideInInspector]public float velocidade;
+    public Image cantil, aguaCantil;
+    [HideInInspector] public float velocidade;
     public bool balde = false, imortal = false, podePa = false;
     [SerializeField] private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
@@ -39,7 +40,7 @@ public class controladorJogador : MonoBehaviour
 
     void Raycasts(){
         hit = Physics2D.RaycastAll(transform.position - new Vector3(0, 0.8f), -transform.up, 0.7f);     
-        noChao = Physics2D.OverlapCircle(transform.position - new Vector3(0,0.84f), 0.7f, LayerMask.GetMask("Chao"));
+        noChao = Physics2D.OverlapCircle(transform.position - new Vector3(0,0.84f), 1f, LayerMask.GetMask("Chao"));
         for (int i = 0; i < hit.Length; i++)
         {
             if (hit[i].collider != null){
@@ -66,6 +67,7 @@ public class controladorJogador : MonoBehaviour
             }
             if (contBroto == 6){
                 contador.text = (contVulcao.ToString() + "/5");
+                iconeBroto.GetComponent<Image>().color = new Color(1,1,1,0.5f);
                 iconeBroto.GetComponent<Image>().sprite = imgVulcao;
                 iconeBroto.GetComponent<IconesBehaviour>().Comeca();
                 contBroto++;
@@ -76,6 +78,7 @@ public class controladorJogador : MonoBehaviour
     public void VulcaoDespisca(){
         iconeBroto.GetComponent<IconesBehaviour>().QuebraRepeticao();
         iconeBroto.GetComponent<IconesBehaviour>().Pisca();
+        iconeBroto.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
 
     void FixedUpdate(){
@@ -166,6 +169,11 @@ public class controladorJogador : MonoBehaviour
     void VisualNormal(){
         GetComponent<DanoPlayerPisca>().QuebraRepeticao();
         renderer.color = new Color(1, 1, 1, 1);
+    }
+    public void MudaIconePa(){
+        iconePa.GetComponent<Image>().enabled = false;
+        cantil.enabled = true;
+        aguaCantil.enabled = true;
     }
 }
 

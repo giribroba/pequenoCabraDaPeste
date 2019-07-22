@@ -6,7 +6,7 @@ public class pocoBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject corda, gota, iconeBalde;
     [SerializeField] private Sprite[] sprites;
-    [SerializeField] private int capacidade;
+    [SerializeField] private int capacidade, indexArray;
     private SpriteRenderer cRenderer;
     private bool cAgua = false, bPoco = false;
     private float profundidade;
@@ -22,7 +22,8 @@ public class pocoBehaviour : MonoBehaviour
     }
     
     void Update(){
-        cRenderer.sprite = sprites[(profundidade <= 0 && bPoco)? ((cAgua)?2 : 1) : 0];
+        indexArray = (profundidade <= 0 && bPoco) ? ((cAgua) ? 2 : 1) : 0;
+        cRenderer.sprite = sprites[indexArray];
         hit = Physics2D.CircleCastAll(transform.position, 1, -transform.up);        
         
         for (int i = 0; i < hit.Length; i++)
@@ -45,6 +46,9 @@ public class pocoBehaviour : MonoBehaviour
                         bPoco = false;
                         other.GetComponent<controladorJogador>().balde = true;
                         iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1, 0.5f);
+                        if (indexArray == 2)
+                            other.GetComponent<controladorJogador>().aguaCantil.fillAmount += 0.1f;
+
                     }
                     if(bPoco)
                     {

@@ -12,7 +12,7 @@ public class controladorJogador : MonoBehaviour
     public Text contador;
     [HideInInspector]public float velocidade;
     public bool balde = false, imortal = false, podePa = false;
-    private bool noChao, iconeUmaVez = true;
+    [SerializeField] private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
     public int contBroto = 0, contVulcao;
     private string balaoNoSim = "Broto";
@@ -24,7 +24,7 @@ public class controladorJogador : MonoBehaviour
     public GameObject tocaSons;
 
     void Start(){
-        contVulcao = 5;
+        contVulcao = 0;
         tocaSons = GameObject.FindWithTag("Sound");
         podePa = false;
         animator = GetComponent<Animator>();

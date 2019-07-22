@@ -155,8 +155,9 @@ public class controladorJogador : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D col){
-        if(col.tag == "eventRosa" && contVulcao == 5){
+        if(col.tag == "eventRosa" && contVulcao == 5 && balde){
             tocaSons.GetComponent<Sons>().PlaySound("rosa");
+            MudaIconePa();
             Destroy(col.gameObject);
         }
     }

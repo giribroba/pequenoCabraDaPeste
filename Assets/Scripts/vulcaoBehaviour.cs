@@ -82,9 +82,6 @@ public class vulcaoBehaviour : MonoBehaviour
                                         if (gameObject.tag == "Balde")
                                             p.balde = true;
                                         p.contador.text = (p.contVulcao.ToString() + "/5");
-                                        if (p.contVulcao == 5){
-                                            p.MudaIconePa();
-                                        }
                                         Destroy(gameObject);
                                     }
                                     else

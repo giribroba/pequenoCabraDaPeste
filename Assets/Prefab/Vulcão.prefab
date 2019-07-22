@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4400280965868050786}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -20.16, y: 0.605, z: 0}
-  m_LocalScale: {x: 0.08763026, y: 0.08763026, z: 0.087630235}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.087630235}
   m_Children:
   - {fileID: 4400280967645157190}
   m_Father: {fileID: 0}
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 94315913
   m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: bb391b96dd5219443aa6c8b394ebad41, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 92a5066bebbafc247818dd6b581f8f36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,6 +113,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50af5b34929fd544f92bd7d6a7ed5763, type: 3}
   indicador: {fileID: 4400280967438299566}
   barra: {fileID: 4400280967645157191}
+  vulcoesAbertos:
+  - {fileID: 21300000, guid: c426f328fe600a44f9b17287d3702597, type: 3}
+  - {fileID: 21300000, guid: d6fc44ba051caa24cabf95f874324e47, type: 3}
   velocidadeBarra:
   - 2
   - 4
@@ -318,8 +321,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4400280967645157191}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.166, z: 0}
-  m_LocalScale: {x: 1.0641296, y: 1.0641296, z: 1.0641298}
+  m_LocalPosition: {x: -0.36, y: -7.2, z: 0}
+  m_LocalScale: {x: 1.3450599, y: 1.3450599, z: 1.3450601}
   m_Children:
   - {fileID: 4400280967438299553}
   m_Father: {fileID: 4400280965868050788}

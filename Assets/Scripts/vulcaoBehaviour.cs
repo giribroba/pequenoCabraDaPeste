@@ -6,10 +6,11 @@ public class vulcaoBehaviour : MonoBehaviour
 {
     [SerializeField] private Sprite[] sNivel;
     [SerializeField] private GameObject indicador, barra;
+    [SerializeField] private Sprite[] vulcoesAbertos;
     [SerializeField] private float[] velocidadeBarra;
     private RaycastHit2D[] hit;
     private int nivel = 1;
-    private bool direita = true, move = true;
+    private bool direita = true, move = true, trocouVulcao = false;
     private controladorJogador p;
     [SerializeField] private AudioSource cavar;
 
@@ -19,83 +20,84 @@ public class vulcaoBehaviour : MonoBehaviour
 
     void Update()
     {
-        indicador.GetComponent<SpriteRenderer>().enabled = false;
-        barra.GetComponent<SpriteRenderer>().enabled = false; 
-        barra.GetComponent<SpriteRenderer>().sprite = sNivel[nivel - 1];
-        hit = Physics2D.CircleCastAll(transform.position + (Vector3.up * 0.2f), 0.3f, transform.up);
-        foreach(RaycastHit2D i in hit)
-        {
-            if(i.collider != null)
+            indicador.GetComponent<SpriteRenderer>().enabled = false;
+            barra.GetComponent<SpriteRenderer>().enabled = false;
+            barra.GetComponent<SpriteRenderer>().sprite = sNivel[nivel - 1];
+            hit = Physics2D.CircleCastAll(transform.position + (Vector3.up * 0.2f), 0.3f, transform.up);
+            foreach (RaycastHit2D i in hit)
             {
-                var other = i.collider.gameObject;
-                //colisões
-                if(other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6)
+                if (i.collider != null)
                 {
-                    p = other.GetComponent<controladorJogador>();
-                    indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
-                    barra.GetComponent<SpriteRenderer>().enabled = p.podePa;
-                    if(p.podePa)
+                    var other = i.collider.gameObject;
+                    //colisões
+                    if (other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6 && !trocouVulcao)
                     {
-                        if(direita && move)
+                        p = other.GetComponent<controladorJogador>();
+                        indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
+                        barra.GetComponent<SpriteRenderer>().enabled = p.podePa;
+                        if (p.podePa)
                         {
-                            indicador.transform.Translate(Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
-                            direita = (indicador.transform.localPosition.x < 4.8f);
-                        }
-                        else if(!direita && move)
-                        {
-                            indicador.transform.Translate(-Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
-                            direita = (indicador.transform.localPosition.x <= -4.8f);
-                        }
-                        if(Input.GetButtonDown("Fire1") && move)
-                        {
-                            switch(nivel)
+                            if (direita && move)
                             {
-                                case 1:
-                                    if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
-                                    {
-                                        StartCoroutine(Pisca(new Color(0.5f, 1, 0.5f, 1)));
-                                        nivel++;
-                                    }
-                                    else
-                                    {
-                                        StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
-                                    }
-                                break;    
+                                indicador.transform.Translate(Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
+                                direita = (indicador.transform.localPosition.x < 4.8f);
+                            }
+                            else if (!direita && move)
+                            {
+                                indicador.transform.Translate(-Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
+                                direita = (indicador.transform.localPosition.x <= -4.8f);
+                            }
+                            if (Input.GetButtonDown("Fire1") && move)
+                            {
+                                switch (nivel)
+                                {
+                                    case 1:
+                                        if (indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
+                                        {
+                                            StartCoroutine(Pisca(new Color(0.5f, 1, 0.5f, 1)));
+                                            nivel++;
+                                        }
+                                        else
+                                        {
+                                            StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
+                                        }
+                                        break;
                                     case 2:
-                                    if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
-                                    {
-                                        StartCoroutine(Pisca(new Color(0.5f, 1, 0.5f, 1)));
-                                        nivel++;
-                                    }
-                                    else
-                                    {
-                                        StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
-                                        nivel = 1;
-                                    }
-                                break;
+                                        if (indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
+                                        {
+                                            StartCoroutine(Pisca(new Color(0.5f, 1, 0.5f, 1)));
+                                            nivel++;
+                                        }
+                                        else
+                                        {
+                                            StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
+                                            nivel = 1;
+                                        }
+                                        break;
                                     case 3:
-                                    if(indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
-                                    {
-                                        GameObject.FindWithTag("Sound").GetComponent<Sons>().PlaySound("vulcao");
-                                        p.VulcaoDespisca();
-                                        p.contVulcao += (gameObject.tag == "Balde")? 0 : 1;
-                                        if (gameObject.tag == "Balde")
+                                        if (indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
+                                        {
+                                            GameObject.FindWithTag("Sound").GetComponent<Sons>().PlaySound("vulcao");
+                                            p.VulcaoDespisca();
+                                            p.contVulcao += (gameObject.tag == "Balde") ? 0 : 1;
+                                            if (gameObject.tag == "Balde")
                                             p.balde = true;
-                                        p.contador.text = (p.contVulcao.ToString() + "/5");
-                                        Destroy(gameObject);
-                                    }
-                                    else
-                                    {
-                                        StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
-                                        nivel = 1;
-                                    }
-                                break;
+                                            p.contador.text = (p.contVulcao.ToString() + "/5");
+                                            GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
+                                            trocouVulcao = true;
+                                        }
+                                        else
+                                        {
+                                            StartCoroutine(Pisca(new Color(1, 0.5f, 0.5f, 1)));
+                                            nivel = 1;
+                                        }
+                                        break;
+                                }
                             }
                         }
-                    }    
+                    }
                 }
             }
-        }
     }
     IEnumerator Pisca(Color cor)
     {

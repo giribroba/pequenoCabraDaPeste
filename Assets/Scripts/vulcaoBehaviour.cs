@@ -85,7 +85,7 @@ public class vulcaoBehaviour : MonoBehaviour
                                             if (gameObject.tag == "Balde")
                                                 p.balde = true;
                                             p.contador.text = (p.contVulcao.ToString() + "/5");
-                                            GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
+                                            GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 1)];
                                             trocouVulcao = true;
                                             Destroy(indicador);
                                             Destroy(barra);

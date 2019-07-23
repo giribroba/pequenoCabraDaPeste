@@ -31,8 +31,8 @@ public class controladorJogador : MonoBehaviour
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         rbPlayer = GetComponent<Rigidbody2D>();
-        parar = true;
-        Invoke("NoParar", 6f);
+        //parar = true;
+        //Invoke("NoParar", 6.5f);
     }
     void Update(){
         movimento = Input.GetAxisRaw("Horizontal");
@@ -48,7 +48,7 @@ public class controladorJogador : MonoBehaviour
             if (hit[i].collider != null){
                 if (hit[i].collider.gameObject.tag == "Broto"){
                     var other = hit[i].collider.gameObject;
-                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6) && velocidade == 0)
+                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6) && velocidade <= 0.0001)
                     {
                         tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;

@@ -8,6 +8,7 @@ public class vulcaoBehaviour : MonoBehaviour
     [SerializeField] private GameObject indicador, barra;
     [SerializeField] private Sprite[] vulcoesAbertos;
     [SerializeField] private float[] velocidadeBarra;
+    [SerializeField] private Animator fumaca;
     private RaycastHit2D[] hit;
     private int nivel = 1;
     private bool direita = true, move = true, trocouVulcao = false;
@@ -89,6 +90,7 @@ public class vulcaoBehaviour : MonoBehaviour
                                             else{
                                                 GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
                                                 p.VulcaoDespisca();
+                                                fumaca.SetTrigger("Fumaca");
                                             }
                                             Destroy(this);
                                         }

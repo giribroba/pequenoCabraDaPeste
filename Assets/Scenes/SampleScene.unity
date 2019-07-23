@@ -1399,7 +1399,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455064439}
-  m_LocalRotation: {x: 0, y: 0, z: 0.612907, w: 0.79015505}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -36.5, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 2}
   m_Children:
@@ -1444,7 +1444,7 @@ Transform:
   - {fileID: 1634490118}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 75.6}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &460587297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1751,7 +1751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -9}
+  m_LocalPosition: {x: 0, y: 5, z: -150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6677,12 +6677,12 @@ PrefabInstance:
     - target: {fileID: 8340964038748500465, guid: 66ed43c1773945c439db74c701007fc1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.11
+      value: -49.81
       objectReference: {fileID: 0}
     - target: {fileID: 8340964038748500465, guid: 66ed43c1773945c439db74c701007fc1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.06
+      value: 4.38
       objectReference: {fileID: 0}
     - target: {fileID: 8340964038748500465, guid: 66ed43c1773945c439db74c701007fc1,
         type: 3}
@@ -7151,12 +7151,12 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.96
+      value: -41.56
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.5
+      value: 26.55
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}

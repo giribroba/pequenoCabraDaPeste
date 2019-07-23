@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4400280965868050791}
   - component: {fileID: 4400280965868050790}
   - component: {fileID: 7762500326493846301}
+  - component: {fileID: 3536029999477005409}
   m_Layer: 0
   m_Name: "Vulc\xE3o"
   m_TagString: Untagged
@@ -217,6 +218,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &3536029999477005409
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400280965868050786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28fe73e9bbe30b249bceb8a3a3cc707a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4400280967438299566
 GameObject:
   m_ObjectHideFlags: 0

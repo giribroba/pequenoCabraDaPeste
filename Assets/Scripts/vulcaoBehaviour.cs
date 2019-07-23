@@ -20,8 +20,6 @@ public class vulcaoBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (!trocouVulcao)
-        {
             indicador.GetComponent<SpriteRenderer>().enabled = false;
             barra.GetComponent<SpriteRenderer>().enabled = false;
             barra.GetComponent<SpriteRenderer>().sprite = sNivel[nivel - 1];
@@ -32,8 +30,8 @@ public class vulcaoBehaviour : MonoBehaviour
                 {
                     var other = i.collider.gameObject;
                     //colisões
-                    if (other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6)
-                    {
+                    if (other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6 && ((gameObject.tag == "Balde")? ((other.GetComponent<controladorJogador>().encontrouRosa)? true : false): true))
+                    {  
                         p = other.GetComponent<controladorJogador>();
                         indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
                         barra.GetComponent<SpriteRenderer>().enabled = p.podePa;
@@ -80,15 +78,19 @@ public class vulcaoBehaviour : MonoBehaviour
                                         if (indicador.transform.localPosition.x > -1.6 && indicador.transform.localPosition.x < 1.6)
                                         {
                                             GameObject.FindWithTag("Sound").GetComponent<Sons>().PlaySound("vulcao");
-                                            p.VulcaoDespisca();
                                             p.contVulcao += (gameObject.tag == "Balde") ? 0 : 1;
-                                            if (gameObject.tag == "Balde")
-                                                p.balde = true;
                                             p.contador.text = (p.contVulcao.ToString() + "/5");
-                                            GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 1)];
-                                            trocouVulcao = true;
                                             Destroy(indicador);
                                             Destroy(barra);
+                                            if (gameObject.tag == "Balde"){
+                                                p.balde = true;
+                                                Destroy(this.gameObject, 2f);
+                                            }
+                                            else{
+                                                GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
+                                                p.VulcaoDespisca();
+                                            }
+                                            Destroy(this);
                                         }
                                         else
                                         {
@@ -102,7 +104,6 @@ public class vulcaoBehaviour : MonoBehaviour
                     }
                 }
             }
-        }
     }
     IEnumerator Pisca(Color cor)
     {

@@ -103,7 +103,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 7065140858737422136}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 010774a2fc216e2469f66665101a3c90, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0

@@ -12,7 +12,7 @@ public class controladorJogador : MonoBehaviour
     public Text contador;
     public Image cantil, aguaCantil;
     [HideInInspector] public float velocidade;
-    public bool balde = false, imortal = false, podePa = false;
+    public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar;
     [SerializeField] private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
     public int contBroto = 0, contVulcao;
@@ -31,6 +31,8 @@ public class controladorJogador : MonoBehaviour
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         rbPlayer = GetComponent<Rigidbody2D>();
+        parar = true;
+        Invoke("NoParar", 6f);
     }
     void Update(){
         movimento = Input.GetAxisRaw("Horizontal");
@@ -46,7 +48,7 @@ public class controladorJogador : MonoBehaviour
             if (hit[i].collider != null){
                 if (hit[i].collider.gameObject.tag == "Broto"){
                     var other = hit[i].collider.gameObject;
-                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6))
+                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6) && velocidade == 0)
                     {
                         tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;
@@ -58,6 +60,8 @@ public class controladorJogador : MonoBehaviour
                         iconeBroto.GetComponent<IconesBehaviour>().QuebraRepeticao();
                         iconeBroto.GetComponent<Image>().enabled = true;
                         iconeBroto.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                        parar = true;
+                        Invoke("NoParar", 0.8f);
                     }
                     else if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && !podePa && iconeUmaVez){
                         iconeUmaVez = false;
@@ -100,11 +104,11 @@ public class controladorJogador : MonoBehaviour
         {
             KB += Time.deltaTime * 1.5f;
         }
-        if (movimento > 0){
+        if (movimento > 0 && !parar){
             velocidade = (velocidade < velocidadeMaxima)? velocidade += Time.deltaTime * 1.5f : velocidade = velocidadeMaxima;
             renderer.flipX = false;
         }
-        else if(movimento < 0){
+        else if(movimento < 0 && !parar){
             velocidade = (velocidade > -velocidadeMaxima)? velocidade -= Time.deltaTime * 1.5f : velocidade = -velocidadeMaxima;
             renderer.flipX = true;
         }
@@ -155,9 +159,12 @@ public class controladorJogador : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D col){
-        if(col.tag == "eventRosa" && contVulcao == 5 && balde){
+        if(col.tag == "eventRosa" && contVulcao == 5){
             tocaSons.GetComponent<Sons>().PlaySound("rosa");
             MudaIconePa();
+            encontrouRosa = true;
+            parar = true;
+            Invoke("NoParar", 2f);
             Destroy(col.gameObject);
         }
     }
@@ -175,6 +182,9 @@ public class controladorJogador : MonoBehaviour
         iconePa.GetComponent<Image>().enabled = false;
         cantil.enabled = true;
         aguaCantil.enabled = true;
+    }
+    void NoParar(){
+        parar = false;
     }
 }
 

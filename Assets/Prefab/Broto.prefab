@@ -1,5 +1,104 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3169752814197983491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2279938243336665277}
+  - component: {fileID: 7862433936502586995}
+  - component: {fileID: 4552110062350060525}
+  m_Layer: 0
+  m_Name: poeira
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2279938243336665277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169752814197983491}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0011960566, w: 0.9999993}
+  m_LocalPosition: {x: -0.06, y: -1.87, z: 0}
+  m_LocalScale: {x: 6.3826666, y: 6.3826666, z: 6.408682}
+  m_Children: []
+  m_Father: {fileID: 5647288190311588610}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.13700001}
+--- !u!212 &7862433936502586995
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169752814197983491}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 94315913
+  m_SortingLayer: 2
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 0.4245283, g: 0.29078123, b: 0.22227661, a: 0.4117647}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &4552110062350060525
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169752814197983491}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e7fc2557e7941f4ca9d0c8135c9ec4d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5647288190311588611
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,8 +111,9 @@ GameObject:
   - component: {fileID: 5647288190311588608}
   - component: {fileID: 5647288190311588609}
   - component: {fileID: 8634342813248610616}
+  - component: {fileID: 3313068504325753888}
   m_Layer: 0
-  m_Name: PrimeiroBrotoComBalao
+  m_Name: Broto
   m_TagString: Broto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +129,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.51165307, w: 0.8591922}
   m_LocalPosition: {x: 129.44, y: -78.81, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1.5948503}
-  m_Children: []
+  m_Children:
+  - {fileID: 2279938243336665277}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -61.548004}
@@ -69,7 +170,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 94315913
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 062b09117fe057c44800a394660ef8f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +195,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.79}
+  m_Offset: {x: 0, y: -1.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -119,3 +220,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b26713d6ebade49860bba9878d6f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3313068504325753888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5647288190311588611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e8ab7ce947b55438ce6c80ca5e5891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poeira: {fileID: 3169752814197983491}

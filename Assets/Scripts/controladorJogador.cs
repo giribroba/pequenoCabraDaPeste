@@ -60,6 +60,7 @@ public class controladorJogador : MonoBehaviour
                         iconeBroto.GetComponent<IconesBehaviour>().QuebraRepeticao();
                         iconeBroto.GetComponent<Image>().enabled = true;
                         iconeBroto.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                        other.GetComponent<Broto>().Poeira();
                         parar = true;
                         Invoke("NoParar", 0.8f);
                     }

@@ -31,8 +31,8 @@ public class controladorJogador : MonoBehaviour
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         rbPlayer = GetComponent<Rigidbody2D>();
-        //parar = true;
-        //Invoke("NoParar", 6.5f);
+        parar = true;
+        Invoke("NoParar", 6.5f);
     }
     void Update(){
         movimento = Input.GetAxisRaw("Horizontal");

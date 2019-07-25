@@ -23,7 +23,7 @@ public class PlataformaCai : MonoBehaviour
         caido = true;
         yield return new WaitForSeconds(0.2f);
         anim.SetBool("Tremendo", true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         anim.SetBool("Tremendo", false);
         anim.SetBool("Caindo", true);
         yield return new WaitForSeconds(1.5f);

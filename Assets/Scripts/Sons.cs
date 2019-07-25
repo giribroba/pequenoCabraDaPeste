@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sons : MonoBehaviour
 {
+    [SerializeField] private FolhetoBehaviour folhetoIntro;
     public AudioSource[] musicas;
     public AudioSource[] sons;
     private int iAu, iAb;
@@ -14,8 +15,10 @@ public class Sons : MonoBehaviour
     void Start()
     {
         musicas[0].volume = 0;
-        iAu = 3; 
+        iAu = 3;
         //musicaAtual = musicas[0];
+        //folheto da introdução para implementar quandoa música começar(música de introdução)
+        //folhetoIntro.AparecerFolheto();
     }
 
     void Update()

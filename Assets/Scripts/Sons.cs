@@ -39,6 +39,7 @@ public class Sons : MonoBehaviour
             musicas[3].Play();
             iAu = 3;
             StartCoroutine("AumentarVolume");
+            folhetoIntro.AparecerFolheto();
         }
         //print(Random.Range(1, 4));
         //print(musicaAtual.clip.length - musicaAtual.time);

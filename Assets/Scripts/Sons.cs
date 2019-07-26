@@ -9,11 +9,13 @@ public class Sons : MonoBehaviour
     public AudioSource[] sons;
     private int iAu, iAb;
     private bool changeSong = true;
+    private GameObject cam;
     //private int evento = "";
     //private AudioSource musicaAtual;
 
     void Start()
     {
+        cam = GameObject.FindWithTag("MainCamera");
         musicas[0].volume = 0;
         iAu = 3;
         //musicaAtual = musicas[0];
@@ -35,7 +37,8 @@ public class Sons : MonoBehaviour
             StartCoroutine("AumentarVolume");
             changeSong = false;
         }
-        if(musicas[2].isPlaying && musicas[2].clip.length - musicas[2].time <= 1){
+        if(musicas[2].isPlaying && (musicas[2].clip.length - musicas[2].time <= 1 || cam.transform.position.z >= -15)){
+            musicas[2].Stop();
             musicas[3].Play();
             iAu = 3;
             StartCoroutine("AumentarVolume");

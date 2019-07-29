@@ -162,6 +162,7 @@ public class controladorJogador : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "eventRosa" && contVulcao == 5){
             tocaSons.GetComponent<Sons>().PlaySound("rosa");
+            col.gameObject.GetComponent<Animator>().SetBool("murchando", true);
             MudaIconePa();
             encontrouRosa = true;
             parar = true;

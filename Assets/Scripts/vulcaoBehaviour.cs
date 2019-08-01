@@ -90,7 +90,8 @@ public class vulcaoBehaviour : MonoBehaviour
                                                 Destroy(this.gameObject, 2f);
                                             }
                                             else{
-                                                GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
+                                                other.GetComponent<Animator>().SetTrigger("pasadaVulcao");
+                                            Invoke("trocouVulcao", 1.5f);
                                                 p.VulcaoDespisca();
                                                 fumaca.SetTrigger("Fumaca");
                                             }
@@ -121,5 +122,9 @@ public class vulcaoBehaviour : MonoBehaviour
         barra.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
         indicador.transform.localPosition = Vector2.zero;
         move = true;
+    }
+    void TrocaVulcao()
+    {
+        GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
     }
 }

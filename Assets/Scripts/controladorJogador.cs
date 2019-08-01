@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class controladorJogador : MonoBehaviour
 {
@@ -174,6 +175,7 @@ public class controladorJogador : MonoBehaviour
         if (col.tag == "eventWins" && contVulcao == 5 && contBaldada >= 6)
         {
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", false);
+            SceneManager.LoadScene(4);
         }
     }
 

@@ -21281,6 +21281,7 @@ MonoBehaviour:
   iconeUmaVez: 1
   contBroto: 0
   contVulcao: 0
+  contBaldada: 0
   tocaSons: {fileID: 0}
 --- !u!82 &2096192241
 AudioSource:

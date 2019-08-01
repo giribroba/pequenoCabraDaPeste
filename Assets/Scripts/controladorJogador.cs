@@ -161,7 +161,7 @@ public class controladorJogador : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D col){
-        if(col.tag == "eventRosa" && contVulcao == 5){
+        if(col.tag == "eventRosa" && contVulcao == 5 ){
             tocaSons.GetComponent<Sons>().PlaySound("rosa");
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", true);
             RealcaIconePa();
@@ -170,6 +170,10 @@ public class controladorJogador : MonoBehaviour
             flor.GetComponent<Animator>().SetBool("encontrouRosa", true);
             Invoke("NoParar", 2f);
             Destroy(col.gameObject);
+        }
+        if (col.tag == "eventWins" && contVulcao == 5 && contBaldada >= 6)
+        {
+            col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", false);
         }
     }
 

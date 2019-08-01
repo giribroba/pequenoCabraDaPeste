@@ -2934,6 +2934,7 @@ Transform:
   m_LocalScale: {x: 0.3723931, y: 0.3723931, z: 0.14897817}
   m_Children:
   - {fileID: 2124089034}
+  - {fileID: 2069523006}
   m_Father: {fileID: 455064442}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 135.436}
@@ -13244,6 +13245,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 5.306
       objectReference: {fileID: 0}
+    - target: {fileID: 7254152407364137246, guid: 1f6929fc00c9e944c82118a696ae8081,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254152407364137246, guid: 1f6929fc00c9e944c82118a696ae8081,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f6929fc00c9e944c82118a696ae8081, type: 3}
 --- !u!1 &1300989857
@@ -20895,6 +20906,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1949855159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2069523005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2069523006}
+  - component: {fileID: 2069523007}
+  m_Layer: 0
+  m_Name: Wins
+  m_TagString: eventWins
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2069523006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069523005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 293582986}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2069523007
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069523005}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.22, y: 0}
+  serializedVersion: 2
+  m_Radius: 24.45
 --- !u!4 &2078428844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,

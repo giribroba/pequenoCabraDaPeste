@@ -17,5 +17,6 @@ public class FolhetoBehaviour : MonoBehaviour
     }
     public void DesparecerFolheto(){
         folhetoAmt.SetBool("folheto", false);
+        Destroy(transform.GetChild(1).gameObject);
     }
 }

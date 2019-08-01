@@ -83,6 +83,8 @@ public class vulcaoBehaviour : MonoBehaviour
                                             p.contador.text = (p.contVulcao.ToString() + "/5");
                                             Destroy(indicador);
                                             Destroy(barra);
+                                        if (p.contVulcao == 5)
+                                            p.MudaIconePa();
                                             if (gameObject.tag == "Balde"){
                                                 p.balde = true;
                                                 Destroy(this.gameObject, 2f);

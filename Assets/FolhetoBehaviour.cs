@@ -6,7 +6,9 @@ public class FolhetoBehaviour : MonoBehaviour
 {
     private Animator folhetoAmt;
     private EscreveTexto escreveText;
-    
+    private GameObject d;
+
+
     public void AparecerFolheto(){
         if(folhetoAmt == null){
             folhetoAmt = GetComponent<Animator>();
@@ -17,6 +19,7 @@ public class FolhetoBehaviour : MonoBehaviour
     }
     public void DesparecerFolheto(){
         folhetoAmt.SetBool("folheto", false);
-        Destroy(transform.GetChild(1).gameObject);
+        d = transform.GetChild(1).gameObject;
+        Destroy(this.d);
     }
 }

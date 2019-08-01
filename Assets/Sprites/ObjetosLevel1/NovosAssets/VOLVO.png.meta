@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 92a5066bebbafc247818dd6b581f8f36
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: VOLVO_0
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: VOLVO_0
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -111,17 +113,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 29
-        y: 283
+        y: 421
         width: 1133
-        height: 843
+        height: 705
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 6af212e5f17ee08438dd24fff6208e9d
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -130,10 +133,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 2c327fbab7b511046ad215025f0a5975
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

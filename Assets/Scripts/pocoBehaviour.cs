@@ -6,7 +6,7 @@ public class pocoBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject corda, gota, iconeBalde;
     [SerializeField] private Sprite[] sprites;
-    [SerializeField] private int capacidade, indexArray;
+    [SerializeField] private int capacidade, indexArray, cBaldada = 0;
     private SpriteRenderer cRenderer;
     private bool cAgua = false, bPoco = false;
     private float profundidade;
@@ -45,9 +45,11 @@ public class pocoBehaviour : MonoBehaviour
                         bPoco = false;
                         other.GetComponent<controladorJogador>().balde = true;
                         iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1, 0.5f);
-                        if (indexArray == 2)
-                        other.GetComponent<controladorJogador>().aguaCantil.fillAmount += 0.1f;
-
+                        if (indexArray == 2){
+                            other.GetComponent<controladorJogador>().aguaCantil.fillAmount += 0.15f;
+                            other.GetComponent<controladorJogador>().AddFlor();
+                            other.GetComponent<controladorJogador>().contBaldada++;
+                        }
                     }
                     if(bPoco)
                     {

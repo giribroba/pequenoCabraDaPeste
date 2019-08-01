@@ -8,14 +8,15 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private float velocidadeMaxima, forcaPulo;
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto;
     [SerializeField] private Sprite terra, imgVulcao;
+    [SerializeField] private Sprite[] florUI;
     [SerializeField] private SpriteRenderer balaoBaoba;
     public Text contador;
-    public Image cantil, aguaCantil;
+    public Image cantil, aguaCantil, flor;
     [HideInInspector] public float velocidade;
     public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar;
     [SerializeField] private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
-    public int contBroto = 0, contVulcao;
+    public int contBroto = 0, contVulcao, contBaldada = 0;
     private string balaoNoSim = "Broto";
     private Animator animator;
     private RaycastHit2D[] hit;
@@ -162,10 +163,11 @@ public class controladorJogador : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "eventRosa" && contVulcao == 5){
             tocaSons.GetComponent<Sons>().PlaySound("rosa");
-            col.gameObject.GetComponent<Animator>().SetBool("murchando", true);
-            MudaIconePa();
+            col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", true);
+            RealcaIconePa();
             encontrouRosa = true;
             parar = true;
+            flor.GetComponent<Animator>().SetBool("encontrouRosa", true);
             Invoke("NoParar", 2f);
             Destroy(col.gameObject);
         }
@@ -180,13 +182,27 @@ public class controladorJogador : MonoBehaviour
         GetComponent<DanoPlayerPisca>().QuebraRepeticao();
         renderer.color = new Color(1, 1, 1, 1);
     }
-    public void MudaIconePa(){
+    public void RealcaIconePa(){
+        cantil.color = new Color(1, 1, 1, 1);
+        aguaCantil.color = new Color(1, 1, 1, 1);
+        flor.color = new Color(1, 1, 1, 1);
+    }
+    public void MudaIconePa()
+    {
         iconePa.GetComponent<Image>().enabled = false;
+        Destroy(iconeBroto.GetComponent<Image>());
         cantil.enabled = true;
         aguaCantil.enabled = true;
+        flor.enabled = true;
+        contador.enabled = false;
     }
     void NoParar(){
         parar = false;
+    }
+    public void AddFlor(){
+        if(contBaldada == 0)
+            Destroy(flor.GetComponent<Animator>());
+        flor.GetComponent<Image>().sprite = florUI[contBaldada];
     }
 }
 

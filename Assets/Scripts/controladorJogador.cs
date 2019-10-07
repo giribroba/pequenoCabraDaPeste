@@ -26,7 +26,9 @@ public class controladorJogador : MonoBehaviour
     private Collider2D colPlayer;
     public GameObject tocaSons;
 
+    public int level;
     void Start(){
+        level = 0;
         contVulcao = 0;
         tocaSons = GameObject.FindWithTag("Sound");
         podePa = false;
@@ -40,6 +42,34 @@ public class controladorJogador : MonoBehaviour
         movimento = Input.GetAxisRaw("Horizontal");
         Jump();
         Raycasts();
+    }
+    public void ResetLeve2()
+    {
+
+    }
+    public void ResetLeve3()
+    {
+
+    }
+    public void SetLevel(int a)
+    {
+        level = a;
+    }
+    public int ReturnLevel()
+    {
+        return level;
+    }
+    public void UpdateLevel()
+    {
+        if (contBroto == 6 && contVulcao < 5)
+        {
+            SetLevel(2);
+        }
+        else if(contVulcao >= 5)
+        {
+            SetLevel(3);
+        }
+        
     }
 
     void Raycasts(){

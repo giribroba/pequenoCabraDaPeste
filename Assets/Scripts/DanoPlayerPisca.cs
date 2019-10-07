@@ -25,7 +25,7 @@ public class DanoPlayerPisca : MonoBehaviour
     public void QuebraRepeticao(){
         CancelInvoke("Pisca");
         CancelInvoke("Despisca");
-        GetComponent<controladorJogador>(). imortal = false;  
+        GetComponent<controladorJogador>().imortal = false;
     }
     
 }

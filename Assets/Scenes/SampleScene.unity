@@ -6545,6 +6545,7 @@ MonoBehaviour:
   - {fileID: 1141611343}
   - {fileID: 1683109670}
   menu: {fileID: 1264054682}
+  life: 0
 --- !u!82 &753673119
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10788,6 +10789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a47a2d1f3d3a6541a1bdbe88975ecb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
 --- !u!114 &1185592905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11474,6 +11476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a47a2d1f3d3a6541a1bdbe88975ecb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 1264054682}
 --- !u!114 &1205033630
 MonoBehaviour:
   m_ObjectHideFlags: 0

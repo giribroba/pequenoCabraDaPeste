@@ -9,23 +9,30 @@ public class Life : MonoBehaviour
     [SerializeField] private int maxLife;
     [SerializeField] GameObject[] spriteHearts;
     [SerializeField] Animator menu;
-    private int life;
-
+    public int life;
     void Start() {
         life = maxLife;
         StartCoroutine(LowerUpdate());
         menu.SetBool("perde", false);
     }
-
+    public void ResetLife()
+    {
+        Debug.Log("StartResetLife()");
+        life = 3;
+        for (int i = 0; i < spriteHearts.Length; i++)
+        {
+            Animator anim2 = spriteHearts[i].GetComponent<Animator>();
+            anim2.SetBool("Broken", false);
+        }
+    }
     private void SetHearts(int curLife){
         for(int i = 0; i < spriteHearts.Length; i++){
             if(i > (curLife - 1)){
                 Animator anim = spriteHearts[i].GetComponent<Animator>();
-                anim.SetTrigger("Broken");
+                anim.SetBool("Broken", true);
             }
         }
-    }
-
+    }    
     public void DecrementLife(){
         life--;
         if(life > maxLife)

@@ -10,11 +10,10 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
-    [SerializeField] private SpriteRenderer balaoBaoba;
     public Text contador;
     public Image cantil, aguaCantil, flor;
     [HideInInspector] public float velocidade;
-    public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar;
+    public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false;
     [SerializeField] private bool noChao, iconeUmaVez = true;
     private float movimento, KB;    
     public int contBroto = 0, contVulcao, contBaldada = 0;
@@ -82,6 +81,7 @@ public class controladorJogador : MonoBehaviour
                     var other = hit[i].collider.gameObject;
                     if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6) && velocidade <= 0.0001)
                     {
+                        other.transform.GetChild(1).gameObject.SetActive(false);
                         tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;
                         contador.text = (contBroto.ToString() + "/6");
@@ -96,7 +96,7 @@ public class controladorJogador : MonoBehaviour
                         parar = true;
                         Invoke("NoParar", 0.8f);
                     }
-                    else if (other.tag == "Broto" && Input.GetKeyDown(KeyCode.E) && !podePa && iconeUmaVez){
+                    else if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && !podePa && iconeUmaVez){
                         iconeUmaVez = false;
                         iconePa.GetComponent<IconesBehaviour>().Comeca();
                     }
@@ -186,9 +186,9 @@ public class controladorJogador : MonoBehaviour
             iconeBroto.GetComponent<IconesBehaviour>().Comeca();
             Destroy(other.gameObject);
         }
-        else if(other.tag == balaoNoSim){
-            balaoBaoba.enabled = true;
-            Invoke("NoBalao", 15f);
+        else if(other.tag == balaoNoSim && podePa && !jaEnsinou){
+            other.transform.GetChild(1).gameObject.SetActive(true);
+            jaEnsinou = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D col){
@@ -207,11 +207,6 @@ public class controladorJogador : MonoBehaviour
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", false);
             SceneManager.LoadScene(4);
         }
-    }
-
-    void NoBalao(){
-        balaoNoSim = "";
-        balaoBaoba.enabled = false;
     }
 
     void VisualNormal(){

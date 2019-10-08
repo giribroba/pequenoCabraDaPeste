@@ -12,6 +12,7 @@ TagManager:
   - Balde
   - eventRosa
   - eventWins
+  - Pause
   layers:
   - Default
   - TransparentFX

@@ -10,8 +10,6 @@ public class MenuBotoesBehaviour : MonoBehaviour
     [SerializeField] private bool trocaAsset;
     private Sprite botaoNormal;
     private Image img;
-
-
     void Start(){
         img = GetComponent<Image>();
         botaoNormal = img.sprite;
@@ -30,4 +28,16 @@ public class MenuBotoesBehaviour : MonoBehaviour
         if (trocaAsset)
             img.sprite = botaoNormal;
     }
+
+    public void Despausa()
+    {
+        Time.timeScale = 1;
+        GameObject.FindWithTag("Pause").GetComponent<Animator>().SetBool("perde", false);
+    }
+
+    public void Pausa()
+    {
+        Time.timeScale = 0;
+    }
+
 }

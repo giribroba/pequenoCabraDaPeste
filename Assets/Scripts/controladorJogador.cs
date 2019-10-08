@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class controladorJogador : MonoBehaviour
 {
     [SerializeField] private float velocidadeMaxima, forcaPulo;
-    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto;
+    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
     public Text contador;
@@ -38,6 +38,15 @@ public class controladorJogador : MonoBehaviour
         Invoke("NoParar", 6.5f);
     }
     void Update(){
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (pause.GetComponent<Animator>().GetBool("perde"))
+            {
+                pause.GetComponent<MenuBotoesBehaviour>().Despausa();
+            }
+            else
+                pause.GetComponent<Animator>().SetBool("perde", !pause.GetComponent<Animator>().GetBool("perde"));
+        }
         movimento = Input.GetAxisRaw("Horizontal");
         Jump();
         Raycasts();

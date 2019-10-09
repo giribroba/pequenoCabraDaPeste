@@ -115,7 +115,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.0166667
-    functionName: Pausa
+    functionName: get_sprite
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

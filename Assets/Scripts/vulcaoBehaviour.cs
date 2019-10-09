@@ -87,11 +87,11 @@ public class vulcaoBehaviour : MonoBehaviour
                                             p.MudaIconePa();
                                             if (gameObject.tag == "Balde"){
                                                 p.balde = true;
-                                                Destroy(this.gameObject, 2f);
+                                                Destroy(this.gameObject);
                                             }
                                             else{
                                                 other.GetComponent<Animator>().SetTrigger("pasadaVulcao");
-                                            Invoke("trocouVulcao", 1.5f);
+                                                Invoke("trocouVulcao", 1.5f);
                                                 p.VulcaoDespisca();
                                                 fumaca.SetTrigger("Fumaca");
                                             }

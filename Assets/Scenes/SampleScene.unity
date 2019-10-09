@@ -22541,6 +22541,7 @@ MonoBehaviour:
   vida: {fileID: 753673114}
   iconePa: {fileID: 1688608105}
   iconeBroto: {fileID: 1759900314}
+  pause: {fileID: 1536074594}
   terra: {fileID: 21300000, guid: 814b9a10ae2b7934691995c7dc8ed824, type: 3}
   imgVulcao: {fileID: 21300000, guid: 5843ddd5e95ef104ab670b10506e1105, type: 3}
   florUI:

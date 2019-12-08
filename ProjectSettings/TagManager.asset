@@ -13,6 +13,11 @@ TagManager:
   - eventRosa
   - eventWins
   - Pause
+  - Marcador
+  - Removido
+  - "Vulc\xE3o"
+  - Rosa
+  - "Po\xE7o"
   layers:
   - Default
   - TransparentFX

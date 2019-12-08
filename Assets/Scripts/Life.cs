@@ -8,12 +8,12 @@ public class Life : MonoBehaviour
 {
     [SerializeField] private int maxLife;
     [SerializeField] GameObject[] spriteHearts;
-    [SerializeField] Animator menu;
-    public int life;
+    [SerializeField] GameObject menu;
+    public static int life;
     void Start() {
         life = maxLife;
         StartCoroutine(LowerUpdate());
-        menu.SetBool("perde", false);
+        menu.GetComponent<Animator>().SetBool("perde", false);
     }
     public void ResetLife()
     {
@@ -39,7 +39,7 @@ public class Life : MonoBehaviour
             life = maxLife;
         else if(life <= 0)
             Invoke("ResetScene", 0.2f);
-            gameObject.GetComponent<AudioSource>().Play();
+        gameObject.GetComponent<AudioSource>().Play();
     }
 
     IEnumerator LowerUpdate(){
@@ -50,7 +50,9 @@ public class Life : MonoBehaviour
     }
 
     void ResetScene(){
-        menu.SetBool("perde", true);
+        menu.GetComponent<Animator>().SetBool("perde", true);
+        menu.transform.GetChild(0).gameObject.SetActive(true);
         GameObject.FindWithTag("Player").SetActive(false);
+        print(life);
     }
 }

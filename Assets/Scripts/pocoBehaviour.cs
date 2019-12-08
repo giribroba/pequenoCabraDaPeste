@@ -41,7 +41,13 @@ public class pocoBehaviour : MonoBehaviour
                         iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1);
                     }
                     else if(Input.GetKeyDown("e") && !other.GetComponent<controladorJogador>().balde && bPoco && profundidade <= 0)
-                    {                        
+                    {
+                        if (capacidade <= 0)
+                        {
+                            this.transform.GetChild(0).gameObject.tag = "Removido";
+                            Objetivo.SetObjetivo("Poço");
+                            Feed();
+                        }
                         bPoco = false;
                         other.GetComponent<controladorJogador>().balde = true;
                         iconeBalde.GetComponent<SpriteRenderer>().color = new Color(1,1,1, 0.5f);
@@ -53,6 +59,7 @@ public class pocoBehaviour : MonoBehaviour
                     }
                     if(bPoco)
                     {
+
                         if(Input.GetAxisRaw("Vertical") > 0)
                         {
                             profundidade -= (profundidade < 0)? 0 : Time.deltaTime;
@@ -74,9 +81,8 @@ public class pocoBehaviour : MonoBehaviour
                             cAgua = true;
                             capacidade--;
                         }
-                        else if(capacidade <= 0 && profundidade >= 1 && !cAgua)
+                        else if(capacidade <= 0 && profundidade <= 0.08f && !cAgua)
                         {
-                            Feed();
                             cAgua = false;
                         }
                     }

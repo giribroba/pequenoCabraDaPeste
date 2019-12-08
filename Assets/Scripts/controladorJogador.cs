@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class controladorJogador : MonoBehaviour
 {
@@ -15,18 +13,20 @@ public class controladorJogador : MonoBehaviour
     [HideInInspector] public float velocidade;
     public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false;
     [SerializeField] private bool noChao, iconeUmaVez = true;
-    private float movimento, KB;    
+    private float movimento, KB;
     public int contBroto = 0, contVulcao, contBaldada = 0;
     private string balaoNoSim = "Broto";
     private Animator animator;
     private RaycastHit2D[] hit;
-    private SpriteRenderer renderer; 
+    private SpriteRenderer renderer;
     private Rigidbody2D rbPlayer;
     private Collider2D colPlayer;
     public GameObject tocaSons;
 
     public int level;
-    void Start(){
+    void Start()
+    {
+        Objetivo.SetObjetivo("Pá");
         level = 0;
         contVulcao = 0;
         tocaSons = GameObject.FindWithTag("Sound");
@@ -37,7 +37,8 @@ public class controladorJogador : MonoBehaviour
         parar = true;
         Invoke("NoParar", 6.5f);
     }
-    void Update(){
+    void Update()
+    {
         if (Input.GetButtonDown("Cancel"))
         {
             if (pause.GetComponent<Animator>().GetBool("perde"))
@@ -48,6 +49,25 @@ public class controladorJogador : MonoBehaviour
                 pause.GetComponent<Animator>().SetBool("perde", !pause.GetComponent<Animator>().GetBool("perde"));
         }
         movimento = Input.GetAxisRaw("Horizontal");
+        if (contBroto == 6)
+        {
+            Objetivo.SetObjetivo("Vulcão");
+            contador.text = (contVulcao.ToString() + "/5");
+            iconeBroto.GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
+            iconeBroto.GetComponent<Image>().sprite = imgVulcao;
+            iconeBroto.GetComponent<IconesBehaviour>().Comeca();
+            contBroto++;
+        }
+        if (contVulcao == 5)
+        {
+            contVulcao++;
+            Objetivo.SetObjetivo("Rosa");
+        }
+        if (contBaldada == 6)
+        {
+            contBaldada++;
+            Objetivo.SetObjetivo("Rosa");
+        }
         Jump();
         Raycasts();
     }
@@ -73,23 +93,28 @@ public class controladorJogador : MonoBehaviour
         {
             SetLevel(2);
         }
-        else if(contVulcao >= 5)
+        else if (contVulcao >= 5)
         {
             SetLevel(3);
         }
-        
+
     }
 
-    void Raycasts(){
-        hit = Physics2D.RaycastAll(transform.position - new Vector3(0, 0.8f), -transform.up, 0.7f);     
-        noChao = Physics2D.OverlapCircle(transform.position - new Vector3(0,0.84f), 1f, LayerMask.GetMask("Chao"));
+    void Raycasts()
+    {
+        hit = Physics2D.RaycastAll(transform.position - new Vector3(0, 0.8f), -transform.up, 0.7f);
+        noChao = Physics2D.OverlapCircle(transform.position - new Vector3(0, 0.84f), 1f, LayerMask.GetMask("Chao"));
         for (int i = 0; i < hit.Length; i++)
         {
-            if (hit[i].collider != null){
-                if (hit[i].collider.gameObject.tag == "Broto"){
+            if (hit[i].collider != null)
+            {
+                if (hit[i].collider.gameObject.tag == "Broto")
+                {
                     var other = hit[i].collider.gameObject;
                     if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6) && velocidade <= 0.0001)
                     {
+                        other.tag = "Removido";
+                        Objetivo.SetObjetivo("Broto");
                         other.transform.GetChild(1).gameObject.SetActive(false);
                         tocaSons.GetComponent<Sons>().PlaySound("broto");
                         contBroto++;
@@ -105,33 +130,30 @@ public class controladorJogador : MonoBehaviour
                         parar = true;
                         Invoke("NoParar", 0.8f);
                     }
-                    else if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && !podePa && iconeUmaVez){
+                    else if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && !podePa && iconeUmaVez)
+                    {
                         iconeUmaVez = false;
                         iconePa.GetComponent<IconesBehaviour>().Comeca();
                     }
                 }
             }
-            if (contBroto == 6){
-                contador.text = (contVulcao.ToString() + "/5");
-                iconeBroto.GetComponent<Image>().color = new Color(1,1,1,0.5f);
-                iconeBroto.GetComponent<Image>().sprite = imgVulcao;
-                iconeBroto.GetComponent<IconesBehaviour>().Comeca();
-                contBroto++;
-            }
         }
-        
+
     }
-    public void VulcaoDespisca(){
+    public void VulcaoDespisca()
+    {
         iconeBroto.GetComponent<IconesBehaviour>().QuebraRepeticao();
         iconeBroto.GetComponent<IconesBehaviour>().Pisca();
         iconeBroto.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
 
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         Move();
     }
 
-    void Move(){
+    void Move()
+    {
         planeta.transform.eulerAngles = new Vector3(planeta.transform.eulerAngles.x, planeta.transform.eulerAngles.y, planeta.transform.eulerAngles.z + velocidade + KB);
         animator.SetBool("walk", velocidade != 0);
         if (Mathf.Abs(KB) < 0.1f)
@@ -146,47 +168,60 @@ public class controladorJogador : MonoBehaviour
         {
             KB += Time.deltaTime * 1.5f;
         }
-        if (movimento > 0 && !parar){
-            velocidade = (velocidade < velocidadeMaxima)? velocidade += Time.deltaTime * 1.5f : velocidade = velocidadeMaxima;
+        if (movimento > 0 && !parar)
+        {
+            velocidade = (velocidade < velocidadeMaxima) ? velocidade += Time.deltaTime * 1.5f : velocidade = velocidadeMaxima;
             renderer.flipX = false;
         }
-        else if(movimento < 0 && !parar){
-            velocidade = (velocidade > -velocidadeMaxima)? velocidade -= Time.deltaTime * 1.5f : velocidade = -velocidadeMaxima;
+        else if (movimento < 0 && !parar)
+        {
+            velocidade = (velocidade > -velocidadeMaxima) ? velocidade -= Time.deltaTime * 1.5f : velocidade = -velocidadeMaxima;
             renderer.flipX = true;
         }
-        else{
-            if(Mathf.Abs(velocidade) < 0.1f){
+        else
+        {
+            if (Mathf.Abs(velocidade) < 0.1f)
+            {
                 velocidade = 0;
             }
-            else if(velocidade > 0){
+            else if (velocidade > 0)
+            {
                 velocidade -= Time.deltaTime * 1.5f;
             }
-            else if(velocidade < 0){
+            else if (velocidade < 0)
+            {
                 velocidade += Time.deltaTime * 1.5f;
             }
         }
     }
 
-    void Jump(){
+    void Jump()
+    {
         animator.SetBool("jump", !noChao);
-        if (noChao && Input.GetButtonDown("Jump")){
+        if (noChao && Input.GetButtonDown("Jump"))
+        {
             tocaSons.GetComponent<Sons>().PlaySound("pulo");
             rbPlayer.velocity = new Vector2(0, forcaPulo);
         }
     }
 
-    void OnCollisionStay2D(Collision2D collision){
-    if(collision.gameObject.tag == "Cacto" && !imortal){
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Cacto" && !imortal)
+        {
             tocaSons.GetComponent<Sons>().PlaySound("hit");
-            KB = (transform.position.x < collision.gameObject.transform.position.x)? -0.5f : 0.5f;
+            KB = (transform.position.x < collision.gameObject.transform.position.x) ? -0.5f : 0.5f;
             vida.GetComponent<Life>().DecrementLife();
             GetComponent<DanoPlayerPisca>().Comeca();
             Invoke("VisualNormal", 1f);
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other){
-        if(other.tag == "Pá"){
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == "Pá")
+        {
+            Objetivo.SetObjetivo("Broto");
             tocaSons.GetComponent<Sons>().PlaySound("pá");
             podePa = true;
             Destroy(iconePa.GetComponent<IconesBehaviour>());
@@ -195,13 +230,18 @@ public class controladorJogador : MonoBehaviour
             iconeBroto.GetComponent<IconesBehaviour>().Comeca();
             Destroy(other.gameObject);
         }
-        else if(other.tag == balaoNoSim && podePa && !jaEnsinou){
+        else if (other.tag == balaoNoSim && podePa && !jaEnsinou)
+        {
             other.transform.GetChild(1).gameObject.SetActive(true);
             jaEnsinou = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D col){
-        if(col.tag == "eventRosa" && contVulcao == 5 ){
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "eventRosa" && contVulcao >= 5)
+        {
+            print("adad");
+            Objetivo.SetObjetivo("Balde");
             tocaSons.GetComponent<Sons>().PlaySound("rosa");
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", true);
             RealcaIconePa();
@@ -211,18 +251,20 @@ public class controladorJogador : MonoBehaviour
             Invoke("NoParar", 2f);
             Destroy(col.gameObject);
         }
-        if (col.tag == "eventWins" && contVulcao == 5 && contBaldada >= 6)
+        if (col.tag == "eventWins" && contVulcao >= 5 && contBaldada >= 6)
         {
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", false);
             SceneManager.LoadScene(4);
         }
     }
 
-    void VisualNormal(){
+    void VisualNormal()
+    {
         GetComponent<DanoPlayerPisca>().QuebraRepeticao();
         renderer.color = new Color(1, 1, 1, 1);
     }
-    public void RealcaIconePa(){
+    public void RealcaIconePa()
+    {
         cantil.color = new Color(1, 1, 1, 1);
         aguaCantil.color = new Color(1, 1, 1, 1);
         flor.color = new Color(1, 1, 1, 1);
@@ -236,11 +278,13 @@ public class controladorJogador : MonoBehaviour
         flor.enabled = true;
         contador.enabled = false;
     }
-    void NoParar(){
+    void NoParar()
+    {
         parar = false;
     }
-    public void AddFlor(){
-        if(contBaldada == 0)
+    public void AddFlor()
+    {
+        if (contBaldada == 0)
             Destroy(flor.GetComponent<Animator>());
         flor.GetComponent<Image>().sprite = florUI[contBaldada];
     }

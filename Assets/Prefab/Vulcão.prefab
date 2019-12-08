@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7762500326493846301}
   m_Layer: 0
   m_Name: "Vulc\xE3o"
-  m_TagString: Untagged
+  m_TagString: "Vulc\xE3o"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4400280965868050786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.149, y: 0.605, z: 0}
-  m_LocalScale: {x: 0.24583355, y: 0.24583355, z: 0.06799753}
+  m_LocalScale: {x: 0.27387127, y: 0.26333776, z: 0.09711792}
   m_Children:
   - {fileID: 657285036165042138}
   - {fileID: 7254152407364137246}

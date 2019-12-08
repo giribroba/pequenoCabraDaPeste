@@ -33,7 +33,8 @@ public class BotaoController : MonoBehaviour
         //{
             player.SetActive(true);
             gameOver.SetBool("perde", false);
-            vida.ResetLife();
+            vida.ResetLife(); 
+        StartCoroutine("Sobe");
         //}
         if (playerS.ReturnLevel() == 2)
         {
@@ -47,4 +48,11 @@ public class BotaoController : MonoBehaviour
     public void SairJogo(){
         Application.Quit();
     }
+
+    private IEnumerator Sobe()
+    {
+        yield return new WaitForSeconds(0.5f);
+        this.transform.GetChild(0).gameObject.SetActive(false);
+    }
+
 }

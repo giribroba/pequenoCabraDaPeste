@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FolhetoBehaviour : MonoBehaviour
 {
@@ -12,7 +10,8 @@ public class FolhetoBehaviour : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponent<controladorJogador>();
     }
-    public void AparecerFolheto(){
+    public void AparecerFolheto()
+    {
 
         if (player.ReturnLevel() == 0)
         {
@@ -26,7 +25,8 @@ public class FolhetoBehaviour : MonoBehaviour
             escreveText.StartCoroutine("ApareceTexto");
         }
     }
-    public void DesparecerFolheto(){
+    public void DesparecerFolheto()
+    {
         folhetoAmt.SetBool("folheto", false);
         d = transform.GetChild(1).gameObject;
         Destroy(this.d);

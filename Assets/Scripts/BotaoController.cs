@@ -27,22 +27,22 @@ public class BotaoController : MonoBehaviour
     public void Reinicia(){
         //if (playerS.ReturnLevel() == 1)
         //{
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //}
         //else
         //{
-            player.SetActive(true);
-            gameOver.SetBool("perde", false);
-            vida.ResetLife(); 
+            // player.SetActive(true);
+            // gameOver.SetBool("perde", false);
+            // vida.ResetLife(); 
         StartCoroutine("Sobe");
         //}
-        if (playerS.ReturnLevel() == 2)
-        {
+        // if (playerS.ReturnLevel() == 2)
+        // {
 
-        }else if(playerS.ReturnLevel() == 3)
-        {
+        // }else if(playerS.ReturnLevel() == 3)
+        // {
 
-        }
+        // }
 
     }
     public void SairJogo(){

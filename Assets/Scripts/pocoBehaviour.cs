@@ -107,6 +107,18 @@ public class pocoBehaviour : MonoBehaviour
         if (collision.tag == "Player"){
             gota.GetComponent<SpriteRenderer>().enabled = false;
             iconeBalde.GetComponent<SpriteRenderer>().enabled = false;
+            if(collision.GetComponent<controladorJogador>().balde && collision.GetComponent<controladorJogador>().primeiroPoco)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+                collision.GetComponent<controladorJogador>().primeiroPoco = collision.GetComponent<controladorJogador>().contBaldada == 0;
+            } 
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Player" && col.GetComponent<controladorJogador>().balde && col.GetComponent<controladorJogador>().primeiroPoco )
+        {
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 }

@@ -11,7 +11,7 @@ public class controladorJogador : MonoBehaviour
     public Text contador;
     public Image cantil, aguaCantil, flor;
     [HideInInspector] public float velocidade;
-    public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false;
+    public bool balde = false, primeiroPoco = true, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false;
     [SerializeField] private bool noChao, iconeUmaVez = true;
     private float movimento, KB;
     public int contBroto = 0, contVulcao, contBaldada = 0;
@@ -46,7 +46,10 @@ public class controladorJogador : MonoBehaviour
                 pause.GetComponent<MenuBotoesBehaviour>().Despausa();
             }
             else
+            {
                 pause.GetComponent<Animator>().SetBool("perde", !pause.GetComponent<Animator>().GetBool("perde"));
+                Time.timeScale = 0;
+            }
         }
         movimento = Input.GetAxisRaw("Horizontal");
         if (contBroto == 6)

@@ -35,9 +35,4 @@ public class MenuBotoesBehaviour : MonoBehaviour
         GameObject.FindWithTag("Pause").GetComponent<Animator>().SetBool("perde", false);
     }
 
-    public void Pausa()
-    {
-        Time.timeScale = 0;
-    }
-
 }

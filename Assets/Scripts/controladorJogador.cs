@@ -26,6 +26,7 @@ public class controladorJogador : MonoBehaviour
     public int level;
     void Start()
     {
+        Time.timeScale = 1;
         Objetivo.SetObjetivo("Pá");
         level = 0;
         contVulcao = 0;

@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -182,7 +183,7 @@ PrefabInstance:
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
@@ -208,11 +209,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1783381248}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,6 +279,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -319,11 +320,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1378192780}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -394,6 +390,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -418,10 +419,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2050431600}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -493,20 +504,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -517,10 +518,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1734904136}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -592,20 +603,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -616,11 +617,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46450475}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -690,6 +686,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -750,11 +751,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 838055145}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -824,6 +820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -922,11 +923,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 717062384}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -997,6 +993,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1027,11 +1028,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1065119416}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1102,6 +1098,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1169,7 +1170,7 @@ PrefabInstance:
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
@@ -1270,11 +1271,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1734904136}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1345,6 +1341,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1369,11 +1370,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2116949756}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1443,6 +1439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -1542,11 +1543,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2110129662}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1617,6 +1613,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1641,11 +1642,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891304814}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1716,6 +1712,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -1771,6 +1772,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2074,11 +2076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1783381248}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2149,6 +2146,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2179,11 +2181,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458392644}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2254,6 +2251,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2278,11 +2280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518426112}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2353,6 +2350,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2383,11 +2385,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310328945}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2458,6 +2455,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2482,11 +2484,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2525,7 +2522,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -2552,6 +2549,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.29452503
       objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}
 --- !u!1001 &187380490
@@ -2561,10 +2563,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1826818118}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -2636,20 +2648,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -2790,11 +2792,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 192309994}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2865,6 +2862,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2907,11 +2909,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1322369658}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2982,6 +2979,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -3043,6 +3045,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3092,7 +3095,7 @@ Transform:
   - {fileID: 2124089034}
   - {fileID: 2069523006}
   m_Father: {fileID: 455064442}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 135.436}
 --- !u!95 &293582987
 Animator:
@@ -3155,11 +3158,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 78892444}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3230,6 +3228,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -3258,6 +3261,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plataforma 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
@@ -3297,7 +3315,7 @@ PrefabInstance:
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
@@ -3329,21 +3347,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1945
       objectReference: {fileID: 0}
-    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d28c4dc75757a434aad5ac67aba74d7b, type: 3}
 --- !u!1001 &317985650
@@ -3353,11 +3356,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1065119416}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3427,6 +3425,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -3476,11 +3479,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Name
-      value: Broto (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3519,7 +3517,7 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -3536,6 +3534,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -136.899
       objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Name
+      value: Broto (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bb612a987c4994fa8c0b2c09083402, type: 3}
 --- !u!4 &332391918 stripped
@@ -3551,11 +3554,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 717062384}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3626,6 +3624,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -3650,10 +3653,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1378192780}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -3725,20 +3738,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -3749,14 +3752,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 8258900762956386103, guid: 340473c862cd82840b4dc7bbcebb1720,
+    - target: {fileID: 8258900762956386100, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
-      propertyPath: m_Name
-      value: Cacto (1)
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8258900762956386103, guid: 340473c862cd82840b4dc7bbcebb1720,
+    - target: {fileID: 8258900762956386100, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8258900762956386102, guid: 340473c862cd82840b4dc7bbcebb1720,
@@ -3797,7 +3800,7 @@ PrefabInstance:
     - target: {fileID: 8258900762956386102, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8258900762956386102, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
@@ -3829,14 +3832,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.33264863
       objectReference: {fileID: 0}
-    - target: {fileID: 8258900762956386100, guid: 340473c862cd82840b4dc7bbcebb1720,
+    - target: {fileID: 8258900762956386103, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
-      propertyPath: m_FlipX
-      value: 1
+      propertyPath: m_Name
+      value: Cacto (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8258900762956386100, guid: 340473c862cd82840b4dc7bbcebb1720,
+    - target: {fileID: 8258900762956386103, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8258900762956386107, guid: 340473c862cd82840b4dc7bbcebb1720,
@@ -4072,7 +4075,7 @@ PrefabInstance:
     - target: {fileID: 2725973156198565430, guid: 2c572bd9bf0b758438a288d520233d03,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2725973156198565430, guid: 2c572bd9bf0b758438a288d520233d03,
         type: 3}
@@ -4108,11 +4111,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1734904136}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4183,6 +4181,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -4213,10 +4216,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1322369658}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -4288,20 +4301,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -4365,6 +4368,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4411,7 +4415,6 @@ Transform:
   m_LocalPosition: {x: 0.01, y: -36.48, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 2}
   m_Children:
-  - {fileID: 1877600602}
   - {fileID: 1337163704}
   - {fileID: 518884462}
   - {fileID: 1032635032}
@@ -4510,11 +4513,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Name
-      value: Broto (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4553,7 +4551,7 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -4570,6 +4568,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 33.154003
       objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Name
+      value: Broto (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bb612a987c4994fa8c0b2c09083402, type: 3}
 --- !u!4 &468484985 stripped
@@ -4585,11 +4588,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2050431600}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4660,6 +4658,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -4684,11 +4687,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1294531340}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4759,6 +4757,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -4783,11 +4786,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46450475}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4858,6 +4856,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -4882,11 +4885,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 78892444}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4957,6 +4955,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -4987,11 +4990,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1813179891}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5062,6 +5060,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5123,6 +5126,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5170,7 +5174,7 @@ Transform:
   m_LocalScale: {x: 7.0000143, y: 7.0000143, z: 0.5}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -163.298}
 --- !u!95 &518884463
 Animator:
@@ -5308,11 +5312,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1349559038}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5382,6 +5381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -5545,11 +5549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 666546264}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5620,6 +5619,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5644,11 +5648,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 192309994}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5719,6 +5718,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5743,11 +5747,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310328945}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5818,6 +5817,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5866,10 +5870,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1783381248}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -5941,20 +5955,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -5971,11 +5975,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2110129662}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6045,6 +6044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -6123,11 +6127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1994794231}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6198,6 +6197,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -6222,11 +6226,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1294531340}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6296,6 +6295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -6464,11 +6468,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1294531340}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6538,6 +6537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -6618,7 +6622,7 @@ PrefabInstance:
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
@@ -6936,11 +6940,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2050431600}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7011,6 +7010,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -7035,11 +7039,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458392644}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7110,6 +7109,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -7134,11 +7138,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891304814}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7209,6 +7208,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -7233,11 +7237,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 666546264}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7308,6 +7307,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -7332,11 +7336,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2116949756}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7406,6 +7405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -7461,6 +7465,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7508,7 +7513,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2.246162}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -156.92001}
 --- !u!4 &813177920 stripped
 Transform:
@@ -7523,11 +7528,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 78892444}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7598,6 +7598,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -7622,11 +7627,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1783381248}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7696,6 +7696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -7768,96 +7773,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_Name
-      value: Cacto3 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 52.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.020432949
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9997912
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 362.342
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.81765175
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.81765175
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.43027267
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2121393132168567080, guid: 97e25f48e63acd2468afd9e6483e883b,
         type: 3}
       propertyPath: m_Points.Array.size
@@ -7983,6 +7898,96 @@ PrefabInstance:
       propertyPath: m_Points.Array.data[12].y
       value: -3.404249
       objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_Name
+      value: Cacto3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 52.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.020432949
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9997912
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 362.342
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.81765175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.81765175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.43027267
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97e25f48e63acd2468afd9e6483e883b, type: 3}
 --- !u!1001 &851006494
@@ -7992,10 +7997,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 838055145}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -8067,20 +8082,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -8097,11 +8102,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1826818118}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8171,6 +8171,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -8242,7 +8247,7 @@ Transform:
   - {fileID: 1294531340}
   - {fileID: 1994794231}
   m_Father: {fileID: 455064442}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &870976724
 BoxCollider2D:
@@ -8323,7 +8328,7 @@ Transform:
   - {fileID: 458392644}
   - {fileID: 1322369658}
   m_Father: {fileID: 455064442}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -17.404001}
 --- !u!61 &886018755
 BoxCollider2D:
@@ -8399,16 +8404,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2096192238}
     m_Modifications:
-    - target: {fileID: 3662258565877123640, guid: 098f3efb758cca54ca8f4c667901143e,
+    - target: {fileID: 3662258565877123635, guid: 098f3efb758cca54ca8f4c667901143e,
         type: 3}
-      propertyPath: m_Name
-      value: ControladorDeSons
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3662258565877123636, guid: 098f3efb758cca54ca8f4c667901143e,
         type: 3}
       propertyPath: folhetoIntro
       value: 
       objectReference: {fileID: 556023836}
+    - target: {fileID: 3662258565877123640, guid: 098f3efb758cca54ca8f4c667901143e,
+        type: 3}
+      propertyPath: m_Name
+      value: ControladorDeSons
+      objectReference: {fileID: 0}
     - target: {fileID: 3662258565877123641, guid: 098f3efb758cca54ca8f4c667901143e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8489,11 +8499,6 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3662258565877123635, guid: 098f3efb758cca54ca8f4c667901143e,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 098f3efb758cca54ca8f4c667901143e, type: 3}
 --- !u!1001 &933389264
@@ -8503,11 +8508,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8546,7 +8546,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -8573,6 +8573,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.29452556
       objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}
 --- !u!1001 &937378363
@@ -8582,11 +8587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1378192780}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8656,6 +8656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -8730,7 +8735,7 @@ PrefabInstance:
     - target: {fileID: 5003005776924064765, guid: ae871b63d4ed9c94fae1cd9958942628,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5003005776924064765, guid: ae871b63d4ed9c94fae1cd9958942628,
         type: 3}
@@ -8786,11 +8791,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 717062384}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8860,6 +8860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -8939,7 +8944,7 @@ PrefabInstance:
     - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
         type: 3}
@@ -9113,7 +9118,7 @@ Transform:
   m_Children:
   - {fileID: 1009303544}
   m_Father: {fileID: 455064442}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39.504}
 --- !u!212 &991386333
 SpriteRenderer:
@@ -9129,6 +9134,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9171,11 +9177,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2110129662}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9246,6 +9247,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -9313,7 +9319,7 @@ PrefabInstance:
     - target: {fileID: 5003005776924064765, guid: ae871b63d4ed9c94fae1cd9958942628,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5003005776924064765, guid: ae871b63d4ed9c94fae1cd9958942628,
         type: 3}
@@ -9400,7 +9406,7 @@ PrefabInstance:
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
@@ -9426,11 +9432,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 192309994}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9501,6 +9502,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -9537,11 +9543,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Name
-      value: Broto (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9580,7 +9581,7 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -9596,6 +9597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.641001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Name
+      value: Broto (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bb612a987c4994fa8c0b2c09083402, type: 3}
@@ -9630,11 +9636,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1322369658}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9704,6 +9705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -9729,11 +9735,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 78892444}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9803,6 +9804,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -9834,11 +9840,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1813179891}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9909,6 +9910,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -9968,11 +9974,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1294531340}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10043,6 +10044,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10073,11 +10079,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485442211}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10148,6 +10149,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10202,6 +10208,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10249,7 +10256,7 @@ Transform:
   m_LocalScale: {x: 9.639617, y: 9.639617, z: 3.855846}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -79.6}
 --- !u!1 &1141611343
 GameObject:
@@ -10351,11 +10358,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10394,7 +10396,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -10421,6 +10423,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.2945252
       objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}
 --- !u!1001 &1148861865
@@ -10430,11 +10437,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10473,7 +10475,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -10500,6 +10502,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.2945251
       objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}
 --- !u!1001 &1149211212
@@ -10509,11 +10516,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1734904136}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10584,6 +10586,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10608,11 +10615,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1994794231}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10683,6 +10685,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10750,10 +10757,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518426112}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -10825,20 +10842,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -10849,11 +10856,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518426112}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10924,6 +10926,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -10948,11 +10955,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10991,7 +10993,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -11018,6 +11020,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.29452524
       objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}
 --- !u!1001 &1184522602
@@ -11027,11 +11034,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1065119416}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11101,6 +11103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -11702,11 +11709,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 66035930355626209, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
-        type: 3}
-      propertyPath: m_Name
-      value: Plataforma cai
-      objectReference: {fileID: 0}
     - target: {fileID: 66035930355626208, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11745,7 +11747,7 @@ PrefabInstance:
     - target: {fileID: 66035930355626208, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
         type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 66035930355626208, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
         type: 3}
@@ -11761,6 +11763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -19.533
+      objectReference: {fileID: 0}
+    - target: {fileID: 66035930355626209, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
+        type: 3}
+      propertyPath: m_Name
+      value: Plataforma cai
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7f2da36b9c5c494f9e0e19ddc3ea843, type: 3}
@@ -12056,11 +12063,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1813179891}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12131,6 +12133,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12155,11 +12162,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1378192780}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12229,6 +12231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -12338,10 +12345,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1813179891}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -12413,20 +12430,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -12437,11 +12444,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46450475}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12512,6 +12514,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12536,10 +12543,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1294531340}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -12611,20 +12628,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -12641,11 +12648,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485442211}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12716,6 +12718,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12746,11 +12753,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2116949756}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12821,6 +12823,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12883,6 +12890,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13033,10 +13041,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 717062384}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -13108,20 +13126,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -13138,11 +13146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1826818118}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13212,6 +13215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -13284,11 +13292,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1322369658}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13359,6 +13362,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -13383,11 +13391,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1349559038}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13458,6 +13461,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -13525,7 +13533,7 @@ PrefabInstance:
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
@@ -13575,7 +13583,7 @@ Transform:
   m_LocalScale: {x: 1.4999998, y: 1.4999998, z: 0.530195}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -467.51202}
 --- !u!58 &1300989859
 CircleCollider2D:
@@ -13623,6 +13631,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13760,6 +13769,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13807,7 +13817,7 @@ Transform:
   m_LocalScale: {x: 20, y: 20, z: 0}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1001 &1338143351
 PrefabInstance:
@@ -13816,11 +13826,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Name
-      value: Broto (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13859,7 +13864,7 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -13875,6 +13880,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 100.68301
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Name
+      value: Broto (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bb612a987c4994fa8c0b2c09083402, type: 3}
@@ -13971,6 +13981,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14013,11 +14024,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 66035930355626209, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
-        type: 3}
-      propertyPath: m_Name
-      value: Plataforma cai
-      objectReference: {fileID: 0}
     - target: {fileID: 66035930355626208, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14056,7 +14062,7 @@ PrefabInstance:
     - target: {fileID: 66035930355626208, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
         type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 66035930355626208, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
         type: 3}
@@ -14073,6 +14079,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -42.598003
       objectReference: {fileID: 0}
+    - target: {fileID: 66035930355626209, guid: e7f2da36b9c5c494f9e0e19ddc3ea843,
+        type: 3}
+      propertyPath: m_Name
+      value: Plataforma cai
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7f2da36b9c5c494f9e0e19ddc3ea843, type: 3}
 --- !u!1001 &1356772350
@@ -14082,11 +14093,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2116949756}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14157,6 +14163,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -14199,10 +14210,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1065119416}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -14274,20 +14295,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -14333,11 +14344,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Name
-      value: Broto (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14376,7 +14382,7 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -14393,6 +14399,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -15.354001
       objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Name
+      value: Broto (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bb612a987c4994fa8c0b2c09083402, type: 3}
 --- !u!1001 &1383803741
@@ -14402,10 +14413,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1994794231}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -14477,20 +14498,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -14507,11 +14518,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 666546264}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14582,6 +14588,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -14612,11 +14623,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518426112}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14687,6 +14693,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -14711,10 +14722,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310328945}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -14786,20 +14807,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -14898,6 +14909,7 @@ RectTransform:
   - {fileID: 1264054681}
   - {fileID: 556023832}
   - {fileID: 1536074595}
+  - {fileID: 1877600602}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14919,11 +14931,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1322369658}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14994,6 +15001,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -15018,10 +15030,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485442211}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -15093,6 +15115,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
+--- !u!1001 &1429065037
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 192309994}
+    m_Modifications:
     - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -15106,21 +15142,7 @@ PrefabInstance:
     - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
---- !u!1001 &1429065037
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 192309994}
-    m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -15192,20 +15214,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -15216,11 +15228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46450475}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15291,6 +15298,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -15315,11 +15327,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458392644}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15390,6 +15397,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -15420,11 +15432,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310328945}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15495,6 +15502,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -15519,10 +15531,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46450475}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -15594,20 +15616,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -15618,11 +15630,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1826818118}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15692,6 +15699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -15758,11 +15770,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1826818118}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15833,6 +15840,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -15857,11 +15869,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1783381248}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15932,6 +15939,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -15962,11 +15974,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2050431600}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16036,6 +16043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -16151,7 +16163,7 @@ PrefabInstance:
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4400280965868050788, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
@@ -16192,10 +16204,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2110129662}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -16267,20 +16289,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -16297,11 +16309,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891304814}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16371,6 +16378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -16519,11 +16531,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1349559038}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16594,6 +16601,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -16618,10 +16630,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891304814}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -16693,20 +16715,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -16742,7 +16754,7 @@ Transform:
   m_Children:
   - {fileID: 1351120676}
   m_Father: {fileID: 455064442}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 318.075}
 --- !u!212 &1627612876
 SpriteRenderer:
@@ -16758,6 +16770,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16921,14 +16934,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
+    - target: {fileID: 7213534246206637312, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
-      propertyPath: m_Name
-      value: Cacto2 (1)
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
+    - target: {fileID: 7213534246206637312, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7213534246206637314, guid: ca85e19b694599f45867eba3698e726a,
@@ -16969,7 +16982,7 @@ PrefabInstance:
     - target: {fileID: 7213534246206637314, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7213534246206637314, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
@@ -17001,14 +17014,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.36872992
       objectReference: {fileID: 0}
-    - target: {fileID: 7213534246206637312, guid: ca85e19b694599f45867eba3698e726a,
+    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
-      propertyPath: m_FlipX
-      value: 1
+      propertyPath: m_Name
+      value: Cacto2 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7213534246206637312, guid: ca85e19b694599f45867eba3698e726a,
+    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7213534246206637319, guid: ca85e19b694599f45867eba3698e726a,
@@ -17195,10 +17208,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 2524183914078555248, guid: 676351a2edf36b5438009e7e820473f5,
+    - target: {fileID: 2524183914078555212, guid: 676351a2edf36b5438009e7e820473f5,
         type: 3}
-      propertyPath: m_Name
-      value: Bode
+      propertyPath: m_Offset.y
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 2524183914078555215, guid: 676351a2edf36b5438009e7e820473f5,
         type: 3}
@@ -17238,7 +17251,7 @@ PrefabInstance:
     - target: {fileID: 2524183914078555215, guid: 676351a2edf36b5438009e7e820473f5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2524183914078555215, guid: 676351a2edf36b5438009e7e820473f5,
         type: 3}
@@ -17270,10 +17283,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15
       objectReference: {fileID: 0}
-    - target: {fileID: 2524183914078555212, guid: 676351a2edf36b5438009e7e820473f5,
+    - target: {fileID: 2524183914078555248, guid: 676351a2edf36b5438009e7e820473f5,
         type: 3}
-      propertyPath: m_Offset.y
-      value: 0.92
+      propertyPath: m_Name
+      value: Bode
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676351a2edf36b5438009e7e820473f5, type: 3}
@@ -17308,11 +17321,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 891304814}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17382,6 +17390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -17407,11 +17420,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1813179891}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17481,6 +17489,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -17530,6 +17543,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17577,7 +17591,7 @@ Transform:
   m_LocalScale: {x: 0.72801757, y: 0.77271384, z: 0.5}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -59.579002}
 --- !u!1001 &1652586017
 PrefabInstance:
@@ -17586,11 +17600,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 192309994}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17661,6 +17670,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -17727,6 +17741,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17774,7 +17789,7 @@ Transform:
   m_LocalScale: {x: 1.6, y: 1.6, z: 2.246162}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -153.279}
 --- !u!1 &1676479141
 GameObject:
@@ -18116,11 +18131,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485442211}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18191,6 +18201,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -18215,10 +18230,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1349559038}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -18290,20 +18315,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -18320,11 +18335,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 8258900762956386103, guid: 340473c862cd82840b4dc7bbcebb1720,
-        type: 3}
-      propertyPath: m_Name
-      value: Cacto
-      objectReference: {fileID: 0}
     - target: {fileID: 8258900762956386102, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18363,7 +18373,7 @@ PrefabInstance:
     - target: {fileID: 8258900762956386102, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8258900762956386102, guid: 340473c862cd82840b4dc7bbcebb1720,
         type: 3}
@@ -18380,6 +18390,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 74.94
       objectReference: {fileID: 0}
+    - target: {fileID: 8258900762956386103, guid: 340473c862cd82840b4dc7bbcebb1720,
+        type: 3}
+      propertyPath: m_Name
+      value: Cacto
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340473c862cd82840b4dc7bbcebb1720, type: 3}
 --- !u!1001 &1726931634
@@ -18389,11 +18404,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2050431600}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18463,6 +18473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -18837,14 +18852,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
-        type: 3}
-      propertyPath: m_Name
-      value: Cacto2
+    - target: {fileID: 240377063, guid: ca85e19b694599f45867eba3698e726a, type: 3}
+      propertyPath: MinDistance
+      value: 0.22761726
       objectReference: {fileID: 0}
-    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
+    - target: {fileID: 7213534246206637312, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7213534246206637314, guid: ca85e19b694599f45867eba3698e726a,
@@ -18885,7 +18899,7 @@ PrefabInstance:
     - target: {fileID: 7213534246206637314, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7213534246206637314, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
@@ -18917,14 +18931,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.36872992
       objectReference: {fileID: 0}
-    - target: {fileID: 7213534246206637312, guid: ca85e19b694599f45867eba3698e726a,
+    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
+      propertyPath: m_Name
+      value: Cacto2
       objectReference: {fileID: 0}
-    - target: {fileID: 240377063, guid: ca85e19b694599f45867eba3698e726a, type: 3}
-      propertyPath: MinDistance
-      value: 0.22761726
+    - target: {fileID: 7213534246206637315, guid: ca85e19b694599f45867eba3698e726a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca85e19b694599f45867eba3698e726a, type: 3}
@@ -18959,11 +18974,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458392644}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19033,6 +19043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -19189,7 +19204,7 @@ PrefabInstance:
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
@@ -19248,11 +19263,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2110129662}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19322,6 +19332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -19394,10 +19409,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2116949756}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -19469,20 +19494,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -19528,11 +19543,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 717062384}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19603,6 +19613,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -19639,11 +19654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19682,7 +19692,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -19708,6 +19718,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.29452503
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}
@@ -19759,96 +19774,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_Name
-      value: Cacto3 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.300072
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -50.400257
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.9508518
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.3096463
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 143.92401
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.81765175
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.81765175
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.43027267
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2121393132168567080, guid: 97e25f48e63acd2468afd9e6483e883b,
         type: 3}
       propertyPath: m_Points.Array.size
@@ -19974,6 +19899,96 @@ PrefabInstance:
       propertyPath: m_Points.Array.data[12].y
       value: -3.404249
       objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_Name
+      value: Cacto3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204304, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.300072
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -50.400257
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9508518
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.3096463
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 143.92401
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.81765175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.81765175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204305, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.43027267
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5616772105226204307, guid: 97e25f48e63acd2468afd9e6483e883b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97e25f48e63acd2468afd9e6483e883b, type: 3}
 --- !u!4 &1847225280 stripped
@@ -20032,7 +20047,7 @@ PrefabInstance:
     - target: {fileID: 2725973156198565430, guid: 2c572bd9bf0b758438a288d520233d03,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2725973156198565430, guid: 2c572bd9bf0b758438a288d520233d03,
         type: 3}
@@ -20068,11 +20083,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20111,7 +20121,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -20137,6 +20147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.2945255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}
@@ -20189,6 +20204,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20236,7 +20252,7 @@ Transform:
   m_LocalScale: {x: 0.9962502, y: 0.9962502, z: 0.3985}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877600599
 GameObject:
@@ -20297,12 +20313,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877600599}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -45.625004, y: 0, z: 0}
-  m_LocalScale: {x: 1.2500002, y: 1.2500002, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -399.9832, y: -225.17647, z: 0}
+  m_LocalScale: {x: 1.6806731, y: 1.6806731, z: 1.6806723}
   m_Children: []
-  m_Father: {fileID: 455064442}
-  m_RootOrder: 0
+  m_Father: {fileID: 1414710275}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1880343462
 PrefabInstance:
@@ -20311,11 +20327,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1349559038}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20386,6 +20397,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -20422,11 +20438,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518426112}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20497,6 +20508,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -20533,10 +20549,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 666546264}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -20608,20 +20634,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -20638,11 +20654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1994794231}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20713,6 +20724,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -20761,11 +20777,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1485442211}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20836,6 +20847,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -20872,11 +20888,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1734904136}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20946,6 +20957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -21017,6 +21033,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: plataforma 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21055,7 +21086,7 @@ PrefabInstance:
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7065140858737422138, guid: d28c4dc75757a434aad5ac67aba74d7b,
         type: 3}
@@ -21087,21 +21118,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1945
       objectReference: {fileID: 0}
-    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065140858737422137, guid: d28c4dc75757a434aad5ac67aba74d7b,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d28c4dc75757a434aad5ac67aba74d7b, type: 3}
 --- !u!1001 &2013611378
@@ -21111,11 +21127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1994794231}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21186,6 +21197,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -21216,11 +21232,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 838055145}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21291,6 +21302,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -21339,6 +21355,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21386,7 +21403,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2.7672715}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -0.89300007, y: -0.45000002, z: -145.46}
 --- !u!1001 &2026113195
 PrefabInstance:
@@ -21395,11 +21412,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 310328945}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21470,6 +21482,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
+      objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -21494,10 +21511,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 78892444}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -21569,20 +21596,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -21623,7 +21640,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 0.5301963}
   m_Children: []
   m_Father: {fileID: 455064442}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -457.44702}
 --- !u!212 &2036106964
 SpriteRenderer:
@@ -21639,6 +21656,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21803,7 +21821,7 @@ PrefabInstance:
     - target: {fileID: 5003005776924064765, guid: ae871b63d4ed9c94fae1cd9958942628,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5003005776924064765, guid: ae871b63d4ed9c94fae1cd9958942628,
         type: 3}
@@ -21844,11 +21862,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Name
-      value: Broto
-      objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21887,7 +21900,7 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -21903,6 +21916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 64.90501
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Name
+      value: Broto
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bb612a987c4994fa8c0b2c09083402, type: 3}
@@ -21972,11 +21990,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1378192780}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22046,6 +22059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -22235,6 +22253,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22318,6 +22337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadeMaxima: 0.4
   forcaPulo: 20
+  aceleracao: 0.4
+  pKB: 1.5
   planeta: {fileID: 455064439}
   vida: {fileID: 753673114}
   iconePa: {fileID: 1688608105}
@@ -22466,11 +22487,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 838055145}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22540,6 +22556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -22635,11 +22656,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 666546264}
     m_Modifications:
-    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA3-01
-      objectReference: {fileID: 0}
     - target: {fileID: 3256747245151730390, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22709,6 +22725,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476753128672486644, guid: 13f8d3347fc11f4469e31c77e599fae0,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA3-01
       objectReference: {fileID: 0}
     - target: {fileID: 8385833181528276837, guid: 13f8d3347fc11f4469e31c77e599fae0,
         type: 3}
@@ -22781,10 +22802,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458392644}
     m_Modifications:
-    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA-01
+      propertyPath: m_SortingLayerID
+      value: 94315913
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7189516631165402740, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
@@ -22856,20 +22887,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
+    - target: {fileID: 9004501217092270874, guid: 7252c769ad5a15a469e49937be5732cb,
         type: 3}
-      propertyPath: m_SortingLayerID
-      value: 94315913
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 290651934404686420, guid: 7252c769ad5a15a469e49937be5732cb,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+      propertyPath: m_Name
+      value: GRAMA FULEIRA-01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7252c769ad5a15a469e49937be5732cb, type: 3}
@@ -22886,11 +22907,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 838055145}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22961,6 +22977,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -22985,11 +23006,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1065119416}
     m_Modifications:
-    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
-        type: 3}
-      propertyPath: m_Name
-      value: GRAMA FULEIRA2_0
-      objectReference: {fileID: 0}
     - target: {fileID: 910072695953712816, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23059,6 +23075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083939659814282842, guid: 3360a856ef53ae14b926b176f37722a6,
+        type: 3}
+      propertyPath: m_Name
+      value: GRAMA FULEIRA2_0
       objectReference: {fileID: 0}
     - target: {fileID: 5342386806900725142, guid: 3360a856ef53ae14b926b176f37722a6,
         type: 3}
@@ -23190,11 +23211,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 455064442}
     m_Modifications:
-    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
-        type: 3}
-      propertyPath: m_Name
-      value: plaquinhas
-      objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23233,7 +23249,7 @@ PrefabInstance:
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 3085840495125821945, guid: 172475739d2f23945948a322859b3c6e,
         type: 3}
@@ -23249,6 +23265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.136
+      objectReference: {fileID: 0}
+    - target: {fileID: 3085840495125821951, guid: 172475739d2f23945948a322859b3c6e,
+        type: 3}
+      propertyPath: m_Name
+      value: plaquinhas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 172475739d2f23945948a322859b3c6e, type: 3}

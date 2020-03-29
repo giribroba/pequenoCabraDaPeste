@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class controladorJogador : MonoBehaviour
 {
-    [SerializeField] private float velocidadeMaxima, forcaPulo;
+    [SerializeField] private float velocidadeMaxima, forcaPulo, aceleracao, pKB;
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
@@ -52,7 +52,7 @@ public class controladorJogador : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
-        movimento = Input.GetAxisRaw("Horizontal");
+        movimento = Input.GetAxis("Horizontal");
         if (contBroto == 6)
         {
             Objetivo.SetObjetivo("Vulcão");
@@ -166,20 +166,22 @@ public class controladorJogador : MonoBehaviour
         }
         else if (KB > 0)
         {
-            KB -= Time.deltaTime * 1.5f;
+            KB -= Time.deltaTime * pKB;
         }
         else if (KB < 0)
         {
-            KB += Time.deltaTime * 1.5f;
+            KB += Time.deltaTime * pKB;
         }
         if (movimento > 0 && !parar)
         {
-            velocidade = (velocidade < velocidadeMaxima) ? velocidade += Time.deltaTime * 1.5f : velocidade = velocidadeMaxima;
+            //velocidade = (velocidade < velocidadeMaxima) ? velocidade += Time.deltaTime * aceleracao : velocidade = velocidadeMaxima;
+            velocidade = movimento * aceleracao;
             renderer.flipX = false;
         }
         else if (movimento < 0 && !parar)
         {
-            velocidade = (velocidade > -velocidadeMaxima) ? velocidade -= Time.deltaTime * 1.5f : velocidade = -velocidadeMaxima;
+            velocidade = movimento * aceleracao;
+            //velocidade = (velocidade > -velocidadeMaxima) ? velocidade -= Time.deltaTime * aceleracao : velocidade = -velocidadeMaxima;
             renderer.flipX = true;
         }
         else

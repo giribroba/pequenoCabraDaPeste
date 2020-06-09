@@ -29,6 +29,7 @@ public class controladorJogador : MonoBehaviour
     {
 #if UNITY_ANDROID
         mobileButtons.SetActive(true);
+        jaEnsinou = true;
 #else
         mobileButtons.SetActive(false);
 #endif

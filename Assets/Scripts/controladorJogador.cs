@@ -6,6 +6,7 @@ public class controladorJogador : MonoBehaviour
 {
     [SerializeField] private float velocidadeMaxima, forcaPulo, aceleracao, pKB;
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause, interagir, mobileButtons;
+    public static float aclPubli;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
     public Text contador;
@@ -47,6 +48,9 @@ public class controladorJogador : MonoBehaviour
     }
     void Update()
     {
+
+        aceleracao = aclPubli;
+
         if (Input.GetButtonDown("Cancel"))
         {
             if (pause.GetComponent<Animator>().GetBool("perde"))

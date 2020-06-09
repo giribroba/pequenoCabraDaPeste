@@ -25,10 +25,12 @@ public class FolhetoBehaviour : MonoBehaviour
             escreveText.StartCoroutine("ApareceTexto");
         }
     }
-    public void DesparecerFolheto()
-    {
+    public void DesparecerFolheto() {
+
         folhetoAmt.SetBool("folheto", false);
         d = transform.GetChild(1).gameObject;
         Destroy(this.d);
+        controladorJogador.aclPubli = 0.4f;
+
     }
 }

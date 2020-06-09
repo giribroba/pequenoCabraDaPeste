@@ -18935,6 +18935,7 @@ GameObject:
   - component: {fileID: 1730423712}
   - component: {fileID: 1730423710}
   - component: {fileID: 1730423709}
+  - component: {fileID: 1730423711}
   m_Layer: 5
   m_Name: MenuPrincipal
   m_TagString: Untagged
@@ -18978,7 +18979,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1536074599}
+        - m_Target: {fileID: 1730423711}
           m_MethodName: Aumenta
           m_Mode: 1
           m_Arguments:
@@ -18993,7 +18994,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1536074599}
+        - m_Target: {fileID: 1730423711}
           m_MethodName: Normal
           m_Mode: 1
           m_Arguments:
@@ -19100,6 +19101,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1730423711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730423707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197dc42d1f05149438acea68d75359ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  som: {fileID: 1185592908}
+  botaoNovo: {fileID: 0}
+  trocaAsset: 0
+  bControle: {fileID: 669857060}
 --- !u!114 &1730423712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21422,18 +21439,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1769394561}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1989321197 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18,
-    type: 3}
-  m_PrefabInstance: {fileID: 1769394561}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1992306532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22924,8 +22929,6 @@ MonoBehaviour:
   contVulcao: 0
   contBaldada: 0
   tocaSons: {fileID: 0}
-  joystick: {fileID: 1989321197}
-  puloJoystick: {fileID: 1130400651380649672}
   level: 0
 --- !u!82 &2096192241
 AudioSource:
@@ -23765,18 +23768,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5649789036420925873}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1130400651380649672 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4740012592732170105, guid: b9032dc3061036e40802253b88b951f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 5649789036420925873}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d2117acf6fc11645add8ba48c86cace, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3085840494633073988
 PrefabInstance:
   m_ObjectHideFlags: 0

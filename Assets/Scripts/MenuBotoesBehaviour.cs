@@ -8,12 +8,30 @@ public class MenuBotoesBehaviour : MonoBehaviour
     [SerializeField] private AudioSource som;
     [SerializeField] private Sprite botaoNovo;
     [SerializeField] private bool trocaAsset;
+#if UNITY_ANDROID
+    public static bool controleVisivel = true;
+#endif
+    [SerializeField] GameObject bControle;
     private Sprite botaoNormal;
     private Image img;
     void Start(){
         img = GetComponent<Image>();
         botaoNormal = img.sprite;
     }
+#if UNITY_STANDALONE
+    bControle.SetActive(false); 
+#endif
+#if UNITY_ANDROID
+    private void Update()
+    {
+        bControle.GetComponent<Image>().color = (controleVisivel ? Color.green : Color.red);
+    }
+
+    public void Controle()
+    {
+        controleVisivel = !controleVisivel;
+    }
+#endif
 
     public void Aumenta(){
         transform.localScale *= 1.2f;
@@ -33,6 +51,12 @@ public class MenuBotoesBehaviour : MonoBehaviour
     {
         Time.timeScale = 1;
         GameObject.FindWithTag("Pause").GetComponent<Animator>().SetBool("perde", false);
+    }
+
+    public void Pausa()
+    {
+        Time.timeScale = 0;
+        GameObject.FindWithTag("Pause").GetComponent<Animator>().SetBool("perde", true);
     }
 
 }

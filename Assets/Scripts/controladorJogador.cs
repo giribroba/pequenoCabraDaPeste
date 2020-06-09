@@ -13,6 +13,7 @@ public class controladorJogador : MonoBehaviour
     [HideInInspector] public float velocidade;
     public bool balde = false, primeiroPoco = true, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false;
     [SerializeField] private bool noChao, iconeUmaVez = true;
+    private bool pulou;
     private float movimento, KB;
     public int contBroto = 0, contVulcao, contBaldada = 0;
     private string balaoNoSim = "Broto";
@@ -20,9 +21,11 @@ public class controladorJogador : MonoBehaviour
     private RaycastHit2D[] hit;
     private SpriteRenderer renderer;
     private Rigidbody2D rbPlayer;
-    private Collider2D colPlayer;
     public GameObject tocaSons;
-
+#if UNITY_ANDROID
+    [SerializeField] private Joystick joystick;
+    [SerializeField] private PuloJoystick puloJoystick;
+#endif
     public int level;
     void Start()
     {
@@ -52,7 +55,11 @@ public class controladorJogador : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+#if UNITY_STANDALONE
         movimento = Input.GetAxis("Horizontal");
+#elif UNITY_ANDROID
+        movimento = joystick.Horizontal;
+#endif
         if (contBroto == 6)
         {
             Objetivo.SetObjetivo("Vulcão");
@@ -159,7 +166,7 @@ public class controladorJogador : MonoBehaviour
     void Move()
     {
         planeta.transform.eulerAngles = new Vector3(planeta.transform.eulerAngles.x, planeta.transform.eulerAngles.y, planeta.transform.eulerAngles.z + velocidade + KB);
-        animator.SetBool("walk", velocidade != 0);
+        animator.SetBool("walk", velocidade != 0 && Mathf.Abs(movimento) >= 0.005f);
         if (Mathf.Abs(KB) < 0.1f)
         {
             KB = 0;
@@ -203,9 +210,17 @@ public class controladorJogador : MonoBehaviour
 
     void Jump()
     {
+#if UNITY_STANDALONE
+        pulou = Input.GetButtonDown("Jump");
+#elif UNITY_ANDROID
+        pulou = puloJoystick.pulou;
+#endif
         animator.SetBool("jump", !noChao);
-        if (noChao && Input.GetButtonDown("Jump"))
+        if (noChao && pulou)
         {
+#if UNITY_ANDROID
+            puloJoystick.pulou = false;
+#endif
             tocaSons.GetComponent<Sons>().PlaySound("pulo");
             rbPlayer.velocity = new Vector2(0, forcaPulo);
         }

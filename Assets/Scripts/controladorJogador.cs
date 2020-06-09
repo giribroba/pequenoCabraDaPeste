@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class controladorJogador : MonoBehaviour
 {
     [SerializeField] private float velocidadeMaxima, forcaPulo, aceleracao, pKB;
+    public static float aclPubli;
     [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
@@ -40,6 +41,9 @@ public class controladorJogador : MonoBehaviour
     }
     void Update()
     {
+
+        aceleracao = aclPubli;
+
         if (Input.GetButtonDown("Cancel"))
         {
             if (pause.GetComponent<Animator>().GetBool("perde"))

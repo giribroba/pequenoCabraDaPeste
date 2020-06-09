@@ -12,9 +12,11 @@ public class BotaoController : MonoBehaviour
     controladorJogador playerS;
     void Start()
     {
-        vida = GameObject.Find("Vidas").GetComponent<Life>();
-        player = GameObject.FindWithTag("Player");
-        playerS = GameObject.Find("Player").GetComponent<controladorJogador>();
+        if(SceneManager.GetActiveScene().name == "SampleScene") {
+            vida = GameObject.Find("Vidas").GetComponent<Life>();
+            player = GameObject.FindWithTag("Player");
+            playerS = GameObject.Find("Player").GetComponent<controladorJogador>();
+        }    
     }
 
     public void ControleBotoes(string cenaDestino){

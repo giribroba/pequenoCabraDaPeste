@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class controladorJogador : MonoBehaviour
 {
     [SerializeField] private float velocidadeMaxima, forcaPulo, aceleracao, pKB;
-    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause;
+    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause, interagir, mobileButtons;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
     public Text contador;
@@ -13,7 +13,7 @@ public class controladorJogador : MonoBehaviour
     [HideInInspector] public float velocidade;
     public bool balde = false, primeiroPoco = true, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false;
     [SerializeField] private bool noChao, iconeUmaVez = true;
-    private bool pulou;
+    private bool pulou, coletar;
     private float movimento, KB;
     public int contBroto = 0, contVulcao, contBaldada = 0;
     private string balaoNoSim = "Broto";
@@ -22,13 +22,16 @@ public class controladorJogador : MonoBehaviour
     private SpriteRenderer renderer;
     private Rigidbody2D rbPlayer;
     public GameObject tocaSons;
-#if UNITY_ANDROID
     [SerializeField] private Joystick joystick;
-    [SerializeField] private PuloJoystick puloJoystick;
-#endif
+    [SerializeField] private PuloJoystick puloJoystick; 
     public int level;
     void Start()
     {
+#if UNITY_ANDROID
+        mobileButtons.SetActive(true);
+#else
+        mobileButtons.SetActive(false);
+#endif
         Time.timeScale = 1;
         Objetivo.SetObjetivo("Pá");
         level = 0;
@@ -119,11 +122,15 @@ public class controladorJogador : MonoBehaviour
         {
             if (hit[i].collider != null)
             {
+#if UNITY_ANDROID
+                interagir.SetActive(hit[i].collider.gameObject.tag == "Broto" && podePa);  
+#endif
                 if (hit[i].collider.gameObject.tag == "Broto")
                 {
                     var other = hit[i].collider.gameObject;
-                    if (other.tag == "Broto" && Input.GetButtonDown("Fire1") && podePa && !(contBroto >= 6) && velocidade <= 0.0001)
+                    if (other.tag == "Broto" && (Input.GetButtonDown("Fire1") || coletar) && podePa && !(contBroto >= 6) && velocidade <= 0.0001)
                     {
+                        coletar = false;
                         other.tag = "Removido";
                         Objetivo.SetObjetivo("Broto");
                         other.transform.GetChild(1).gameObject.SetActive(false);
@@ -146,6 +153,7 @@ public class controladorJogador : MonoBehaviour
                         iconeUmaVez = false;
                         iconePa.GetComponent<IconesBehaviour>().Comeca();
                     }
+
                 }
             }
         }
@@ -308,6 +316,11 @@ public class controladorJogador : MonoBehaviour
         if (contBaldada == 0)
             Destroy(flor.GetComponent<Animator>());
         flor.GetComponent<Image>().sprite = florUI[contBaldada];
+    }
+
+    public void Coletar()
+    {
+        coletar = true;
     }
 }
 

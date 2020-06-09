@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuBotoesBehaviour : MonoBehaviour
@@ -8,19 +6,23 @@ public class MenuBotoesBehaviour : MonoBehaviour
     [SerializeField] private AudioSource som;
     [SerializeField] private Sprite botaoNovo;
     [SerializeField] private bool trocaAsset;
+    public static bool controleVisivel =
 #if UNITY_ANDROID
-    public static bool controleVisivel = true;
+true;
+#else
+false;
 #endif
     [SerializeField] GameObject bControle;
     private Sprite botaoNormal;
     private Image img;
-    void Start(){
+    void Start()
+    {
         img = GetComponent<Image>();
         botaoNormal = img.sprite;
-    }
 #if UNITY_STANDALONE
-    bControle.SetActive(false); 
+        bControle.SetActive(false);
 #endif
+    }
 #if UNITY_ANDROID
     private void Update()
     {
@@ -33,15 +35,17 @@ public class MenuBotoesBehaviour : MonoBehaviour
     }
 #endif
 
-    public void Aumenta(){
+    public void Aumenta()
+    {
         transform.localScale *= 1.2f;
         som.Play();
-        if(trocaAsset)
+        if (trocaAsset)
             img.sprite = botaoNovo;
         //TODO: impedir que o som seja sobrescrito
     }
 
-    public void Normal(){
+    public void Normal()
+    {
         transform.localScale /= 1.2f;
         if (trocaAsset)
             img.sprite = botaoNormal;

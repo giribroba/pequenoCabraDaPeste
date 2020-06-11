@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -226,7 +227,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: "Explora\xE7\xE3o"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &642555543
@@ -323,6 +324,7 @@ MonoBehaviour:
   som: {fileID: 642555547}
   botaoNovo: {fileID: 21300000, guid: cd938d1d4466e1d418440227b5502337, type: 3}
   trocaAsset: 1
+  bControle: {fileID: 0}
 --- !u!82 &642555547
 AudioSource:
   m_ObjectHideFlags: 0
@@ -579,6 +581,7 @@ MonoBehaviour:
   som: {fileID: 726027836}
   botaoNovo: {fileID: 21300000, guid: 3351032497ef0544d904c19f0b465469, type: 3}
   trocaAsset: 1
+  bControle: {fileID: 0}
 --- !u!114 &726027835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,6 +752,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1251,6 +1255,7 @@ MonoBehaviour:
   som: {fileID: 1976773858}
   botaoNovo: {fileID: 21300000, guid: f8f5b9d4e0a188c4bb33fb6408b81c0b, type: 3}
   trocaAsset: 1
+  bControle: {fileID: 0}
 --- !u!82 &1976773858
 AudioSource:
   m_ObjectHideFlags: 0

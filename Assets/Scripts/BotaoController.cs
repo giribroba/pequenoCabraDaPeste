@@ -12,7 +12,7 @@ public class BotaoController : MonoBehaviour
     controladorJogador playerS;
     void Start()
     {
-        if(SceneManager.GetActiveScene().name == "SampleScene") {
+        if(SceneManager.GetActiveScene().name == "Exploração") {
             vida = GameObject.Find("Vidas").GetComponent<Life>();
             player = GameObject.FindWithTag("Player");
             playerS = GameObject.Find("Player").GetComponent<controladorJogador>();
@@ -20,7 +20,7 @@ public class BotaoController : MonoBehaviour
     }
 
     public void ControleBotoes(string cenaDestino){
-        if (cenaDestino == "SampleScene")
+        if (cenaDestino == "Exploração")
         {
             Debug.Log("Jogo Iniciado");
         }

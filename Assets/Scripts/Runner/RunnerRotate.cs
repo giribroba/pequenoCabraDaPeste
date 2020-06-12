@@ -25,8 +25,7 @@ public class RunnerRotate : MonoBehaviour
             
             this.transform.Rotate(new Vector3(0f, 0f, definitiveDistance), Space.World);
 
-            Debug.ClearDeveloperConsole();
-            Debug.Log(definitiveDistance);
+            Debug.LogWarning(definitiveDistance);
             
         }
 

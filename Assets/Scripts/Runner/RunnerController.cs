@@ -5,8 +5,9 @@ using UnityEngine;
 public class RunnerController : MonoBehaviour
 {
     public enum State {beforeRunner, inRunner, afterRunner}
-    public State currentState; 
+    public State currentState;
 
+    public RunnerRotate runnerRotate;
     public static RunnerController instace;
 
     void Awake() {

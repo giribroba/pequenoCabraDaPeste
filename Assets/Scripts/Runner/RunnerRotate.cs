@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RunnerRotate : MonoBehaviour
 {
-    public float distanceRotationStart, distanceRotation, maxDistanceRotation, minDistanceRotation;
+    public float distanceRotationStart, distanceRotation, maxDistanceRotation, minDistanceRotation, defRotation;
     void Update() {
         
         Rotation(RunnerController.instace.currentState);
@@ -25,8 +25,8 @@ public class RunnerRotate : MonoBehaviour
             
             this.transform.Rotate(new Vector3(0f, 0f, definitiveDistance), Space.World);
 
-            Debug.LogWarning(definitiveDistance);
-            
+            defRotation = definitiveDistance;
+                
         }
 
     }

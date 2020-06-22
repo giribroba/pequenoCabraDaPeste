@@ -18,6 +18,7 @@ TagManager:
   - "Vulc\xE3o"
   - Rosa
   - "Po\xE7o"
+  - Obstacles
   layers:
   - Default
   - TransparentFX

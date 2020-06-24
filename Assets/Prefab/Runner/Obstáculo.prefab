@@ -91,7 +91,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8197360406201861718}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -148,3 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3728b4a43bf0a4dbafd73445b6b88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeObstacle: 2
+  spriteObstacle: 4
+  collidersObstacles:
+  - {fileID: 8197360406201861716}
+  - {fileID: 8197360406201861714}

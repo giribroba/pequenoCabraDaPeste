@@ -19,6 +19,7 @@ TagManager:
   - Rosa
   - "Po\xE7o"
   - Obstacles
+  - Controller
   layers:
   - Default
   - TransparentFX

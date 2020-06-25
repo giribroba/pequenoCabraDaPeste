@@ -26,6 +26,7 @@ public class controladorJogador : MonoBehaviour
     [SerializeField] private Joystick joystick;
     [SerializeField] private PuloJoystick puloJoystick; 
     public int level;
+
     void Start()
     {
 #if UNITY_ANDROID

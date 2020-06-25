@@ -20,6 +20,7 @@ TagManager:
   - "Po\xE7o"
   - Obstacles
   - Controller
+  - iPoco
   layers:
   - Default
   - TransparentFX

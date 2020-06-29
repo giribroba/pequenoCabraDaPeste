@@ -21,6 +21,7 @@ TagManager:
   - Obstacles
   - Controller
   - iPoco
+  - Planeta
   layers:
   - Default
   - TransparentFX

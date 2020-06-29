@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class SetVertical : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 {
@@ -12,6 +13,7 @@ public class SetVertical : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        this.GetComponent<Image>().color = Color.gray;
         if (botao == tipo.U)
         {
             poco.GetComponent<pocoBehaviour>().vertical = 1;
@@ -23,6 +25,7 @@ public class SetVertical : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     }
     public void OnPointerUp(PointerEventData eventData)
     {
+        this.GetComponent<Image>().color = Color.white;
         poco.GetComponent<pocoBehaviour>().vertical = 0;
     }
 }

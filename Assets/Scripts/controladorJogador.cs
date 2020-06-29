@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class controladorJogador : MonoBehaviour
 {
     [SerializeField] private float velocidadeMaxima, forcaPulo, aceleracao, pKB;
-    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause, interagir, mobileButtons;
+    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause, interagir, mobileButtons, pJoy, pBut;
     public static float aclPubli;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
@@ -49,8 +49,10 @@ public class controladorJogador : MonoBehaviour
     }
     void Update()
     {
-
         aceleracao = aclPubli;
+
+        pJoy.SetActive(!MenuBotoesBehaviour.controleVisivel);
+        pBut.SetActive(MenuBotoesBehaviour.controleVisivel);
 
         if (Input.GetButtonDown("Cancel"))
         {
@@ -227,16 +229,22 @@ public class controladorJogador : MonoBehaviour
 #if UNITY_STANDALONE
         pulou = Input.GetButtonDown("Jump");
 #elif UNITY_ANDROID
-        pulou = puloJoystick.pulou;
+        if(!MenuBotoesBehaviour.controleVisivel)
+            pulou = puloJoystick.pulou;
 #endif
         animator.SetBool("jump", !noChao);
         if (noChao && pulou)
         {
 #if UNITY_ANDROID
-            puloJoystick.pulou = false;
+            if (!MenuBotoesBehaviour.controleVisivel)
+                puloJoystick.pulou = false;
 #endif
             tocaSons.GetComponent<Sons>().PlaySound("pulo");
             rbPlayer.velocity = new Vector2(0, forcaPulo);
+        }
+        else
+        {
+            pulou = false;
         }
     }
 
@@ -322,6 +330,11 @@ public class controladorJogador : MonoBehaviour
         if (contBaldada == 0)
             Destroy(flor.GetComponent<Animator>());
         flor.GetComponent<Image>().sprite = florUI[contBaldada];
+    }
+
+    public void Pular()
+    {
+        pulou = true;
     }
 
     public void Coletar()

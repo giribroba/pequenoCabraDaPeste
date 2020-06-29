@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BalaozinBaoba
       objectReference: {fileID: 0}
+    - target: {fileID: 2492068307859489786, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2492068307859489787, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,11 +87,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8698409
       objectReference: {fileID: 0}
-    - target: {fileID: 2492068307859489786, guid: ed22ae5e727b4d14facfd49c6ff84fe4,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed22ae5e727b4d14facfd49c6ff84fe4, type: 3}
 --- !u!1001 &4440052433354134259
@@ -96,10 +96,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
+    - target: {fileID: 2279938243336665277, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
-      propertyPath: m_Name
-      value: PrimeiroBroto Variant
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588609, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647288190311588609, guid: 07bb612a987c4994fa8c0b2c09083402,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -119,22 +129,22 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.746686
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.66517663
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -154,7 +164,7 @@ PrefabInstance:
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 96.608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647288190311588610, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
@@ -171,20 +181,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5177765
       objectReference: {fileID: 0}
-    - target: {fileID: 2279938243336665277, guid: 07bb612a987c4994fa8c0b2c09083402,
+    - target: {fileID: 5647288190311588611, guid: 07bb612a987c4994fa8c0b2c09083402,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5647288190311588609, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 5647288190311588609, guid: 07bb612a987c4994fa8c0b2c09083402,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.19
+      propertyPath: m_Name
+      value: PrimeiroBroto Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07bb612a987c4994fa8c0b2c09083402, type: 3}

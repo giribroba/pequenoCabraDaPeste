@@ -2,7 +2,7 @@
 
 public class pocoBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject corda, gota, iconeBalde, interagir;
+    [SerializeField] private GameObject corda, gota, iconeBalde, interagir, setas;
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private int capacidade, indexArray, cBaldada = 0;
     [SerializeField] private AudioSource baldeIn;
@@ -36,6 +36,14 @@ public class pocoBehaviour : MonoBehaviour
                 if (other.tag == "Player")
                 {
 #if UNITY_ANDROID
+                    if (bPoco)
+                    {
+                        setas.SetActive(true);
+                    }
+                    else
+                    {
+                        setas.SetActive(false);
+                    }
                     if (other.GetComponent<controladorJogador>().balde || (bPoco && profundidade == 0))
                     {
                         interagir.SetActive(true);
@@ -181,6 +189,8 @@ public class pocoBehaviour : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            vertical = 0;
+            setas.SetActive(false);
             interagir.SetActive(false);
             gota.GetComponent<SpriteRenderer>().enabled = false;
             iconeBalde.GetComponent<SpriteRenderer>().enabled = false;

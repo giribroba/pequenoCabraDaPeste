@@ -26,7 +26,7 @@ public class pocoBehaviour : MonoBehaviour
     {
         indexArray = (profundidade <= 0 && bPoco) ? ((cAgua) ? 2 : 1) : 0;
         cRenderer.sprite = sprites[indexArray];
-        hit = Physics2D.CircleCastAll(transform.position, 1, -transform.up);
+        hit = Physics2D.CircleCastAll(this.transform.position, 2, -transform.up, 2);
 
         for (int i = 0; i < hit.Length; i++)
         {
@@ -44,7 +44,7 @@ public class pocoBehaviour : MonoBehaviour
                     {
                         setas.SetActive(false);
                     }
-                    if (other.GetComponent<controladorJogador>().balde || (bPoco && profundidade == 0))
+                    if (other.GetComponent<controladorJogador>().balde || (bPoco && profundidade <= 0))
                     {
                         interagir.SetActive(true);
                     }
@@ -189,9 +189,11 @@ public class pocoBehaviour : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            vertical = 0;
-            setas.SetActive(false);
-            interagir.SetActive(false);
+            if (setas != null)
+                setas.SetActive(false);
+            if (interagir != null)
+                interagir.SetActive(false);
+
             gota.GetComponent<SpriteRenderer>().enabled = false;
             iconeBalde.GetComponent<SpriteRenderer>().enabled = false;
 #if UNITY_STANDALONE
@@ -214,5 +216,11 @@ public class pocoBehaviour : MonoBehaviour
     public void Interagir()
     {
         interagiu = true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(this.transform.position, 2);
     }
 }

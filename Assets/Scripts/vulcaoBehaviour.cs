@@ -203,6 +203,7 @@ public class vulcaoBehaviour : MonoBehaviour
 
     public void Interagir()
     {
+        print("aeee");
         interagiu = true;
     }
 }

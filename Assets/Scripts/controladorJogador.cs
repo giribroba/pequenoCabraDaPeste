@@ -12,7 +12,7 @@ public class controladorJogador : MonoBehaviour
     public Text contador;
     public Image cantil, aguaCantil, flor;
     [HideInInspector] public float velocidade;
-    public bool balde = false, primeiroPoco = true, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false;
+    public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false, primeiroPoco;
     [SerializeField] private bool noChao, iconeUmaVez = true;
     private bool pulou, coletar;
     private float movimento, KB;
@@ -24,15 +24,17 @@ public class controladorJogador : MonoBehaviour
     private Rigidbody2D rbPlayer;
     public GameObject tocaSons;
     [SerializeField] private Joystick joystick;
-    [SerializeField] private PuloJoystick puloJoystick; 
+    [SerializeField] private PuloJoystick puloJoystick;
     public int level;
 
     void Start()
     {
 #if UNITY_ANDROID
+        primeiroPoco = false;
         mobileButtons.SetActive(true);
         jaEnsinou = true;
 #else
+        primeiroPoco = true;
         mobileButtons.SetActive(false);
 #endif
         Time.timeScale = 1;
@@ -131,7 +133,7 @@ public class controladorJogador : MonoBehaviour
             if (hit[i].collider != null)
             {
 #if UNITY_ANDROID
-                interagir.SetActive(hit[i].collider.gameObject.tag == "Broto" && podePa);  
+                interagir.SetActive(hit[i].collider.gameObject.tag == "Broto" && podePa);
 #endif
                 if (hit[i].collider.gameObject.tag == "Broto")
                 {
@@ -229,7 +231,7 @@ public class controladorJogador : MonoBehaviour
 #if UNITY_STANDALONE
         pulou = Input.GetButtonDown("Jump");
 #elif UNITY_ANDROID
-        if(!MenuBotoesBehaviour.controleVisivel)
+        if (!MenuBotoesBehaviour.controleVisivel)
             pulou = puloJoystick.pulou;
 #endif
         animator.SetBool("jump", !noChao);

@@ -12,7 +12,7 @@ public class AsteroidsSpawn : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        InvokeRepeating("Spawn", 0f, 0.5f);
+        InvokeRepeating("Spawn", 0f, 0.7f);
     }
 
     // Update is called once per frame

@@ -22,6 +22,7 @@ TagManager:
   - Controller
   - iPoco
   - Planeta
+  - Asteroide
   layers:
   - Default
   - TransparentFX

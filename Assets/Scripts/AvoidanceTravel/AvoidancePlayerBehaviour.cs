@@ -21,4 +21,12 @@ public class AvoidancePlayerBehaviour : MonoBehaviour
 
         rb.velocity = new Vector2(hor, ver) * speed;
     }
+
+    private void OnTriggerEnter2D(Collider2D col) 
+    {
+        if(col.gameObject.tag == "Asteroide")
+        {
+            print(1);
+        }
+    }
 }

@@ -8,7 +8,7 @@ public class ButtonController : MonoBehaviour {
 
         if(PlayerBehaviour.instance.inGround || PlayerBehaviour.instance.slinding) {
 
-            PlayerBehaviour.instance.Jump();
+            if(RunnerController.instace.currentState == RunnerController.State.inRunner) PlayerBehaviour.instance.Jump();
 
         }
 
@@ -18,7 +18,7 @@ public class ButtonController : MonoBehaviour {
     
         if(!PlayerBehaviour.instance.slinding && PlayerBehaviour.instance.inGround){
 
-            PlayerBehaviour.instance.Slide();
+            if(RunnerController.instace.currentState == RunnerController.State.inRunner) PlayerBehaviour.instance.Slide();
 
         }
 

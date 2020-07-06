@@ -6,6 +6,7 @@ public class MenuBotoesBehaviour : MonoBehaviour
     [SerializeField] private AudioSource som;
     [SerializeField] private Sprite botaoNovo;
     [SerializeField] private bool trocaAsset;
+    public static bool inPause;
     public static bool controleVisivel =
 #if UNITY_ANDROID
 true;
@@ -53,13 +54,13 @@ false;
 
     public void Despausa()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1; inPause = false;
         GameObject.FindWithTag("Pause").GetComponent<Animator>().SetBool("perde", false);
     }
 
     public void Pausa()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0; inPause = true;
         GameObject.FindWithTag("Pause").GetComponent<Animator>().SetBool("perde", true);
     }
 

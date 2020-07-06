@@ -57,4 +57,18 @@ public class BotaoController : MonoBehaviour
         this.transform.GetChild(0).gameObject.SetActive(false);
     }
 
+    public void ReiniciaRunner() {
+
+        StartCoroutine(ReiniciaRunnerTrasition());
+
+    }
+
+    IEnumerator ReiniciaRunnerTrasition() {
+
+        GameObject.Find("RestartTrasition").GetComponent<Animation>().Play();
+        yield return new WaitForSeconds(.4f);
+        RunnerController.instace.currentState = RunnerController.State.beforeRunner;
+
+    }
+
 }

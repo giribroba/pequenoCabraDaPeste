@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class ObstaclesBehaviour : MonoBehaviour {
 
-    public enum TypeObstacle { down, up, nothing }
-
+    public enum TypeObstacle { down = 0, up = 1, nothing = 2 }
     public enum SpriteObstacle { aviator, bird, cactus, rock, nothing }
-
-    public static GameObject lastObstaclesType, beforeLastObstaclesType;
-
-    public GameObject a, b;
 
     public TypeObstacle typeObstacle;
     public SpriteObstacle spriteObstacle;
 
     [HideInInspector] public BoxCollider2D[] collidersObstacles;
+    public Sprite[] spriteGroup;
+
+    public List<string> keySequence, complementarySequence;
+    public string KeyPlusComplementary;
+
+    public float levelDificuty;
 
     private void Awake() {
 
@@ -25,96 +26,94 @@ public class ObstaclesBehaviour : MonoBehaviour {
 
     private void Update() {
 
-        a = beforeLastObstaclesType;
-        b = lastObstaclesType;
+        if (RunnerController.instace.currentState == RunnerController.State.beforeRunner) {
+
+            levelDificuty = 0;
+
+        }
+
+        RandomSprite(this.typeObstacle);
 
     }
 
-    static float countStartRandom = 0;
-    private void RandomType() {
+    private void CollidersActivate() {
 
-        countStartRandom++;
+        if (typeObstacle == TypeObstacle.down) { collidersObstacles[0].enabled = true; collidersObstacles[1].enabled = false; }
+        else if (typeObstacle == TypeObstacle.up) { collidersObstacles[0].enabled = false; collidersObstacles[1].enabled = true; }
 
-        beforeLastObstaclesType = lastObstaclesType;
-        lastObstaclesType = this.gameObject;
+    }
 
-        float random = Random.Range(1, 11);
+    private void RandomType(string nameObstacle) {
 
-        if (countStartRandom > 1) {
+        string nameOfObstacle = nameObstacle;
 
-            if (beforeLastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.nothing) {
+        if (nameObstacle != "Slot (01)" && nameObstacle != "Slot (13)" && nameObstacle != "Slot (25)") return;
 
-                if (lastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.down) {
-                    if (random > 0 && random < 6) { this.typeObstacle = TypeObstacle.up; }
-                        else if (random > 5 && random < 9) { this.typeObstacle = TypeObstacle.down; }
-                            else this.typeObstacle = TypeObstacle.nothing;
+            else {
+
+                int indexOStartbstacle = int.Parse(nameObstacle.Substring(nameObstacle.Length - 3, 2));
+                int indexLastObstacle = indexOStartbstacle + 11;
+
+                KeyPlusComplementary = keySequence[Random.Range(0, keySequence.Capacity - 1)] + complementarySequence[Random.Range(0, complementarySequence.Capacity - 1)];
+
+                if (ObstaclesController.instace.sequence.Contains(KeyPlusComplementary)) {
+
+                    RandomType(nameOfObstacle);
+                    return;
+                
+                }
+                else {
+                    
+                    if(ObstaclesController.instace.sequence != "") ObstaclesController.instace.sequence += ", " + KeyPlusComplementary;
+                    else ObstaclesController.instace.sequence = KeyPlusComplementary;
 
                 }
-                    else if (lastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.up) {
 
-                    if (random > 0 && random < 4) { this.typeObstacle = TypeObstacle.up; }
-                        else if (random > 3 && random < 9) { this.typeObstacle = TypeObstacle.down; }
-                            else this.typeObstacle = TypeObstacle.nothing;
+                int counter = 0; TypeObstacle type = TypeObstacle.nothing;
+                for (int i = indexOStartbstacle; i < indexLastObstacle + 1; i++) {
 
-                    }
-                        else {
+                    counter++;
 
-                            if (random > 0 && random < 6) { this.typeObstacle = TypeObstacle.down; }
-                            else this.typeObstacle = TypeObstacle.up;
+                    string typeString = ObstaclesController.instace.sequence.Substring(ObstaclesController.instace.sequence.Length - (13 - counter), 1);
+
+                    if (typeString == "0") type = TypeObstacle.down;
+                        else if(typeString == "1") type = TypeObstacle.up;
+                            else type = TypeObstacle.nothing;
+
+                    ObstaclesController.instace.pointsObstacles[i - 1].transform.GetChild(1).gameObject
+                    .GetComponent<ObstaclesBehaviour>().typeObstacle = type;
+
+                    if (levelDificuty == 0) {
+
+                            ObstaclesController.instace.pointsObstacles[i - 1].SetActive(true);
+
+                        if (int.Parse(ObstaclesController.instace.pointsObstacles[i - 1].transform.name.Substring(6, 2)) % 2 == 0) {
+
+                            ObstaclesController.instace.pointsObstacles[i - 1].SetActive(false);
 
                         }
+
+                    }
+                        else if (levelDificuty < 3) {
+
+                                ObstaclesController.instace.pointsObstacles[i - 1].SetActive(true);
+
+                            if (ObstaclesController.instace.pointsObstacles[i - 1].transform.name.Contains("2)") ||
+                                ObstaclesController.instace.pointsObstacles[i - 1].transform.name.Contains("6)") ||
+                                ObstaclesController.instace.pointsObstacles[i - 1].transform.name.Contains("9)")) {
+
+                                ObstaclesController.instace.pointsObstacles[i - 1].SetActive(false);
+
+                            }
+
+                        }
+                            else ObstaclesController.instace.pointsObstacles[i - 1].SetActive(true);
 
             }
-                else if (beforeLastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.up) {
 
-                    if (lastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.down) {
-                        if (random > 0 && random < 4) { this.typeObstacle = TypeObstacle.up; }
-                            else if (random > 3 && random < 8) { this.typeObstacle = TypeObstacle.down; }
-                                else this.typeObstacle = TypeObstacle.nothing;
+            }
 
-                    }
-                        else if (lastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.up) {
-
-                            if (random > 0 && random < 6) { this.typeObstacle = TypeObstacle.down; }
-                                else this.typeObstacle = TypeObstacle.nothing;
-
-                        }
-                            else {
-
-                                if (random > 0 && random < 5) { this.typeObstacle = TypeObstacle.up; }
-                                    else if (random > 4 && random < 10) { this.typeObstacle = TypeObstacle.down; }
-                                        else this.typeObstacle = TypeObstacle.nothing;
-
-                            }
-
-                }
-                    else if (beforeLastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.down) {
-
-                        if (lastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.down) {
-                            if (random > 0 && random < 6) { this.typeObstacle = TypeObstacle.up; }
-                                else this.typeObstacle = TypeObstacle.nothing;
-
-                        }
-                            else if (lastObstaclesType.GetComponent<ObstaclesBehaviour>().typeObstacle == TypeObstacle.up) {
-
-                                if (random > 0 && random < 4) { this.typeObstacle = TypeObstacle.up; }
-                                    else if (random > 3 && random < 8) { this.typeObstacle = TypeObstacle.down; }
-                                        else this.typeObstacle = TypeObstacle.nothing;
-
-                            }
-                                else {
-
-                                    if (random > 0 && random < 6) { this.typeObstacle = TypeObstacle.up; }
-                                        else if (random > 5 && random < 10) { this.typeObstacle = TypeObstacle.down; }
-                                            else this.typeObstacle = TypeObstacle.nothing;
-
-                                }
-
-                    }
-
-            RandomSprite(this.typeObstacle);
-
-        }
+        levelDificuty++;
 
     }
 
@@ -125,22 +124,27 @@ public class ObstaclesBehaviour : MonoBehaviour {
             case TypeObstacle.down:
 
                 this.spriteObstacle = (SpriteObstacle)Random.Range(2, 4);
+                this.GetComponent<SpriteRenderer>().sprite = spriteGroup[1];
 
                 break;
 
             case TypeObstacle.up:
 
                 this.spriteObstacle = (SpriteObstacle)Random.Range(0, 2);
+                this.GetComponent<SpriteRenderer>().sprite = spriteGroup[0];
 
                 break;
 
             case TypeObstacle.nothing:
 
                 this.spriteObstacle = SpriteObstacle.nothing;
+                this.GetComponent<SpriteRenderer>().sprite = null;
 
                 break;
 
         }
+
+        CollidersActivate();
 
     }
 
@@ -149,7 +153,13 @@ public class ObstaclesBehaviour : MonoBehaviour {
         if (collision.gameObject.name == "RunnerController") {
 
             print("Troquei!");
-            RandomType();
+            RandomType(this.gameObject.transform.parent.name);
+
+        }
+
+        if (Progress.instance.endGame) {
+
+            this.gameObject.SetActive(false);
 
         }
 

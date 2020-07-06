@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -770762109
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ffab2219c5b3e204b92bc25c27a8c790, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9ef8875cf592aa4f9bfc9109b326d83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,8 +100,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.87, y: 0.99}
+    pivot: {x: 0.45, y: 0.1866533}
+    oldSize: {x: 3.5555556, y: 3.5555556}
     newSize: {x: 0.87, y: 0.99}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126,8 +126,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.87, y: 0.99}
+    pivot: {x: 0.45, y: 0.1866533}
+    oldSize: {x: 3.5555556, y: 3.5555556}
     newSize: {x: 0.87, y: 0.99}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -153,3 +153,40 @@ MonoBehaviour:
   collidersObstacles:
   - {fileID: 8197360406201861716}
   - {fileID: 8197360406201861714}
+  spriteGroup:
+  - {fileID: 21300000, guid: cb8aaead53ac18c41aaab00b7a926487, type: 3}
+  - {fileID: 21300000, guid: a9ef8875cf592aa4f9bfc9109b326d83, type: 3}
+  keySequence:
+  - 2010
+  - 2001
+  - 0210
+  - 2101
+  - 2110
+  - 1201
+  - 0102
+  - 1002
+  - 0120
+  - 1012
+  - 0112
+  - 1021
+  - 0201
+  - 1210
+  - 1201
+  complementarySequence:
+  - 01001001
+  - 10110110
+  - 00101101
+  - 11010010
+  - 01100101
+  - 10011010
+  - 01001101
+  - 10110010
+  - 00110101
+  - 11001010
+  - 10111010
+  - 01000110
+  - 01000101
+  - 10111001
+  - 01010001
+  viewKeyPlusComplementary: []
+  thisKeyPlusComplementary: []

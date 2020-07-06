@@ -1,15 +1,64 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObstaclesController : MonoBehaviour
 {
     public List<GameObject> pointsObstacles;
     public GameObject obstaclePrefable;
 
+    public static ObstaclesController instace;
+
+    public string sequence;
+    public Text txtStartingTimer;
+
+    float varAuxForStart = 0;
+
     void Awake() {
         
         SetPointsObstacles(pointsObstacles);
+        instace = this;
+
+    }
+
+    private void Update() {
+
+        if (RunnerController.instace.currentState == RunnerController.State.beforeRunner) {
+
+            if (varAuxForStart == 0) {
+
+                for (int i = 24; i < 35; i++) {
+
+                    pointsObstacles[i].GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+
+                }
+
+                for (int i = 0; i < pointsObstacles.Count; i++) {
+
+                    pointsObstacles[i].SetActive(true); pointsObstacles[i].transform.GetChild(1)
+                    .GetComponent<ObstaclesBehaviour>().typeObstacle = ObstaclesBehaviour.TypeObstacle.nothing;
+
+                }
+
+                StartCoroutine(StartingTimer());
+
+            }
+
+            varAuxForStart++;
+
+        }
+            else if (RunnerController.instace.currentState == RunnerController.State.inRunner) {
+
+                if(pointsObstacles[24] != null && pointsObstacles[24].GetComponentInChildren<SpriteRenderer>().color == new Color(255, 255, 255, 0)) StartCoroutine(ReturnObstracles());
+                
+            }
+                else {
+
+                    varAuxForStart = 0;
+                    StopAllCoroutines();       
+
+                }
 
     }
 
@@ -18,7 +67,9 @@ public class ObstaclesController : MonoBehaviour
         for (int i = 1; i < 37; i++)
         {
             
-            pointsObstacles.Add(GameObject.Find("Slot (" + i + ")"));
+            if(i < 10) pointsObstacles.Add(GameObject.Find("Slot (0"+ i + ")"));
+                else pointsObstacles.Add(GameObject.Find("Slot (" + i + ")"));
+            
             AddPrefable(pointsObstacles[i - 1], obstaclePrefable);
 
         }
@@ -32,5 +83,34 @@ public class ObstaclesController : MonoBehaviour
 
     }
 
+    IEnumerator StartingTimer() {
+
+        txtStartingTimer.text = "3";
+        yield return new WaitForSeconds(1);
+
+        txtStartingTimer.text = "2";
+        yield return new WaitForSeconds(1);
+
+        txtStartingTimer.text = "1";
+        yield return new WaitForSeconds(1);
+
+        txtStartingTimer.text = "Vai!";
+        RunnerController.instace.currentState = RunnerController.State.inRunner;
+        yield return new WaitForSeconds(.5f);
+        txtStartingTimer.text = "";
+
+    }
+
+    IEnumerator ReturnObstracles() {
+
+        yield return new WaitForSeconds(12);
+
+        for (int i = 24; i < 35; i++) {
+
+            pointsObstacles[i].GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, 1);
+
+        }
+
+    }
+
 }
-    

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AsteroidsSpawn : MonoBehaviour
 {
-    private GameObject player;
+    private GameObject player, life;
     public GameObject asteroid;
     private float x, y;
     private Vector3 pos;
@@ -12,13 +12,17 @@ public class AsteroidsSpawn : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        life = GameObject.Find("Vidas");
         InvokeRepeating("Spawn", 0f, 0.7f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Life.life == 0)
+        {
+            CancelInvoke();
+        }
     }
     public void Spawn()
     {

@@ -6,6 +6,7 @@ public class AvoidancePlayerBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField]private float speed;
+    [SerializeField]private GameObject vida;
     private float hor, ver;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class AvoidancePlayerBehaviour : MonoBehaviour
     {
         if(col.gameObject.tag == "Asteroide")
         {
-            print(1);
+            vida.GetComponent<Life>().DecrementLife();
         }
     }
 }

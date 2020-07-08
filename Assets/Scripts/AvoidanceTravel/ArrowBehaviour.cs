@@ -4,28 +4,39 @@ using UnityEngine;
 
 public class ArrowBehaviour : MonoBehaviour
 {
-    private GameObject planet, pl;
+    private GameObject pl;
+    public GameObject[] planet;
     private float x, y, mod = -1.2f;
     public float rot;
+    public int i = 0;
     // Start is called before the first frame update
+    private void Awake() 
+    {
+        planet = GameObject.FindGameObjectsWithTag("Planeta");
+        planet[0].transform.position = new Vector3(-46.9f, 5.4f);
+        planet[1].transform.position = new Vector3(-105.9f, 20.2f);
+        planet[2].transform.position = new Vector3(-157.9f, 9.2f);
+        planet[3].transform.position = new Vector3(-206.9f, 14.7f);
+        planet[4].transform.position = new Vector3(-256.1f, 8.7f);
+    }
     void Start()
     {
-        planet = GameObject.FindWithTag("Planeta");
         pl = GameObject.FindWithTag("Player");
-        transform.right = new Vector3(planet.transform.position.x - pl.transform.position.x, planet.transform.position.y - pl.transform.position.y);
+        transform.right = new Vector3(planet[i].transform.position.x - pl.transform.position.x, planet[i].transform.position.y - pl.transform.position.y);
         rot = transform.rotation.eulerAngles.z;
-        if(rot >= 140 && rot <= 215)
-            x = -32.16159f;
-        else if(rot <= 40 || (rot <= 360 && rot >= 315))
-            x = 32.16159f;
-        // x = (rot >= 140) ? -32.07379f : (rot <= 40) ? 32.07379f : 0;
-        transform.localPosition += new Vector3(x, 0);
+        // if(rot >= 140 && rot <= 215)
+        //     x = -32.16159f;
+        // else if(rot <= 40 || (rot <= 360 && rot >= 315))
+        //     x = 32.16159f;
+        transform.localPosition += new Vector3(-32.16159f, 0);
+        
+        //print(planet[0].name + planet[1].name + planet[2].name + planet[3].name + planet[4].name);
     }
 
     // Update is called once per frame
     void Update()
     {        
-        transform.right = new Vector3(planet.transform.position.x - pl.transform.position.x, planet.transform.position.y - pl.transform.position.y);
+        transform.right = new Vector3(planet[i].transform.position.x - pl.transform.position.x, planet[i].transform.position.y - pl.transform.position.y);
         rot = transform.rotation.eulerAngles.z;
         if(rot <= 360 && rot >= 350)
             mod = -360;

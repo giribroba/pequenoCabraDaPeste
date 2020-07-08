@@ -8,6 +8,7 @@ public class AsteroidBehaviour : MonoBehaviour
     private Rigidbody2D rb;
     private GameObject pl;
     private Vector3 direc;
+    static public float maxDis = 15;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class AsteroidBehaviour : MonoBehaviour
     void Update()
     {        
         // transform.Translate(Vector3.up * speed * Time.deltaTime);
-        if(Vector3.Distance(transform.position, pl.transform.position) > 15)
+        if(Vector3.Distance(transform.position, pl.transform.position) > maxDis)
             Destroy(this.gameObject);
     }
 }

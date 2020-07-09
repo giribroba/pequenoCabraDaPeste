@@ -23,6 +23,7 @@ TagManager:
   - iPoco
   - Planeta
   - Asteroide
+  - Menu Alfa
   layers:
   - Default
   - TransparentFX

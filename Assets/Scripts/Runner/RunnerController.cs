@@ -5,44 +5,53 @@ using UnityEngine.SceneManagement;
 
 public class RunnerController : MonoBehaviour
 {
-    public enum State {beforeRunner, inRunner, afterRunner}
+    public enum State { beforeRunner, inRunner, afterRunner }
     public State currentState;
 
     public bool arcade;
 
     public static RunnerController instace;
     public RunnerRotate runnerRotate;
-    public GameObject btnPause, btnJump, btnSlide, winGameFadeOut; 
+    public GameObject btnPause, btnJump, btnSlide, winGameFadeOut;
 
-    void Awake() {
-        
+    void Awake()
+    {
+
         instace = this;
         currentState = State.beforeRunner;
 
+        arcade = MenuAlfa.instance != null ? MenuAlfa.instance.isArcade : arcade;
+        if (MenuAlfa.instance != null) Destroy(MenuAlfa.instance.gameObject);
+
     }
 
-    private void Update() {
+    private void Update()
+    {
 
-        if (!Progress.instance.endGame) {
+        if (!Progress.instance.endGame)
+        {
 
-            if (MenuBotoesBehaviour.inPause || RunnerController.instace.currentState != RunnerController.State.inRunner) {
+            if (MenuBotoesBehaviour.inPause || RunnerController.instace.currentState != RunnerController.State.inRunner)
+            {
 
                 btnPause.SetActive(false);
                 btnJump.SetActive(false);
                 btnSlide.SetActive(false);
 
             }
-                else {
+            else
+            {
 
-                    btnPause.SetActive(true);
-                    btnJump.SetActive(true);
-                    btnSlide.SetActive(true);
+                btnPause.SetActive(true);
+                btnJump.SetActive(true);
+                btnSlide.SetActive(true);
 
-                }
+            }
 
         }
 
-        else {
+        else
+        {
 
             btnPause.SetActive(false);
             btnJump.SetActive(false);
@@ -54,17 +63,19 @@ public class RunnerController : MonoBehaviour
 
         }
 
-        if (Progress.instance.endGame) {
+        if (Progress.instance.endGame)
+        {
 
             StartCoroutine(WinGame());
 
         }
 
-        IEnumerator WinGame() {
+        IEnumerator WinGame()
+        {
 
             winGameFadeOut.SetActive(true);
             yield return new WaitForSeconds(2.5f);
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("MenuAlfa");
 
         }
 

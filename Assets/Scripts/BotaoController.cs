@@ -12,30 +12,33 @@ public class BotaoController : MonoBehaviour
     controladorJogador playerS;
     void Start()
     {
-        if(SceneManager.GetActiveScene().name == "Exploração") {
+        if (SceneManager.GetActiveScene().name == "Exploração")
+        {
             vida = GameObject.Find("Vidas").GetComponent<Life>();
             player = GameObject.FindWithTag("Player");
             playerS = GameObject.Find("Player").GetComponent<controladorJogador>();
-        }    
+        }
     }
 
-    public void ControleBotoes(string cenaDestino){
+    public void ControleBotoes(string cenaDestino)
+    {
         if (cenaDestino == "Exploração")
         {
             Debug.Log("Jogo Iniciado");
         }
         SceneManager.LoadScene(cenaDestino);
     }
-    public void Reinicia(){
+    public void Reinicia()
+    {
         //if (playerS.ReturnLevel() == 1)
         //{
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //}
         //else
         //{
-            // player.SetActive(true);
-            // gameOver.SetBool("perde", false);
-            // vida.ResetLife(); 
+        // player.SetActive(true);
+        // gameOver.SetBool("perde", false);
+        // vida.ResetLife(); 
         StartCoroutine("Sobe");
         //}
         // if (playerS.ReturnLevel() == 2)
@@ -47,7 +50,8 @@ public class BotaoController : MonoBehaviour
         // }
 
     }
-    public void SairJogo(){
+    public void SairJogo()
+    {
         Application.Quit();
     }
 
@@ -57,13 +61,15 @@ public class BotaoController : MonoBehaviour
         this.transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    public void ReiniciaRunner() {
+    public void ReiniciaRunner()
+    {
 
         StartCoroutine(ReiniciaRunnerTrasition());
 
     }
 
-    IEnumerator ReiniciaRunnerTrasition() {
+    IEnumerator ReiniciaRunnerTrasition()
+    {
 
         GameObject.Find("RestartTrasition").GetComponent<Animation>().Play();
         yield return new WaitForSeconds(.4f);

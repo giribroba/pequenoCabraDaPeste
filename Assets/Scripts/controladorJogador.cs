@@ -298,8 +298,11 @@ public class controladorJogador : MonoBehaviour
         }
         if (col.tag == "eventWins" && contVulcao >= 5 && contBaldada >= 6)
         {
+
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", false);
-            SceneManager.LoadScene(4);
+            if (!ExploreController.instance.arcade) SceneManager.LoadScene("AvoidanceTravel");
+            if (ExploreController.instance.arcade) SceneManager.LoadScene("MenuAlfa");
+
         }
     }
 

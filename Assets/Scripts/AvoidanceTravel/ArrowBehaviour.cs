@@ -36,7 +36,9 @@ public class ArrowBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        transform.right = new Vector3(planet[i].transform.position.x - pl.transform.position.x, planet[i].transform.position.y - pl.transform.position.y);
+        if(i < 5)
+            transform.right = new Vector3(planet[i].transform.position.x - pl.transform.position.x, planet[i].transform.position.y - pl.transform.position.y);
+            
         rot = transform.rotation.eulerAngles.z;
         if(rot <= 360 && rot >= 350)
             mod = -360;

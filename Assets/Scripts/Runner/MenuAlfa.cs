@@ -20,6 +20,7 @@ public class MenuAlfa : MonoBehaviour
     {
 
         DontDestroyOnLoad(this);
+        PlayerPrefs.SetInt("Planet", 0);
         SceneManager.LoadScene(nomeCena);
 
     }

@@ -13,6 +13,7 @@ public class AvoidancePlayerBehaviour : MonoBehaviour
     private int planet;
     public float hor, ver;
     public bool imortal;
+    public FixedJoystick joy;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +36,10 @@ public class AvoidancePlayerBehaviour : MonoBehaviour
     {
         print(ab.i);
 
-        hor = Input.GetAxisRaw("Horizontal");
-        ver = Input.GetAxisRaw("Vertical");
+        // hor = Input.GetAxisRaw("Horizontal");
+        // ver = Input.GetAxisRaw("Vertical");
+        hor = joy.Horizontal;
+        ver = joy.Vertical;
         
         rb.velocity = new Vector2(hor, ver) * speed;        
 

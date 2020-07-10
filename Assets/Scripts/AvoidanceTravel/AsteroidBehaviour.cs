@@ -26,4 +26,10 @@ public class AsteroidBehaviour : MonoBehaviour
         if(Vector3.Distance(transform.position, pl.transform.position) > maxDis)
             Destroy(this.gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D col) 
+    {
+        if(col.gameObject.tag == "Planeta")
+            Destroy(this.gameObject);
+    }
 }

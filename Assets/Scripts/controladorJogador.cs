@@ -73,7 +73,7 @@ public class controladorJogador : MonoBehaviour
 #elif UNITY_ANDROID
         movimento = joystick.Horizontal;
 #endif
-        movimento = Input.GetAxis("Horizontal");
+        //movimento = Input.GetAxis("Horizontal");
         if (contBroto == 6)
         {
             Objetivo.SetObjetivo("Vulcão");
@@ -235,7 +235,7 @@ public class controladorJogador : MonoBehaviour
         if (!MenuBotoesBehaviour.controleVisivel)
             pulou = puloJoystick.pulou;
 #endif
-        pulou = Input.GetButtonDown("Jump");
+        //pulou = Input.GetButtonDown("Jump");
         animator.SetBool("jump", !noChao);
         if (noChao && pulou)
         {

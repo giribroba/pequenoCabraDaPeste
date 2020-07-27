@@ -57,6 +57,20 @@ public class PlayerBehaviour : MonoBehaviour
         //Lock position for best position of axis X.
         this.transform.position = new Vector2(Mathf.Clamp(this.transform.position.x, -6.34f, -6.10f), this.transform.position.y);
 
+        //Touch in screen - Jump & Slide
+        if(Input.touchCount > 0) {
+
+            Touch touch = Input.GetTouch(Input.touchCount - 1);
+
+            if(touch.phase == TouchPhase.Began) {
+
+                if (touch.position.x > Screen.width / 2) Slide();
+                else Jump();
+
+            }
+
+        }
+
         //Switch defining game occurrence in each player state.
         switch (statePlayer)
         {

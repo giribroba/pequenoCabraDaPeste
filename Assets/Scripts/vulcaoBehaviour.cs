@@ -34,6 +34,7 @@ public class vulcaoBehaviour : MonoBehaviour
                     p = other.GetComponent<controladorJogador>();
                     indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
                     barra.GetComponent<SpriteRenderer>().enabled = p.podePa;
+                    indicador.transform.localPosition = new Vector3(Random.Range(-4, 4), indicador.transform.localPosition.y);
                     if (p.podePa)
                     {
                         interagir.SetActive(true);

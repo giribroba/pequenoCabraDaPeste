@@ -90,7 +90,7 @@ public class Progress : MonoBehaviour
     IEnumerator Ab()
     {
 
-        Debug.LogWarning(time++);
+        //Debug.LogWarning(time++);
         yield return new WaitForSeconds(1);
         StartCoroutine(Ab());
 

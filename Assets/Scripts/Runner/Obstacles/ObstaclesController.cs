@@ -9,6 +9,9 @@ public class ObstaclesController : MonoBehaviour
     public GameObject obstaclePrefable;
 
     public static ObstaclesController instace;
+    public bool snakeMoment; public float forSnake, levelDificulty;
+    [Range(0, 10)]
+    public float time;
 
     public string sequence;
     public Text txtStartingTimer;
@@ -16,7 +19,9 @@ public class ObstaclesController : MonoBehaviour
     float varAuxForStart = 0;
 
     void Awake() {
-        
+
+        forSnake = 0;
+
         SetPointsObstacles(pointsObstacles);
         instace = this;
 
@@ -24,11 +29,14 @@ public class ObstaclesController : MonoBehaviour
 
     private void Update() {
 
+        Time.timeScale = time;
+
         if (RunnerController.instace.currentState == RunnerController.State.beforeRunner) {
 
+            levelDificulty = 0; forSnake = 0;
             if (varAuxForStart == 0) {
 
-                for (int i = 24; i < 35; i++) {
+                for (int i = 24; i < 36; i++) {
 
                     pointsObstacles[i].GetComponentInChildren<SpriteRenderer>().color = new Color(255, 255, 255, 0);
 
@@ -56,7 +64,7 @@ public class ObstaclesController : MonoBehaviour
                 else {
 
                     varAuxForStart = 0;
-                    StopAllCoroutines();       
+                    StopAllCoroutines();
 
                 }
 

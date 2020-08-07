@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RunnerRotate : MonoBehaviour
 {
-    [HideInInspector] public float distanceRotationStart, distanceRotation, maxDistanceRotation, minDistanceRotation, defRotation;
+    [HideInInspector] public float maxDistanceRotation, defRotation, speedRedoneta;
     
     public GameObject solBackground;
     public Animator animatorRedoneta;
@@ -13,10 +13,12 @@ public class RunnerRotate : MonoBehaviour
         
         Rotation(RunnerController.instace.currentState);
 
+        //Apagar depois
+        //Debug.LogWarning("Speed Redoneta: " + animatorRedoneta.speed);
+
     }
 
     float count = 0; float countAux = 0;
-    float definitiveDistance;
     void Rotation(RunnerController.State currentState){
 
 
@@ -34,21 +36,31 @@ public class RunnerRotate : MonoBehaviour
 
             else if(currentState == RunnerController.State.inRunner) {
 
-                    if(countAux == 2) { StartCoroutine(TimeToNotImmortal()); countAux++; }                
+                    if(countAux == 2) { 
 
-                    PlayerBehaviour.instance.myAnim.speed = 1;
-                    animatorRedoneta.speed = 1;
+                        StartCoroutine(TimeToNotImmortal()); 
+                        countAux++; 
+                        animatorRedoneta.speed = 1;
 
-                    count++;
-            
-                    solBackground.GetComponent<Animator>().speed = 1;
-                    if(!MenuBotoesBehaviour.inPause) animatorRedoneta.speed += 0.0001f * Time.deltaTime;
-                
-                    if(animatorRedoneta.speed > 1.35) animatorRedoneta.speed = 1.35f * Time.deltaTime;
+                    }
 
-                    if (!MenuBotoesBehaviour.inPause) definitiveDistance = distanceRotationStart + distanceRotation * count;
-                    definitiveDistance = Mathf.Clamp(definitiveDistance, minDistanceRotation, maxDistanceRotation);
-                
+                     solBackground.GetComponent<Animator>().speed = 1.5f;
+                     PlayerBehaviour.instance.myAnim.speed = 1;
+
+                    if (PlayerBehaviour.instance.statePlayer == PlayerBehaviour.playerState.jumping || PlayerBehaviour.instance.statePlayer == PlayerBehaviour.playerState.sliding) {
+
+                        animatorRedoneta.speed = speedRedoneta * 1.1f;
+
+                    }
+                        else {
+
+                            animatorRedoneta.speed = speedRedoneta;
+                            if (!MenuBotoesBehaviour.inPause) animatorRedoneta.speed += 0.0001f * Time.deltaTime;
+                            speedRedoneta = animatorRedoneta.speed;
+
+                        }
+
+
             }
 
                 else if(currentState == RunnerController.State.beforeRunner) { 
@@ -57,8 +69,10 @@ public class RunnerRotate : MonoBehaviour
                     
                     if(countAux > 2) countAux = 2;
 
-                    solBackground.GetComponent<Animator>().speed = 1; 
-                    if(countAux == 1) animatorRedoneta.Play("Rotation", 0, 0); animatorRedoneta.speed = 1;
+                    solBackground.GetComponent<Animator>().speed = 1;
+                    PlayerPrefs.SetFloat("SpeedRedonetaBeforeJumpOrSlide", 1);
+                    if (countAux == 1) animatorRedoneta.Play("Rotation", 0, 0); animatorRedoneta.speed = 1;
+                    speedRedoneta = 1;
                     PlayerBehaviour.instance.myAnim.speed = 1;
                     PlayerBehaviour.instance.statePlayer =  PlayerBehaviour.playerState.running;
 

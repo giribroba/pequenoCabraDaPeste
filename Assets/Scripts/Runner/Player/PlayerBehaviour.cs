@@ -22,8 +22,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Update() {
 
         controllerCharacter();
-
-        Debug.Log(statePlayer);        
+        if (Input.GetKeyDown(KeyCode.I)) immortal = !immortal;
 
     }
 
@@ -40,34 +39,27 @@ public class PlayerBehaviour : MonoBehaviour
         inGround = Physics2D.OverlapCircle(new Vector2(0f, (this.gameObject.transform.position.y - 1f) - 
         (playerHeigh / 2)), .2f, itsGround);
 
-        //Aceleration in jump moment.
-        if (this.transform.position.y >= 5.88) {
-
-            this.transform.position = Vector2.MoveTowards(this.transform.position,
-                new Vector2(this.transform.position.x + 2f, this.transform.position.y), 1f * Time.deltaTime);
-
-        }
-            else if (this.transform.position.y <= 4.7f) {
-
-                this.transform.position = Vector2.MoveTowards(this.transform.position,
-                    new Vector2(this.transform.position.x - 2f, this.transform.position.y), 1f * Time.deltaTime);
-
-            }
-
         //Lock position for best position of axis X.
         this.transform.position = new Vector2(Mathf.Clamp(this.transform.position.x, -6.34f, -6.10f), this.transform.position.y);
 
         //Touch in screen - Jump & Slide
-        if(Input.touchCount > 0) {
+        if(Input.touchCount > 0 && RunnerController.instace.currentState ==RunnerController.State.inRunner) {
 
             Touch touch = Input.GetTouch(Input.touchCount - 1);
 
             if(touch.phase == TouchPhase.Began) {
 
-                if (touch.position.x > Screen.width / 2) Slide();
-                else Jump();
+                if (touch.position.x > Screen.width / 2 && statePlayer == playerState.running) Slide();
+                else if (touch.position.x < Screen.width / 2 && statePlayer != playerState.jumping) Jump();
 
             }
+
+        }
+
+        if (RunnerController.instace.currentState == RunnerController.State.inRunner) {
+
+            if (Input.GetKeyDown(KeyCode.A) && statePlayer != playerState.jumping) Jump();
+            else if (Input.GetKeyDown(KeyCode.D) && statePlayer == playerState.running) Slide();
 
         }
 
@@ -164,8 +156,6 @@ public class PlayerBehaviour : MonoBehaviour
         yield return new WaitForSeconds(timeSlide);
 
         slinding = false;
-
-        Debug.Log(timeSlide);
 
     }
 

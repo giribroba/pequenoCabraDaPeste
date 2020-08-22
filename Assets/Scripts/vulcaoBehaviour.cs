@@ -14,10 +14,29 @@ public class vulcaoBehaviour : MonoBehaviour
     private controladorJogador p;
     [SerializeField] private AudioSource cavar;
 
+    private void Start()
+    {
+
+        if (this.gameObject.tag == "Balde" && (Objetivo.obj == "Poço" || Objetivo.obj == "eventWins"))
+        {
+            this.gameObject.tag = "Removido";
+            p.balde = true;
+            this.gameObject.SetActive(false);
+        }
+    }
+
     void Update()
     {
         if (interagir != null)
             interagir.SetActive(false);
+
+        if(Objetivo.obj != "Broto" && Objetivo.obj != "Pá" && Objetivo.obj != "Vulcão")
+        {
+            this.gameObject.tag = "Removido";
+            fumaca.SetTrigger("Fumaca");
+            GetComponent<SpriteRenderer>().sprite = vulcoesAbertos[Random.Range(0, 2)];
+        }
+
 
         indicador.GetComponent<SpriteRenderer>().enabled = false;
         barra.GetComponent<SpriteRenderer>().enabled = false;
@@ -208,7 +227,6 @@ public class vulcaoBehaviour : MonoBehaviour
 
     public void Interagir()
     {
-        print("aeee");
         interagiu = true;
     }
 }

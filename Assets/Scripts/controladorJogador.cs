@@ -38,6 +38,11 @@ public class controladorJogador : MonoBehaviour
         primeiroPoco = true;
         mobileButtons.SetActive(false);
 #endif
+        if (Objetivo.obj == "Balde")
+        {
+            Objetivo.SetObjetivo("Rosa");
+        }
+
         Pa.SetActive(Objetivo.obj == "Pá");
         planeta.transform.eulerAngles = Vector3.forward * rotaCheck;
         Time.timeScale = 1;
@@ -95,7 +100,7 @@ public class controladorJogador : MonoBehaviour
         if (contBaldada == 6)
         {
             contBaldada++;
-            Objetivo.SetObjetivo("Rosa");
+            Objetivo.SetObjetivo("eventWins");
         }
         Jump();
         Raycasts();
@@ -292,7 +297,7 @@ public class controladorJogador : MonoBehaviour
     {
         if (col.tag == "eventRosa" && contVulcao >= 5)
         {
-            print("adad");
+            rotaCheck = 250;
             Objetivo.SetObjetivo("Balde");
             tocaSons.GetComponent<Sons>().PlaySound("rosa");
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", true);

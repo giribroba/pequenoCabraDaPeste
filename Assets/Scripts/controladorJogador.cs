@@ -80,6 +80,7 @@ public class controladorJogador : MonoBehaviour
         if (contBroto == 6)
         {
             Objetivo.SetObjetivo("Vulcão");
+            rotaCheck = 140;
             contador.text = (contVulcao.ToString() + "/5");
             iconeBroto.GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
             iconeBroto.GetComponent<Image>().sprite = imgVulcao;

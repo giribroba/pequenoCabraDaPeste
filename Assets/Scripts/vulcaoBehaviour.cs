@@ -16,8 +16,9 @@ public class vulcaoBehaviour : MonoBehaviour
 
     void Update()
     {
-        if(interagir != null)
+        if (interagir != null)
             interagir.SetActive(false);
+
         indicador.GetComponent<SpriteRenderer>().enabled = false;
         barra.GetComponent<SpriteRenderer>().enabled = false;
         barra.GetComponent<SpriteRenderer>().sprite = sNivel[nivel - 1];
@@ -30,17 +31,20 @@ public class vulcaoBehaviour : MonoBehaviour
                 //colisões
                 if (other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6 && ((gameObject.tag == "Balde") ? ((other.GetComponent<controladorJogador>().encontrouRosa) ? true : false) : true))
                 {
-                    
+
                     p = other.GetComponent<controladorJogador>();
                     indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
                     barra.GetComponent<SpriteRenderer>().enabled = p.podePa;
                     indicador.transform.localPosition = new Vector3(Random.Range(-4, 4), indicador.transform.localPosition.y);
                     if (p.podePa)
                     {
+#if UNITY_ANDROID
                         interagir.SetActive(true);
+#endif
                         if (direita && move)
                         {
                             indicador.transform.Translate(Vector3.right * Time.deltaTime * velocidadeBarra[nivel - 1]);
+                            print(velocidadeBarra[nivel - 1]);
                             direita = (indicador.transform.localPosition.x < 4.8f);
                         }
                         else if (!direita && move)

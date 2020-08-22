@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Objetivo : MonoBehaviour
 {
+    public static string obj = "Pá";
     private static List<GameObject> objetivos;
     private GameObject objetivoUnico, player, marcador;
     [SerializeField] private float xMax;
@@ -11,10 +12,12 @@ public class Objetivo : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         marcador = GameObject.FindWithTag("Marcador");
+        objetivos = new List<GameObject>(GameObject.FindGameObjectsWithTag(obj));
     }
 
     public static void SetObjetivo(string objetivo)
     {
+        obj = objetivo;
         objetivos = new List<GameObject>(GameObject.FindGameObjectsWithTag(objetivo));
     }
 

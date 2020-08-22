@@ -4,15 +4,16 @@ using UnityEngine.UI;
 
 public class controladorJogador : MonoBehaviour
 {
-    [SerializeField] private float velocidadeMaxima, forcaPulo, aceleracao, pKB;
-    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause, interagir, mobileButtons, pJoy, pBut;
+    private static float rotaCheck = -90;
+    [SerializeField] private float velo, forcaPulo, aceleracao, pKB;
+    [SerializeField] private GameObject planeta, vida, iconePa, iconeBroto, pause, interagir, mobileButtons, pJoy, pBut, Pa;
     public static float aclPubli;
     [SerializeField] private Sprite terra, imgVulcao;
     [SerializeField] private Sprite[] florUI;
     public Text contador;
     public Image cantil, aguaCantil, flor;
     [HideInInspector] public float velocidade;
-    public bool balde = false, imortal = false, podePa = false, encontrouRosa = false, parar, jaEnsinou = false, primeiroPoco;
+    public bool balde = false, imortal = false, podePa, encontrouRosa = false, parar, jaEnsinou = false, primeiroPoco;
     [SerializeField] private bool noChao, iconeUmaVez = true;
     private bool pulou, coletar;
     private float movimento, KB;
@@ -37,12 +38,12 @@ public class controladorJogador : MonoBehaviour
         primeiroPoco = true;
         mobileButtons.SetActive(false);
 #endif
+        Pa.SetActive(Objetivo.obj == "Pá");
+        planeta.transform.eulerAngles = Vector3.forward * rotaCheck;
         Time.timeScale = 1;
-        Objetivo.SetObjetivo("Pá");
         level = 0;
         contVulcao = 0;
         tocaSons = GameObject.FindWithTag("Sound");
-        podePa = false;
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         rbPlayer = GetComponent<Rigidbody2D>();
@@ -51,6 +52,8 @@ public class controladorJogador : MonoBehaviour
     }
     void Update()
     {
+        podePa = Objetivo.obj != "Pá";
+
         aceleracao = aclPubli;
 
         pJoy.SetActive(!MenuBotoesBehaviour.controleVisivel);
@@ -201,12 +204,12 @@ public class controladorJogador : MonoBehaviour
         if (movimento > 0 && !parar)
         {
             //velocidade = (velocidade < velocidadeMaxima) ? velocidade += Time.deltaTime * aceleracao : velocidade = velocidadeMaxima;
-            velocidade = movimento * aceleracao;
+            velocidade = movimento * aceleracao * velo;
             renderer.flipX = false;
         }
         else if (movimento < 0 && !parar)
         {
-            velocidade = movimento * aceleracao;
+            velocidade = movimento * aceleracao * velo;
             //velocidade = (velocidade > -velocidadeMaxima) ? velocidade -= Time.deltaTime * aceleracao : velocidade = -velocidadeMaxima;
             renderer.flipX = true;
         }
@@ -269,6 +272,7 @@ public class controladorJogador : MonoBehaviour
         if (other.tag == "Pá")
         {
             Objetivo.SetObjetivo("Broto");
+            rotaCheck = -45;
             tocaSons.GetComponent<Sons>().PlaySound("pá");
             podePa = true;
             Destroy(iconePa.GetComponent<IconesBehaviour>());

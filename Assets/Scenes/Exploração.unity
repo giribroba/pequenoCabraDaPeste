@@ -10053,6 +10053,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -149.62001
       objectReference: {fileID: 0}
+    - target: {fileID: 4400280965868050790, guid: 1f6929fc00c9e944c82118a696ae8081,
+        type: 3}
+      propertyPath: velocidadeBarra.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400280965868050790, guid: 1f6929fc00c9e944c82118a696ae8081,
+        type: 3}
+      propertyPath: velocidadeBarra.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400280965868050790, guid: 1f6929fc00c9e944c82118a696ae8081,
+        type: 3}
+      propertyPath: velocidadeBarra.Array.data[2]
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4400280967438299552, guid: 1f6929fc00c9e944c82118a696ae8081,
         type: 3}
       propertyPath: m_Enabled

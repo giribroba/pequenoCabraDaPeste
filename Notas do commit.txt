@@ -1,0 +1,6 @@
+* Checkpoint do broto para vulcão
+* Correção da barra do vulcão dito no commit anterior
+* Redução da velocidade do player para 70% (Feedback)
+	Essa redução aumentou a dificuldade do obstaculo "graminha" deixando quase impossivel
+
+* Posiçao aleatoria "indicador" vulcao (Feedback)

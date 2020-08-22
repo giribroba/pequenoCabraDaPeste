@@ -29,13 +29,13 @@ public class vulcaoBehaviour : MonoBehaviour
             {
                 var other = i.collider.gameObject;
                 //colisões
-                if (other.tag == "Player" && other.GetComponent<controladorJogador>().contBroto >= 6 && ((gameObject.tag == "Balde") ? ((other.GetComponent<controladorJogador>().encontrouRosa) ? true : false) : true))
+                if (other.tag == "Player" && Objetivo.obj == "Vulcão" && ((gameObject.tag == "Balde") ? ((other.GetComponent<controladorJogador>().encontrouRosa) ? true : false) : true))
                 {
 
                     p = other.GetComponent<controladorJogador>();
                     indicador.GetComponent<SpriteRenderer>().enabled = p.podePa;
                     barra.GetComponent<SpriteRenderer>().enabled = p.podePa;
-                    indicador.transform.localPosition = new Vector3(Random.Range(-4, 4), indicador.transform.localPosition.y);
+
                     if (p.podePa)
                     {
 #if UNITY_ANDROID
@@ -198,7 +198,7 @@ public class vulcaoBehaviour : MonoBehaviour
         barra.GetComponent<SpriteRenderer>().color = cor;
         yield return new WaitForSeconds(0.5f);
         barra.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
-        indicador.transform.localPosition = Vector2.zero;
+        indicador.transform.localPosition = new Vector3(Random.Range(-4, 4), indicador.transform.localPosition.y);
         move = true;
     }
     void TrocaVulcao()

@@ -81,7 +81,6 @@ public class controladorJogador : MonoBehaviour
 #elif UNITY_ANDROID
         movimento = joystick.Horizontal;
 #endif
-        movimento = Input.GetAxisRaw("Horizontal");
         if (contBroto == 6)
         {
             Objetivo.SetObjetivo("Vulcão");
@@ -243,8 +242,7 @@ public class controladorJogador : MonoBehaviour
 #elif UNITY_ANDROID
         if (!MenuBotoesBehaviour.controleVisivel)
             pulou = puloJoystick.pulou;
-#endif
-        pulou = Input.GetButtonDown("Jump");
+#endif        
         animator.SetBool("jump", !noChao);
         if (noChao && pulou)
         {
@@ -312,8 +310,9 @@ public class controladorJogador : MonoBehaviour
         {
             col.gameObject.transform.parent.GetComponent<Animator>().SetBool("murchando", false);
             PlayerPrefs.SetInt("Planet", 0);
-            if (!ExploreController.instance.arcade) SceneManager.LoadScene("AvoidanceTravel");
-            if (ExploreController.instance.arcade) SceneManager.LoadScene("MenuAlfa");
+            //if (!ExploreController.instance.arcade) SceneManager.LoadScene("AvoidanceTravel");
+            //if (ExploreController.instance.arcade) 
+            SceneManager.LoadScene("Wins");
 
         }
     }

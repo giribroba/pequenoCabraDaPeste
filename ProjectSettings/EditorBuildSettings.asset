@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenuAlfa.unity
     guid: a262cb4fbdd928b49a22cd49ed70ea49
   - enabled: 1
-    path: Assets/Scenes/OI.unity
-    guid: 78f2f128acc618a429a70bab15e15de4
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 3001d7d61f592df489e5fc9e0eec0232
+  - enabled: 1
+    path: Assets/Scenes/OI.unity
+    guid: 78f2f128acc618a429a70bab15e15de4
   - enabled: 1
     path: "Assets/Scenes/Explora\xE7\xE3o.unity"
     guid: 7a8312a80c609f0458a64753022deba1
@@ -23,10 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wins.unity
     guid: e65e957151b91b946a035cb78cbb484d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Runner.unity
     guid: 7f4c2eab1f4f4b14d804598744972cf3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AvoidanceTravel.unity
     guid: 51d6fb5a697b27b4a976040d0e13de34
   m_configObjects: {}
